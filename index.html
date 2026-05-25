@@ -135,7 +135,7 @@
     .why-us h3{margin-bottom:24px;font-size:22px}
     .why-list{list-style:none}
     .why-list li{margin-bottom:16px;display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px}
-    .why-list li::before{content:&#x27;✓&#x27;;color:var(--gold);font-weight:900}
+    .why-list li::before{content:'✓';color:var(--gold);font-weight:900}
     .factory-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:60px}
     .factory-img{border-radius:20px;overflow:hidden;aspect-ratio:1.5;border:1px solid var(--line)}
     .factory-img img{width:100%;height:100%;object-fit:cover;transition:0.4s}
@@ -261,6 +261,7 @@
     .reviews-footer:hover { transform: scale(1.02); box-shadow: var(--shadow); }
   </style>
 
+
 </head>
 <body>
 
@@ -319,11 +320,11 @@
             <span class="kicker">Product Showcase</span>
             <h2 class="section-title">Fully Customizable Styles</h2>
           </div>
-          <p class="section-desc">Tailored to your product&#x27;s specific dimensions and brand aesthetic. Explore our range of high-durability structures and premium materials.</p>
+          <p class="section-desc">Tailored to your product's specific dimensions and brand aesthetic. Explore our range of high-durability structures and premium materials.</p>
         </div>
 
         <div class="search-bar">
-          <input type="text" id="searchInput" class="search-input" placeholder="Search by style, material, or keyword (e.g. &#x27;Eco-friendly&#x27;, &#x27;Rigid&#x27;)..." aria-label="Search Products">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by style, material, or keyword (e.g. 'Eco-friendly', 'Rigid')..." aria-label="Search Products">
           <div class="filter-group">
             <button class="filter-btn active" data-category="All">All Items</button>
             <button class="filter-btn" data-category="Rigid Boxes">Rigid Boxes</button>
@@ -375,7 +376,7 @@
               <span class="badge">Cartons</span>
             </div>
             <div class="product-body">
-              <h3>Lid &amp; Base Food Boxes</h3>
+              <h3>Lid & Base Food Boxes</h3>
               <p>Food-grade packaging solutions suitable for sushi, cookies, and cakes. Space-saving design that ships flat for cost-effective logistics.</p>
               <div class="tag-list"><span class="tag">Food Grade</span><span class="tag">Flat Shipping</span><span class="tag">Bakery</span></div>
               <div class="product-actions">
@@ -455,7 +456,7 @@
               <span class="badge">Cosmetics</span>
             </div>
             <div class="product-body">
-              <h3>Oil &amp; Perfume Boxes</h3>
+              <h3>Oil & Perfume Boxes</h3>
               <p>Custom-fit packaging for fragrance bottles. Specialized inserts to ensure zero breakages.</p>
               <div class="tag-list"><span class="tag">Fragrance</span><span class="tag">Safety</span><span class="tag">Luxury</span></div>
               <div class="product-actions">
@@ -512,7 +513,7 @@
               <span class="badge">Accessories</span>
             </div>
             <div class="product-body">
-              <h3>Stickers &amp; Labels</h3>
+              <h3>Stickers & Labels</h3>
               <p>Final touch accessories. Custom printed labels, stickers, and decorative sealing elements.</p>
               <div class="tag-list"><span class="tag">Branding</span><span class="tag">Stickers</span><span class="tag">Logo</span></div>
               <div class="product-actions"><a href="#quote" class="btn">Get Quote</a><a href="#quote" class="btn btn-outline">Details</a></div>
@@ -572,12 +573,12 @@
           <a href="#quote" class="btn" style="margin-top:32px">Consult an Expert</a>
         </div>
         <div class="industry-list">
-          <a href="#quote" class="industry-item">Jewelry &amp; Watches <span>→</span></a>
-          <a href="#quote" class="industry-item">Beauty &amp; Cosmetics <span>→</span></a>
+          <a href="#quote" class="industry-item">Jewelry & Watches <span>→</span></a>
+          <a href="#quote" class="industry-item">Beauty & Cosmetics <span>→</span></a>
           <a href="#quote" class="industry-item">Luxury Sports Equipment <span>→</span></a>
           <a href="#quote" class="industry-item">Consumer Electronics <span>→</span></a>
           <a href="#quote" class="industry-item">E-commerce Apparel <span>→</span></a>
-          <a href="#quote" class="industry-item">Artisan Bakery &amp; Foods <span>→</span></a>
+          <a href="#quote" class="industry-item">Artisan Bakery & Foods <span>→</span></a>
         </div>
       </div>
     </section>
@@ -619,12 +620,84 @@
       </div>
     </section>
 
+    <section id="reviews" class="section">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:60px;">
+          <span class="kicker">Voice of Customers</span>
+          <h2 class="section-title">WHAT OUR <span class="highlight-gold">CUSTOMERS</span> SAY</h2>
+          <p style="color:var(--gray)">Real reviews from verified buyers worldwide</p>
+        </div>
+
+        <div class="testimonials-stats">
+          <div class="stat-item"><h3>100+</h3><p>5-Star Reviews</p></div>
+          <div class="stat-item stat-divider"><h3>50+</h3><p>Countries Served</p></div>
+          <div class="stat-item stat-divider"><h3>100%</h3><p>Satisfaction Rate</p></div>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="customer-name">Lisa Heitzmann 🇩🇪</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="review-text">"The communication with the supplier was very smooth. High quality printing and beautiful color."</p>
+          </div>
+          
+          <div class="review-card">
+            <div class="review-header">
+              <div class="customer-name">Abraheem Ashe 🇺🇸</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="review-text">"Product looks amazing! I'll definitely purchase from them again. Thanks!!"</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="customer-name">Sheaufen Tay 🇸🇬</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="review-text">"Good communication and accommodating to requests. Printing was done well — overall very satisfied!"</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="customer-name">Florence Hinder 🇬🇧</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="review-text">"Incredibly fast production and distribution of the packaging for a great price!"</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="customer-name">Mo Alq 🇬🇧</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="review-text">"I am very pleased with the quality but particularly with the level of customer service I received."</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="customer-name">Dylan Reymen 🇧🇪</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="review-text">"Superb communication and quality of the product."</p>
+          </div>
+        </div>
+
+        <a href="#quote" style="display:block; text-decoration:none;">
+          <div class="reviews-footer">
+            Join 1000+ satisfied customers worldwide →
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section id="quote" class="section">
       <div class="container">
         <div class="quote-wrap">
           <div class="quote-info">
             <span class="kicker">Request a Quote</span>
-            <h2>Let&#x27;s build your packaging</h2>
+            <h2>Let's build your packaging</h2>
             <p>Our packaging specialists are ready to help with structure, material selection, and cost optimization.</p>
             <div class="contact-list">
               <div>✉️ <a href="mailto:timwu@gzwoood.com">timwu@gzwoood.com</a></div>
@@ -683,70 +756,33 @@
 
   <div class="back-to-top" id="backToTop" title="Scroll to top">↑</div>
   <a href="https://wa.me/8613189018213" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-    <svg viewBox="0 0 448 512" width="30" height="30" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.6-2.8-23.6-8.7-45-27.7-16.6-14.9-27.9-33.3-31.1-38.9-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-11.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.7z"/></svg>
+    <svg viewBox="0 0 448 512" width="30" height="30" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.6-2.8-23.6-8.7-45-27.7-16.6-14.9-27.9-33.3-31.1-38.9-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.7z"/></svg>
   </a>
 
   <script>
-    // Search &amp; Filter Logic
-    const filterButtons = document.querySelectorAll(&#x27;.filter-btn&#x27;);
-    const productCards = document.querySelectorAll(&#x27;.product-card&#x27;);
-    const searchInput = document.getElementById(&#x27;searchInput&#x27;);
-    let currentCategory = &#x27;All&#x27;;
+    // Search & Filter Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    const searchInput = document.getElementById('searchInput');
+    let currentCategory = 'All';
 
     function filterProducts() {
       const keyword = searchInput.value.trim().toLowerCase();
-      productCards.forEach(card =&gt; {
+      productCards.forEach(card => {
         const category = card.dataset.category;
         const searchText = card.dataset.search.toLowerCase();
-        const title = card.querySelector(&#x27;h3&#x27;).textContent.toLowerCase();
+        const title = card.querySelector('h3').textContent.toLowerCase();
         
-        const matchCategory = currentCategory === &#x27;All&#x27; || category === currentCategory;
+        const matchCategory = currentCategory === 'All' || category === currentCategory;
         const matchSearch = !keyword || searchText.includes(keyword) || title.includes(keyword);
         
-        if(matchCategory &amp;&amp; matchSearch) {
-          card.style.display = &#x27;flex&#x27;;
+        if(matchCategory && matchSearch) {
+          card.style.display = 'flex';
         } else {
-          card.style.display = &#x27;none&#x27;;
+          card.style.display = 'none';
         }
       });
     }
 
-    filterButtons.forEach(button =&gt; {
-      button.addEventListener(&#x27;click&#x27;, () =&gt; {
-        filterButtons.forEach(btn =&gt; btn.classList.remove(&#x27;active&#x27;));
-        button.classList.add(&#x27;active&#x27;);
-        currentCategory = button.dataset.category;
-        filterProducts();
-      });
-    });
-
-    searchInput.addEventListener(&#x27;input&#x27;, filterProducts);
-
-    // WhatsApp Form Integration
-    const contactForm = document.getElementById(&#x27;contactForm&#x27;);
-    if(contactForm) {
-      contactForm.addEventListener(&#x27;submit&#x27;, (e) =&gt; {
-        e.preventDefault();
-        const inputs = contactForm.querySelectorAll(&#x27;input, select, textarea&#x27;);
-        const data = {};
-        inputs.forEach(input =&gt; {
-          const key = input.placeholder || input.ariaLabel || &#x27;Field&#x27;;
-          data[key] = input.value;
-        });
-        
-        const message = `Inquiry from Website:
-Name: ${data[&#x27;Full Name&#x27;]}
-Contact: ${data[&#x27;Email or WhatsApp&#x27;]}
-Product: ${data[&#x27;Box Type&#x27;]}
-Quantity: ${data[&#x27;Order Quantity&#x27;]}
-Size: ${data[&#x27;Box Size (L x W x H)&#x27;]}
-Note: ${data[&#x27;Material preferences, printing colors, or special requests...&#x27;]}`;
-
-        window.open(`https://wa.me/8613189018213?text=${encodeURIComponent(message)}`, &#x27;_blank&#x27;);
-      });
-    }
-
-    // Scroll to Top
-    const btt = document.getElementById(&#x27;backToTop&#x27;);
-    window.addEventListener(&#x27;scroll&#x27;, () =&gt; {
-      if
+    filterButtons.forEach(button => {
+      button.
