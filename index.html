@@ -638,75 +638,75 @@
 
   <script>
     // Search & Filter Logic
-    const filterButtons = document.querySelectorAll(\'.filter-btn\');
-    const productCards = document.querySelectorAll(\'.product-card\');
-    const searchInput = document.getElementById(\'searchInput\');
-    let currentCategory = \'All\';
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    const searchInput = document.getElementById('searchInput');
+    let currentCategory = 'All';
 
     function filterProducts() {
       const keyword = searchInput.value.trim().toLowerCase();
       productCards.forEach(card => {
         const category = card.dataset.category;
         const searchText = card.dataset.search.toLowerCase();
-        const title = card.querySelector(\'h3\').textContent.toLowerCase();
+        const title = card.querySelector('h3').textContent.toLowerCase();
         
-        const matchCategory = currentCategory === \'All\' || category === currentCategory;
+        const matchCategory = currentCategory === 'All' || category === currentCategory;
         const matchSearch = !keyword || searchText.includes(keyword) || title.includes(keyword);
         
         if(matchCategory && matchSearch) {
-          card.style.display = \'flex\';
+          card.style.display = 'flex';
         } else {
-          card.style.display = \'none\';
+          card.style.display = 'none';
         }
       });
     }
 
     filterButtons.forEach(button => {
-      button.addEventListener(\'click\', () => {
-        filterButtons.forEach(btn => btn.classList.remove(\'active\'));
-        button.classList.add(\'active\');
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
         currentCategory = button.dataset.category;
         filterProducts();
       });
     });
 
-    searchInput.addEventListener(\'input\', filterProducts);
+    searchInput.addEventListener('input', filterProducts);
 
     // WhatsApp Form Integration
-    const contactForm = document.getElementById(\'contactForm\');
+    const contactForm = document.getElementById('contactForm');
     if(contactForm) {
-      contactForm.addEventListener(\'submit\', (e) => {
+      contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const inputs = contactForm.querySelectorAll(\'input, select, textarea\');
+        const inputs = contactForm.querySelectorAll('input, select, textarea');
         const data = {};
         inputs.forEach(input => {
-          const key = input.placeholder || input.ariaLabel || \'Field\';
+          const key = input.placeholder || input.ariaLabel || 'Field';
           data[key] = input.value;
         });
         
         const message = `Inquiry from Website:
-Name: ${data[\'Full Name\']}
-Contact: ${data[\'Email or WhatsApp\']}
-Product: ${data[\'Box Type\']}
-Quantity: ${data[\'Order Quantity\']}
-Size: ${data[\'Box Size (L x W x H)\']}
-Note: ${data[\'Material preferences, printing colors, or special requests...\']}`;
+Name: ${data['Full Name']}
+Contact: ${data['Email or WhatsApp']}
+Product: ${data['Box Type']}
+Quantity: ${data['Order Quantity']}
+Size: ${data['Box Size (L x W x H)']}
+Note: ${data['Material preferences, printing colors, or special requests...']}`;
 
-        window.open(`https://wa.me/8613189018213?text=${encodeURIComponent(message)}`, \'_blank\');
+        window.open(`https://wa.me/8613189018213?text=${encodeURIComponent(message)}`, '_blank');
       });
     }
 
     // Scroll to Top
-    const btt = document.getElementById(\'backToTop\');
-    window.addEventListener(\'scroll\', () => {
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
       if(window.scrollY > 500) {
-        btt.classList.add(\'show\');
+        btt.classList.add('show');
       } else {
-        btt.classList.remove(\'show\');
+        btt.classList.remove('show');
       }
     });
-    btt.addEventListener(\'click\', () => {
-      window.scrollTo({ top: 0, behavior: \'smooth\' });
+    btt.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
