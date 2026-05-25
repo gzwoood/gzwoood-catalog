@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Packaging Manufacturer | Wholesale Luxury & Eco-friendly Boxes | gzwoood.com</title>
-  <meta name="description" content="gzwoood.com is a leading factory-direct custom packaging manufacturer. We specialize in wholesale FSC certified sustainable rigid boxes, mailer boxes, and luxury gift packaging with custom logos. Global DDP shipping to UAE, US, and Europe." />
-  <meta name="keywords" content="custom packaging boxes, wholesale packaging, eco-friendly boxes, luxury gift boxes, custom mailer boxes, packaging manufacturer china, FSC certified packaging, small business packaging, rigid box factory" />
+  <title>Custom Packaging Box Catalog | Eco-friendly & Sustainable | gzwoood.com</title>
+  <meta name="description" content="gzwoood.com custom packaging box catalog. Specialist in FSC certified, biodegradable, and recyclable rigid boxes, mailer boxes, and luxury gift packaging." />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -58,81 +57,127 @@
     .nav-menu{display:flex;gap:32px;font-weight:700;font-size:14px}
     .nav-menu a:hover{color:var(--gold)}
 
-    /* New Sections Styles */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .about-content h2 { margin-bottom: 24px; }
-    .about-content p { margin-bottom: 20px; color: var(--gray); }
-    .about-features {
-      list-style: none;
-      margin: 32px 0;
-    }
-    .about-features li {
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-    }
-    .about-features li::before {
-      content: "✓";
-      color: var(--gold);
-      font-weight: 800;
-    }
-    .factory-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .gallery-item { text-align: center; }
-    .gallery-caption {
-      margin-top: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gray);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .factory-gallery img {
-      border-radius: 12px;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      box-shadow: var(--shadow);
-      transition: 0.3s;
-      width: 100%;
-    }
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;background:#111;color:#fff;font-weight:800;border:1px solid #111;cursor:pointer;transition:0.3s var(--transition);white-space:nowrap;font-size:14px;letter-spacing:0.5px}
+    .btn:hover{transform:translateY(-3px);box-shadow:var(--shadow);background:#333;border-color:#333}
+    .btn-outline{background:#fff;color:#111;border-color:var(--line)}
+    .btn-outline:hover{background:var(--light);border-color:var(--black)}
+    .btn-gold{background:var(--gold);border-color:var(--gold);color:#fff}
+    .btn-gold:hover{background:#b18e41;border-color:#b18e41}
 
-    .factory-gallery img:hover { transform: scale(1.05); }
+    .hero{position:relative;min-height:640px;display:flex;align-items:center;background:url('https://sc01.alicdn.com/kf/Ad0dd952e0e3d4558b5623be2a6ef02f4L.jpg') no-repeat center right;background-size:cover;padding:80px 0;border-bottom:1px solid var(--line)}
+    .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg, #fff 35%, transparent 85%);opacity:0.6;pointer-events:none}
+    .hero .container{position:relative;z-index:1}
+    .hero-content{max-width:620px}
+    .hero h1{font-size:clamp(44px,6vw,68px);line-height:1;letter-spacing:-0.05em;color:#111;margin-bottom:28px}
+    .hero p{color:var(--gray);font-size:19px;line-height:1.6;margin-bottom:44px;max-width:540px}
+    .hero-actions{display:flex;gap:18px;flex-wrap:wrap}
+    .btn-large{min-height:60px;padding:0 36px;font-size:16px}
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-    .why-card {
-      padding: 40px;
-      background: var(--white);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
+    .section{padding:100px 0}
+    .section-light{background:var(--light)}
+    .section-dark{background:#111;color:#fff}
+    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px}
+    .kicker{color:var(--gold);font-size:13px;font-weight:900;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:12px;display:block}
+    .section-title{font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-0.04em}
+    .section-desc{max-width:680px;color:var(--gray);font-size:17px}
+    .section-dark .section-desc{color:rgba(255,255,255,0.7)}
+
+    .trust-badges{padding:40px 0;border-bottom:1px solid var(--line);background:#fafafa}
+    .badge-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;opacity:0.6;filter:grayscale(1)}
+    .badge-item{display:flex;align-items:center;gap:10px;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+
+    .search-bar{margin-bottom:48px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;background:var(--light);padding:16px;border-radius:24px}
+    .search-input{flex:1;min-width:300px;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:16px;outline:none;transition:0.2s}
+    .search-input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,163,78,0.1)}
+    .filter-group{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.filter-group::-webkit-scrollbar{display:none}
+    .filter-btn{padding:0 22px;min-height:44px;border-radius:999px;font-size:13px;font-weight:700;background:#fff;border:1px solid var(--line);cursor:pointer;white-space:nowrap;transition:0.3s}
+    .filter-btn:hover{border-color:var(--black)}
+    .filter-btn.active{background:#111;color:#fff;border-color:#111}
+
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:40px}
+    .product-card{background:#fff;border-radius:36px;overflow:hidden;transition:0.4s var(--transition);border:1px solid var(--line);display:flex;flex-direction:column}
+    .product-card:hover{transform:translateY(-12px);box-shadow:var(--shadow);border-color:transparent}
+    .product-image{position:relative;aspect-ratio:1.2;background:var(--light);overflow:hidden}
+    .product-image img{width:100%;height:100%;object-fit:cover;transition:0.6s var(--transition)}
+    .product-card:hover .product-image img{transform:scale(1.08)}
+    .badge{position:absolute;top:24px;left:24px;padding:8px 16px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:99px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--black);box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    .product-body{padding:32px;flex:1;display:flex;flex-direction:column}
+    .product-body h3{font-size:24px;letter-spacing:-0.03em;margin-bottom:12px}
+    .product-body p{font-size:15px;color:var(--gray);line-height:1.6;margin-bottom:20px;flex:1}
+    .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+    .tag{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--gold);background:rgba(201,163,78,0.1);padding:5px 12px;border-radius:6px}
+    .product-actions{display:flex;gap:12px}
+    .product-actions .btn{flex:1}
+
+    .industry-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .industry-list{display:grid;gap:8px}
+    .industry-item{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:20px;transition:0.3s}
+    .industry-item:hover{color:var(--gold);padding-left:12px;border-bottom-color:var(--gold)}
+    .industry-item span{font-size:16px;opacity:0.3}
+
+    .finish-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;margin-top:60px}
+    .finish-item{padding:24px;border-radius:24px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:15px;display:flex;align-items:center;gap:14px;transition:0.3s}
+    .finish-item:hover{border-color:var(--gold);background:var(--light)}
+    .finish-item .check{color:var(--gold);font-size:18px}
+
+    .process-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:40px}
+    .process-card{padding:48px;border-radius:40px;background:#1a1a1a;border:1px solid #333;transition:0.3s}
+    .process-card:hover{border-color:var(--gold);background:#222}
+    .process-num{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+    .process-icon{font-size:32px}
+    .process-num strong{font-size:40px;opacity:0.1;color:var(--white)}
+    .process-card h3{font-size:22px;margin-bottom:16px;color:var(--white)}
+    .process-card p{font-size:15px;color:rgba(255,255,255,0.6)}
+
+    .quote-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:100px;align-items:start}
+    .quote-info h2{font-size:52px;line-height:1;letter-spacing:-0.04em;margin-top:16px}
+    .quote-info p{margin-top:28px;color:var(--gray);font-size:19px}
+    .contact-list{margin-top:60px;display:grid;gap:24px;font-weight:700;font-size:18px}
+    .quote-form{background:var(--light);padding:48px;border-radius:48px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .field{width:100%;min-height:56px;padding:0 24px;border-radius:16px;border:1px solid var(--line);background:#fff;font-size:15px;outline:none;transition:0.2s}
+    .field:focus{border-color:var(--gold)}
+    .field-full{grid-column:1/-1}
+    .textarea{width:100%;min-height:160px;padding:20px 24px;border-radius:16px;border:1px solid var(--line);background:#fff;font-size:15px;resize:vertical;outline:none;transition:0.2s}
+    .textarea:focus{border-color:var(--gold)}
+
+    .footer{padding:100px 0 60px;border-top:1px solid var(--line);background:var(--white)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:60px;flex-wrap:wrap}
+    .footer-brand strong{font-size:28px;letter-spacing:-1px}
+    .footer-brand p{max-width:360px;margin-top:20px;color:var(--gray);font-size:15px}
+    .social-links{display:flex;gap:14px;margin-top:32px}
+    .social-icon{width:44px;height:44px;border-radius:50%;background:var(--light);display:grid;place-items:center;transition:0.3s}
+    .social-icon:hover{background:var(--gold);color:#fff;transform:translateY(-4px)}
+    .footer-links{display:flex;gap:48px;font-weight:700;font-size:15px}
+
+    .back-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:var(--white);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;cursor:pointer;z-index:99;opacity:0;visibility:hidden;transition:0.3s;box-shadow:var(--shadow)}
+    .back-to-top.show{opacity:1;visibility:visible}
+    .back-to-top:hover{background:var(--black);color:var(--white);border-color:var(--black)}
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
       text-align: center;
-      border: 1px solid var(--line);
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      transition: 0.3s;
     }
-    .why-card h3 { margin: 20px 0 10px; }
-    .why-card p { font-size: 14px; color: var(--gray); }
-    .why-icon {
-      font-size: 40px;
-      color: var(--gold);
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #128c7e;
     }
 
     @media (max-width:992px){
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .factory-gallery { grid-template-columns: repeat(2, 1fr); }
-
       .hero{background-position:center;text-align:center;padding:120px 0}
       .hero::before{background:rgba(255,255,255,0.85)}
       .hero-content{margin:auto}
@@ -151,83 +196,6 @@
       .search-bar{padding:12px;border-radius:20px}
       .quote-form{padding:32px;border-radius:32px}
       .form-grid{grid-template-columns:1fr}
-      .factory-gallery{grid-template-columns:1fr}
-      .testimonials-stats { grid-template-columns: 1fr; gap: 30px; }
-      .stat-divider { border-left: none; border-top: 1px solid var(--line); padding-top: 30px; }
-    }
-
-    .testimonials-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 40px 0;
-      border-top: 2px solid var(--gold);
-      border-bottom: 2px solid var(--gold);
-      margin: 60px 0;
-      text-align: center;
-    }
-    .stat-item h3 { font-size: 42px; font-weight: 900; margin-bottom: 5px; color: var(--gold); }
-    .stat-item p { font-size: 14px; text-transform: uppercase; font-weight: 600; color: var(--gray); }
-    .stat-divider { border-left: 1px solid var(--line); }
-
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-    .review-card {
-      background: var(--white);
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-left: 8px solid var(--gold);
-      box-shadow: var(--shadow);
-      transition: 0.3s;
-    }
-    .review-card:hover { transform: translateY(-5px); }
-    .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
-    .customer-name { font-size: 18px; font-weight: 800; }
-    .stars { color: var(--gold); font-size: 18px; }
-    .review-text { font-size: 15px; line-height: 1.6; color: var(--black); font-weight: 500; font-style: italic; }
-
-    .reviews-footer {
-      background: var(--gold);
-      color: var(--white);
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    .reviews-footer:hover { transform: scale(1.02); box-shadow: var(--shadow); }
-    .highlight-gold { background: var(--gold); color: var(--white); padding: 0 8px; border-radius: 4px; }
-    .back-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:var(--white);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;cursor:pointer;z-index:999;opacity:0;visibility:hidden;transition:0.3s;box-shadow:var(--shadow)}
-    .back-to-top.show{opacity:1;visibility:visible}
-    .back-to-top:hover{background:var(--black);color:var(--white);border-color:var(--black)}
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 95px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 24px;
-      box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: grid;
-      place-items: center;
-      transition: 0.3s;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      background-color: #128c7e;
-      color: #fff;
     }
   </style>
 </head>
@@ -235,8 +203,8 @@
 
   <div class="top-bar">
     <div class="container">
-      <span>Custom Packaging Manufacturer | <strong>DDP Shipping to UAE, US & Europe</strong></span>
-      <span>Call/WhatsApp: <strong>+86 131-8901-8213</strong></span>
+      <span>Call us toll free: <strong>1-318-901-8213</strong></span>
+      <span>Mon-Fri: 9:30am - 6:30pm EST</span>
     </div>
   </div>
 
@@ -244,12 +212,11 @@
     <div class="container nav">
       <a href="/" class="logo" aria-label="gzwoood Home">
         <div class="logo-mark">W</div>
-        <div>gzwoood.com<small>Packaging Made Easy — Your Hassle-Free Packaging Expert.</small></div>
+        <div>gzwoood.com<small>Premium Packaging Factory</small></div>
       </a>
       <nav class="nav-menu">
-        <a href="#products">Catalog</a>
+        <a href="#products">Products</a>
         <a href="#industries">Industries</a>
-        <a href="#about">About Us</a>
         <a href="#quote">Contact</a>
       </nav>
       <a href="#quote" class="btn btn-gold">Get a Quote</a>
@@ -260,9 +227,9 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <span class="kicker">Direct Factory | Wholesale Pricing | Global Export</span>
-          <h1>Wholesale Custom Packaging & Eco-friendly Box Solutions</h1>
-          <p>Over 8 years of manufacturing expertise in custom rigid boxes, e-commerce mailer boxes, and luxury packaging for small businesses and global brands. FSC certified and 100% recyclable.</p>
+          <span class="kicker">Est. 2017 | Global Export</span>
+          <h1>Premium Sustainable Packaging Solutions</h1>
+          <p>Over 8 years of manufacturing expertise in custom rigid boxes, e-commerce mailers, and eco-friendly packaging for luxury brands worldwide.</p>
           <div class="hero-actions">
             <a href="#products" class="btn btn-large">Browse Catalog</a>
             <a href="#quote" class="btn btn-large btn-outline">Request Custom Quote</a>
@@ -271,15 +238,24 @@
       </div>
     </section>
 
-    <section id="products" class="section">
+    <div class="trust-badges">
+      <div class="container badge-grid">
+        <div class="badge-item"><span>🌿</span> FSC Certified</div>
+        <div class="badge-item"><span>♻️</span> 100% Recyclable</div>
+        <div class="badge-item"><span>🌎</span> Worldwide Shipping</div>
+        <div class="badge-item"><span>🏗️</span> Factory Direct</div>
+        <div class="badge-item"><span>⚡</span> Fast Production</div>
+      </div>
+    </div>
 
+    <section id="products" class="section">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="kicker">Product Showcase</span>
-            <h2 class="section-title">Wholesale Custom Packaging Styles</h2>
+            <h2 class="section-title">Fully Customizable Styles</h2>
           </div>
-          <p class="section-desc">Factory-direct manufacturing tailored to your product's specific dimensions and brand aesthetic. Wholesale luxury boxes, mailers, and eco-friendly retail packaging.</p>
+          <p class="section-desc">Tailored to your product's specific dimensions and brand aesthetic. Explore our range of high-durability structures and premium materials.</p>
         </div>
 
         <div class="search-bar">
@@ -441,7 +417,7 @@
             </div>
           </article>
 
-          <article class="product-card" data-category="Accessories" data-search="custom paper bags luxury retail bag shopping branding eco-friendly">
+          <article class="product-card" data-category="Accessories" data-search="custom paper bags luxury retail_bag shopping branding eco-friendly">
             <div class="product-image">
               <img src="assets/Custom_Paper_Bags.jpg" alt="Custom Luxury Paper Bags" loading="lazy" decoding="async">
               <span class="badge">Accessories</span></div>
@@ -538,79 +514,12 @@
       </div>
     </section>
 
-    <section id="about" class="section section-light">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-content">
-            <span class="kicker">Our Story</span>
-            <h2 class="section-title">Wholesale Packaging Manufacturer</h2>
-            <p><strong>Guangzhou Woood Trading Co., Ltd.</strong> is a premier <strong>custom packaging manufacturer</strong> based in Guangzhou, China. With over 10 years of factory experience, we specialize in high-quality <strong>wholesale paper packaging</strong> solutions, including rigid gift boxes, magnetic folding boxes, corrugated mailer boxes, and eco-friendly paper bags.</p>
-            <p>We help brands create packaging that is practical, attractive, and cost-effective. Customers can share product photos, dimensions, quantity, and design requirements, and our team will provide a detailed quotation and professional suggestions within 24 hours.</p>
-            <p>Whether you are developing a new packaging project or looking to optimize your current packaging cost, Woood Packaging is ready to support you from concept to delivery.</p>
-          </div>
-          <div class="factory-gallery">
-            <div class="gallery-item">
-              <img src="https://sc01.alicdn.com/kf/A50733507a0824a948146ea487f5b249dJ.jpg" alt="Heidelberg Printing Machine - High Quality Custom Box Printing" loading="lazy">
-              <p class="gallery-caption">Precision Heidelberg Printing</p>
-            </div>
-            <div class="gallery-item">
-              <img src="https://sc01.alicdn.com/kf/A1e74ddfda5ef4b91a0ceeb50e09dafc0J.jpg" alt="Woood Packaging Factory Floor - Custom Box Manufacturer China" loading="lazy">
-              <p class="gallery-caption">Advanced Manufacturing Floor</p>
-            </div>
-            <div class="gallery-item">
-              <img src="https://sc01.alicdn.com/kf/A0f80b1d1cd5d48888cda7ff47a1b381fV.jpg" alt="Packaging Production Line - FSC Certified Sustainable Materials" loading="lazy">
-              <p class="gallery-caption">FSC-Certified Production</p>
-            </div>
-            <div class="gallery-item">
-              <img src="https://sc01.alicdn.com/kf/A7f995767e6934888ac4ecc03745d26f4l.jpg" alt="Laminating Machine - Premium Surface Finishing for Luxury Boxes" loading="lazy">
-              <p class="gallery-caption">Premium Surface Finishing</p>
-            </div>
-            <div class="gallery-item">
-              <img src="https://sc01.alicdn.com/kf/Af82fb0c2f0bd45feb4c94acf569f0d28j.jpg" alt="Box Gluing Machine - Automated Rigid Box Assembly" loading="lazy">
-              <p class="gallery-caption">Automated Box Assembly</p>
-            </div>
-            <div class="gallery-item">
-              <img src="https://sc01.alicdn.com/kf/A89b877129d784e55a9b9e9f9aab16c6bq.jpg" alt="Assembly Workshop - QC Inspected Packaging Solutions" loading="lazy">
-              <p class="gallery-caption">Rigorous Quality Control</p>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top:80px; text-align:center">
-          <span class="kicker">The Woood Advantage</span>
-          <h2 class="section-title">Why Work With Us</h2>
-          <div class="why-grid">
-            <div class="why-card">
-              <div class="why-icon">⚡</div>
-              <h3>Fast Response</h3>
-              <p>One-on-one service with quotations and technical feedback within 2 working hours.</p>
-            </div>
-            <div class="why-card">
-              <div class="why-icon">📦</div>
-              <h3>Low Minimums</h3>
-              <p>Flexible MOQs and custom sample support to help brands test new packaging projects.</p>
-            </div>
-            <div class="why-card">
-              <div class="why-icon">🏭</div>
-              <h3>Direct Factory</h3>
-              <p>Competitive factory pricing with reliable after-sales service and quality control.</p>
-            </div>
-            <div class="why-card">
-              <div class="why-icon">🎨</div>
-              <h3>Expert Design</h3>
-              <p>Professional suggestions on structure and materials to ensure attractive and practical results.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="quote" class="section">
       <div class="container">
         <div class="quote-wrap">
           <div class="quote-info">
             <span class="kicker">Request a Quote</span>
-            <h2>Let's build your packaging</h2>
+            <h2>Let\'s build your packaging</h2>
             <p>Our packaging specialists are ready to help with structure, material selection, and cost optimization.</p>
             <div class="contact-list">
               <div>✉️ <a href="mailto:timwu@gzwoood.com">timwu@gzwoood.com</a></div>
@@ -653,14 +562,14 @@
         <p>Premium factory-direct manufacturer of luxury and eco-friendly packaging. Certified quality, global shipping.</p>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/tim-wu-387668257/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-          <a href="https://www.instagram.com/gzwoood/" target="_blank" rel="noopener" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z\"/></svg></a>
-          <a href="mailto:timwu@gzwoood.com" class="social-icon" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 8.138h-18.745l5.479-8.133zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z\"/></svg></a>
+          <a href="https://www.instagram.com/gzwoood/" target="_blank" rel="noopener" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="mailto:timwu@gzwoood.com" class="social-icon" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 8.138h-18.745l5.479-8.133zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z"/></svg></a>
         </div>
       </div>
       <div class="footer-links">
-        <a href="#products">Catalog</a>
+        <a href="#products">Products</a>
         <a href="#industries">Industries</a>
-        <a href="#about">About Us</a>
+        <a href="#finishes">Finishes</a>
         <a href="#quote">Contact</a>
       </div>
     </div>
@@ -673,75 +582,75 @@
 
   <script>
     // Search & Filter Logic
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const productCards = document.querySelectorAll('.product-card');
-    const searchInput = document.getElementById('searchInput');
-    let currentCategory = 'All';
+    const filterButtons = document.querySelectorAll(\'.filter-btn\');
+    const productCards = document.querySelectorAll(\'.product-card\');
+    const searchInput = document.getElementById(\'searchInput\');
+    let currentCategory = \'All\';
 
     function filterProducts() {
       const keyword = searchInput.value.trim().toLowerCase();
       productCards.forEach(card => {
         const category = card.dataset.category;
         const searchText = card.dataset.search.toLowerCase();
-        const title = card.querySelector('h3').textContent.toLowerCase();
+        const title = card.querySelector(\'h3\').textContent.toLowerCase();
         
-        const matchCategory = currentCategory === 'All' || category === currentCategory;
+        const matchCategory = currentCategory === \'All\' || category === currentCategory;
         const matchSearch = !keyword || searchText.includes(keyword) || title.includes(keyword);
         
         if(matchCategory && matchSearch) {
-          card.style.display = 'flex';
+          card.style.display = \'flex\';
         } else {
-          card.style.display = 'none';
+          card.style.display = \'none\';
         }
       });
     }
 
     filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+      button.addEventListener(\'click\', () => {
+        filterButtons.forEach(btn => btn.classList.remove(\'active\'));
+        button.classList.add(\'active\');
         currentCategory = button.dataset.category;
         filterProducts();
       });
     });
 
-    searchInput.addEventListener('input', filterProducts);
+    searchInput.addEventListener(\'input\', filterProducts);
 
     // WhatsApp Form Integration
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.getElementById(\'contactForm\');
     if(contactForm) {
-      contactForm.addEventListener('submit', (e) => {
+      contactForm.addEventListener(\'submit\', (e) => {
         e.preventDefault();
-        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        const inputs = contactForm.querySelectorAll(\'input, select, textarea\');
         const data = {};
         inputs.forEach(input => {
-          const key = input.placeholder || input.ariaLabel || 'Field';
+          const key = input.placeholder || input.ariaLabel || \'Field\';
           data[key] = input.value;
         });
         
         const message = `Inquiry from Website:
-Name: ${data['Full Name']}
-Contact: ${data['Email or WhatsApp']}
-Product: ${data['Box Type']}
-Quantity: ${data['Order Quantity']}
-Size: ${data['Box Size (L x W x H)']}
-Note: ${data['Material preferences, printing colors, or special requests...']}`;
+Name: ${data[\'Full Name\']}
+Contact: ${data[\'Email or WhatsApp\']}
+Product: ${data[\'Box Type\']}
+Quantity: ${data[\'Order Quantity\']}
+Size: ${data[\'Box Size (L x W x H)\']}
+Note: ${data[\'Material preferences, printing colors, or special requests...\']}`;
 
-        window.open(`https://wa.me/8613189018213?text=${encodeURIComponent(message)}`, '_blank');
+        window.open(`https://wa.me/8613189018213?text=${encodeURIComponent(message)}`, \'_blank\');
       });
     }
 
     // Scroll to Top
-    const btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
+    const btt = document.getElementById(\'backToTop\');
+    window.addEventListener(\'scroll\', () => {
       if(window.scrollY > 500) {
-        btt.classList.add('show');
+        btt.classList.add(\'show\');
       } else {
-        btt.classList.remove('show');
+        btt.classList.remove(\'show\');
       }
     });
-    btt.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    btt.addEventListener(\'click\', () => {
+      window.scrollTo({ top: 0, behavior: \'smooth\' });
     });
   </script>
 </body>
