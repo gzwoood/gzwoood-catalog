@@ -264,6 +264,16 @@
       transition: 0.3s;
     }
     .reviews-footer:hover { transform: scale(1.02); box-shadow: var(--shadow); }
+
+    /* FAQ Accordion Styles */
+    .faq-grid { max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; transition: 0.3s; }
+    .faq-item:hover { border-color: var(--gold); }
+    .faq-question { width: 100%; padding: 24px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; font-size: 18px; font-weight: 700; color: var(--black); transition: 0.3s; }
+    .faq-question::after { content: '+'; font-size: 24px; color: var(--gold); transition: 0.3s; }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; padding: 0 24px; color: var(--gray); font-size: 15px; line-height: 1.6; }
+    .faq-item.active .faq-answer { max-height: 500px; padding-bottom: 24px; }
   </style>
 
 
@@ -286,6 +296,7 @@
       <nav class="nav-menu">
         <a href="#products">Products</a>
         <a href="#about">About Us</a>
+        <a href="#faq">FAQ</a>
         <a href="#industries">Industries</a>
         <a href="#quote">Contact</a>
       </nav>
@@ -696,6 +707,88 @@
       </div>
     </section>
 
+    <section id="faq" class="section">
+      <div class="container">
+        <div style="text-align:center;max-width:820px;margin:auto">
+          <span class="kicker">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Everything you need to know about starting your custom packaging project with Woood.</p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question">What’s your MOQ?</button>
+            <div class="faq-answer">
+              <p>Our standard MOQ is:<br>
+              • 100 pcs for rigid and magnetic boxes<br>
+              • 200 pcs for mailer boxes and paper bags<br>
+              Need a smaller trial order? Contact us — we’ll do our best to help.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Can you help with packaging design?</button>
+            <div class="faq-answer">
+              <p>Yes. We provide free mockups and 3D previews before production. You can send us your artwork, or our team can help create the design for you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Do you provide samples?</button>
+            <div class="faq-answer">
+              <p>Absolutely. We provide a physical pre-production sample for approval before mass production begins. Sample lead time is usually 3–5 working days.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">How long is production?</button>
+            <div class="faq-answer">
+              <p>Standard production time is around 12–18 days after sample approval. Rush production is available for selected projects.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Can you match Pantone colors?</button>
+            <div class="faq-answer">
+              <p>Yes. We support Pantone color matching and work with AI, PDF, and editable artwork files.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">What finishing options do you offer?</button>
+            <div class="faq-answer">
+              <p>We offer a wide range of premium finishes, including:<br>
+              • Matte / Gloss Lamination<br>
+              • Soft-touch Finish<br>
+              • Foil Stamping<br>
+              • Embossing & Debossing<br>
+              • Spot UV<br>
+              • Textured Paper<br>
+              Need something special? Just ask.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">What payment methods do you accept?</button>
+            <div class="faq-answer">
+              <p>We accept:<br>
+              • T/T Bank Transfer<br>
+              • PayPal<br>
+              • Alibaba Trade Assurance<br>
+              Standard terms: 50% deposit before production, balance before shipment.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">Do you ship internationally?</button>
+            <div class="faq-answer">
+              <p>Yes — we ship worldwide. We offer sea freight, air freight, and express shipping based on your timeline and budget. DDP shipping is also available for selected countries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="reviews" class="section">
       <div class="container">
         <div style="text-align:center; margin-bottom:60px;">
@@ -836,10 +929,21 @@
   </a>
 
   <script>
-    // Search & Filter Logic
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const productCards = document.querySelectorAll('.product-card');
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+        
+        // Optional: Close other open items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) otherItem.classList.remove('active');
+        });
+      });
+    });
+
     const searchInput = document.getElementById('searchInput');
+
     let currentCategory = 'All';
 
     function filterProducts() {
