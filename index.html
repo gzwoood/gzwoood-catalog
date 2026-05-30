@@ -93,9 +93,11 @@
     .section-desc{max-width:680px;color:var(--gray);font-size:17px}
     .section-dark .section-desc{color:rgba(255,255,255,0.7)}
 
-    .trust-badges{padding:40px 0;border-bottom:1px solid var(--line);background:#fafafa}
-    .badge-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;opacity:0.6;filter:grayscale(1)}
-    .badge-item{display:flex;align-items:center;gap:10px;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+    .trust-badges{padding:40px 0;border-bottom:1px solid var(--line);background:#fff}
+    .badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 20px;text-align:center}
+    .badge-item{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:14px;color:#111}
+    .badge-item strong { font-weight: 800; }
+    .badge-item span { font-size: 32px; }
 
     .search-bar{margin-bottom:48px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;background:var(--light);padding:16px;border-radius:24px}
     .search-input{flex:1;min-width:300px;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:16px;outline:none;transition:0.2s}
@@ -105,7 +107,19 @@
     .filter-btn:hover{border-color:var(--black)}
     .filter-btn.active{background:#111;color:#fff;border-color:#111}
 
-    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:40px}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:40px}
+    
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .section { padding: 60px 0; }
+      .product-grid { grid-template-columns: 1fr; gap: 24px; }
+      .search-input { min-width: 100%; }
+      .section-head { margin-bottom: 32px; }
+      .badge-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
+      .badge-item { font-size: 11px; }
+      .badge-item span { font-size: 24px; }
+      .nav-menu { display: none; }
+    }
     .product-card{background:#fff;border-radius:36px;overflow:hidden;transition:0.4s var(--transition);border:1px solid var(--line);display:flex;flex-direction:column}
     .product-card:hover{transform:translateY(-12px);box-shadow:var(--shadow);border-color:transparent}
     .product-image{position:relative;aspect-ratio:1.2;background:var(--light);overflow:hidden}
@@ -339,37 +353,37 @@
     </section>
 
     <div class="trust-badges" style="background: #fff; border-bottom: 1px solid var(--line); padding: 60px 0;">
-      <div class="container badge-grid" style="opacity: 1; filter: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 20px; text-align: center;">
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">📦</span> 
+      <div class="container badge-grid">
+        <div class="badge-item">
+          <span>📦</span> 
           <strong>MOQ from 100 pcs</strong>
         </div>
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">🎨</span> 
+        <div class="badge-item">
+          <span>🎨</span> 
           <strong>Free design support & 3D mockup</strong>
         </div>
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">⏱️</span> 
+        <div class="badge-item">
+          <span>⏱️</span> 
           <strong>Samples in 3 days</strong>
         </div>
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">⚙️</span> 
+        <div class="badge-item">
+          <span>⚙️</span> 
           <strong>Mass production in 15 days</strong>
         </div>
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">🚀</span> 
+        <div class="badge-item">
+          <span>🚀</span> 
           <strong>USA & Europe DDP Delivery</strong>
         </div>
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">🌍</span> 
+        <div class="badge-item">
+          <span>🌍</span> 
           <strong>Serving 50+ Countries</strong>
         </div>
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">🤝</span> 
+        <div class="badge-item">
+          <span>🤝</span> 
           <strong>Trusted by 1000+ Brands</strong>
         </div>
-        <div class="badge-item" style="display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; color: #111;">
-          <span style="font-size: 32px;">🏭</span> 
+        <div class="badge-item">
+          <span>🏭</span> 
           <strong>10,000+ m² Facility</strong>
         </div>
       </div>
