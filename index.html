@@ -66,7 +66,14 @@
     .btn-gold{background:var(--gold);border-color:var(--gold);color:#fff}
     .btn-gold:hover{background:#b18e41;border-color:#b18e41}
 
-       .hero{position:relative;width:100%;aspect-ratio:3 / 1;display:flex;align-items:center;background:url('https://sc01.alicdn.com/kf/Acce1cfa7acbd44f09dbea9ca7dfc4d231.png') no-repeat center;background-size:100% 100%;padding:0;border-bottom:1px solid var(--line)}
+    /* Hero Responsiveness & Fixes */
+    .hero{position:relative;width:100%;aspect-ratio:3 / 1;display:flex;align-items:center;background:url('https://sc01.alicdn.com/kf/Acce1cfa7acbd44f09dbea9ca7dfc4d231.png') no-repeat center;background-size:cover;padding:0;border-bottom:1px solid var(--line)}
+    
+    @media (max-width: 768px) {
+      .hero { aspect-ratio: 1 / 1; background-position: center; }
+      .hero-content { left: 50% !important; transform: translateX(-50%); bottom: 20px !important; width: 90%; text-align: center; }
+      .hero-content .btn { width: 100%; justify-content: center; font-size: 14px !important; min-height: 44px !important; }
+    }
 
 
     
