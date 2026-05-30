@@ -371,6 +371,7 @@
   </header>
 
   <main>
+    <h1 style="display:none">Custom Packaging Manufacturer | Luxury Gift Boxes & Sustainable Mailers</h1>
     <section class="hero">
       <div class="container" style="position: relative; width: 100%; height: 100%; display: flex; flex-direction: column;">
         <div class="hero-content">
@@ -1023,6 +1024,8 @@
       });
     });
 
+    // Fix potential ReferenceError
+    const filterButtons = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('searchInput');
 
     let currentCategory = 'All';
