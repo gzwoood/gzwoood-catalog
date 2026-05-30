@@ -125,7 +125,26 @@
       .badge-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
       .badge-item { font-size: 11px; }
       .badge-item span { font-size: 24px; }
-      .nav-menu { display: none; }
+      
+      /* Mobile Nav: Horizontal Scroll */
+      .nav { flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+      .nav-menu { 
+        display: flex; 
+        order: 3; 
+        width: 100%; 
+        overflow-x: auto; 
+        white-space: nowrap; 
+        gap: 20px; 
+        padding: 10px 0;
+        scrollbar-width: none; /* Hide scrollbar Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+      }
+      .nav-menu::-webkit-scrollbar { display: none; } /* Hide scrollbar Chrome/Safari */
+      .nav-menu a { font-size: 13px; padding-bottom: 5px; }
+
+      .footer-inner { flex-direction: column; gap: 40px; text-align: center; align-items: center; }
+      .footer-links { flex-direction: column; gap: 16px; align-items: center; }
+      .footer-brand p { margin: 20px auto 0; }
     }
     .product-card{background:#fff;border-radius:36px;overflow:hidden;transition:0.4s var(--transition);border:1px solid var(--line);display:flex;flex-direction:column}
     .product-card:hover{transform:translateY(-12px);box-shadow:var(--shadow);border-color:transparent}
@@ -344,6 +363,7 @@
         <a href="#about">About Us</a>
         <a href="#faq">FAQ</a>
         <a href="#industries">Industries</a>
+        <a href="#finishes">Finishes</a>
         <a href="#quote">Contact</a>
       </nav>
       <a href="#quote" class="btn btn-gold">Get a Quote</a>
