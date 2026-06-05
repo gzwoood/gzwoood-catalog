@@ -487,6 +487,9 @@
             <button class="filter-btn" data-category="Cosmetics Packaging">Cosmetics Packaging</button>
             <button class="filter-btn" data-category="Gift Packaging">Gift Packaging</button>
           </div>
+          <div id="categoryDesc" class="category-description" style="margin-top: 15px; font-size: 14px; color: #666; max-width: 800px; line-height: 1.6;">
+            Discover our full range of premium custom packaging solutions. From luxury rigid boxes to eco-friendly shipping mailers, we provide high-quality, factory-direct products tailored to your brand's unique needs.
+          </div>
 
         </div>
 
@@ -1087,10 +1090,23 @@
     // Fix potential ReferenceError
     const filterButtons = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('searchInput');
+    const categoryDesc = document.getElementById('categoryDesc');
+    const productCards = document.querySelectorAll('.product-card');
+
+    const industryDescriptions = {
+      'All': "Discover our full range of premium custom packaging solutions. From luxury rigid boxes to eco-friendly shipping mailers, we provide high-quality, factory-direct products tailored to your brand's unique needs.",
+      'Beauty Packaging': "Elevate your fragrance and skincare line with our luxury beauty packaging. From premium essential oil boxes to bespoke fragrance sets, we focus on elegant finishes and protective structures that reflect your brand's sophistication.",
+      'Wig Packaging': "Designed for hair extensions and luxury wigs, our custom wig packaging features silk linings and magnetic closures. We provide foldable rigid structures to reduce shipping costs without compromising on the high-end unboxing experience.",
+      'Apparel Packaging': "Sustainable and durable packaging solutions for the apparel industry. We offer FSC-certified mailers, premium shopping bags, and branded boxes designed for both retail displays and secure e-commerce shipping.",
+      'Jewelry Packaging': "Exquisite jewelry boxes for watches, fine jewelry, and accessories. Our custom rigid drawer boxes and lid-and-base structures feature premium inserts like velvet or EVA foam to ensure your products are presented with elegance.",
+      'Cosmetics Packaging': "Premium cosmetics packaging for makeup, skincare, and beauty tools. Our custom folding cartons and printed paper boxes offer versatile designs with luxury finishes like foil stamping and UV coating to capture customer attention.",
+      'Gift Packaging': "Bespoke gift packaging for every occasion. Our high-quality gift boxes, including book-style and collapsible designs, use eco-friendly materials to provide a sustainable yet luxurious gifting solution for premium brands."
+    };
 
     let currentCategory = 'All';
 
     function filterProducts() {
+
       const keyword = searchInput.value.trim().toLowerCase();
       productCards.forEach(card => {
         const category = card.dataset.category;
@@ -1113,9 +1129,11 @@
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         currentCategory = button.dataset.category;
+        categoryDesc.textContent = industryDescriptions[currentCategory] || industryDescriptions['All'];
         filterProducts();
       });
     });
+
 
     searchInput.addEventListener('input', filterProducts);
 
@@ -1158,15 +1176,4 @@ Note: ${data['Material preferences, printing colors, or special requests...']}`;
   </script>
 </body>
 </html>
-
-/html>
-
-html>
-
-/html>
-
-
-/html>
-
-tml>
 
