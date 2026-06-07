@@ -85,15 +85,51 @@
     /* --- Luxopack Inspired Hero Style --- */
     .hero {
       position: relative;
-      background: #111;
+      background: #000;
       color: #fff;
-      padding: 0;
+      padding: 60px 0;
       overflow: hidden;
       min-height: 85vh;
       display: flex;
       align-items: center;
-      border-bottom: none;
     }
+    .hero .container {
+      width: min(1440px, 95%);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 0;
+      align-items: center;
+      position: relative;
+      z-index: 5;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding-right: 40px;
+    }
+    .hero-visual {
+      position: relative;
+      width: 100%;
+    }
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -1px;
+      width: 50%; height: 100%;
+      background: linear-gradient(to right, #000 0%, transparent 100%);
+      z-index: 2;
+    }
+    .hero-visual img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+      box-shadow: none;
+      transform: none;
+    }
+    .hero-visual:hover img {
+      transform: none;
+    }
+
     .hero .container {
       width: min(1400px, 100%);
       display: grid;
