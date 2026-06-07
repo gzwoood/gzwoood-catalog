@@ -87,13 +87,57 @@
       position: relative;
       background: #000;
       color: #fff;
-      padding: 120px 0 80px;
+      padding: 0;
       overflow: hidden;
       min-height: 85vh;
       display: flex;
       align-items: center;
       border-bottom: none;
     }
+    .hero .container {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 0;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content {
+      padding: 80px 40px 80px 80px;
+      z-index: 5;
+    }
+    .hero-visual {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .hero-visual img {
+      width: 110%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to right, #000 15%, transparent 60%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .stat .lbl {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
     .hero .container {
       width: min(1400px, 100%);
       display: grid;
