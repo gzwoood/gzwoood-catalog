@@ -191,8 +191,104 @@
       transform: perspective(1000px) rotateY(0deg) translateY(-10px);
     }
 
-    @media (max-width: 992px) {
-      .hero { padding: 40px 0; min-height: auto; }
+    /* News & Insights Styling */
+    .blog-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: 0.3s var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .blog-image {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+    }
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+    .blog-card:hover .blog-image img {
+      transform: scale(1.1);
+    }
+    .blog-body {
+      padding: 32px;
+      flex-grow: 1;
+    }
+    .blog-date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .blog-card h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .blog-card p {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    /* Modal Styling for Blog Content */
+    .blog-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(5px);
+      overflow-y: auto;
+    }
+    .blog-modal-content {
+      background: #fff;
+      margin: 50px auto;
+      width: min(900px, 90%);
+      border-radius: var(--radius);
+      padding: 60px;
+      position: relative;
+    }
+    .close-modal {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 30px;
+      cursor: pointer;
+      color: var(--black);
+    }
+    .blog-full-content h2 { font-size: 32px; margin-bottom: 24px; }
+    .blog-full-content h3 { font-size: 24px; margin: 32px 0 16px; color: var(--gold); }
+    .blog-full-content p { font-size: 17px; line-height: 1.8; color: var(--black); margin-bottom: 20px; }
+    .blog-full-content ul { margin-bottom: 24px; padding-left: 20px; }
+    .blog-full-content li { margin-bottom: 12px; font-size: 16px; }
+
+    @media (max-width: 768px) {
+      .blog-modal-content { padding: 40px 20px; margin: 20px auto; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
       .hero .container { grid-template-columns: 1fr; text-align: center; gap: 30px; }
       .hero-content { max-width: 100%; margin: 0 auto; order: 2; }
       .hero p { margin: 0 auto 30px; font-size: 16px; }
@@ -1156,7 +1252,74 @@
       </div>
     </section>
 
+    <section id="news" class="section section-light">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:60px;">
+          <span class="kicker">News & Insights</span>
+          <h2 class="section-title">EXPERT <span class="highlight-gold">PACKAGING</span> GUIDES</h2>
+          <p style="color:var(--gray)">Industry trends, material selection, and design tips</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="assets/padel-luxury-magnetic.webp" alt="Padel Racket Packaging Trends 2026">
+            </div>
+            <div class="blog-body">
+              <span class="blog-date">June 7, 2026</span>
+              <h3>How to Choose the Ultimate Padel Racket Packaging</h3>
+              <p>Discover the 2026 trends for sports brand packaging. From eco-friendly corrugated mailers to luxury magnetic gift boxes...</p>
+              <button class="btn btn-outline" onclick="openBlog('padel-blog')">Read Guide →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div id="padel-blog" class="blog-modal">
+      <div class="blog-modal-content">
+        <span class="close-modal" onclick="closeBlog('padel-blog')">&times;</span>
+        <div class="blog-full-content">
+          <span class="blog-date">June 7, 2026</span>
+          <h2>How to Choose the Ultimate Padel Racket Packaging: A Guide for Premium Sports Brands (2026)</h2>
+          <p>With the explosive growth of Padel in Europe, the USA, and the Middle East, brands are facing a new challenge: <strong>How to stand out in a crowded market through packaging?</strong></p>
+          <p>For professional racket brands, packaging is no longer just a box. It’s the first impression of your brand and the "armor" for your product during global transit. At <strong>Guangzhou Woood (gzwoood)</strong>, we specialize in high-end sports packaging. Here are the top 3 solutions favored by premium brands in 2026.</p>
+          
+          <h3>1. E-commerce Ready: The High-Strength Corrugated Solution</h3>
+          <p>If your business focuses on online sales and global DDP shipping, a high-strength <strong>Corrugated Mailer Box</strong> is your best choice.</p>
+          <ul>
+            <li><strong>Core Advantage:</strong> Lightweight, shock-resistant, and cost-effective.</li>
+            <li><strong>Design Tip:</strong> Use E-flute material and consider inside printing to tell your brand story during the unboxing experience.</li>
+          </ul>
+
+          <h3>2. The Luxury Statement: Magnetic Rigid Gift Boxes</h3>
+          <p>For retail display or limited edition rackets, a <strong>Magnetic Rigid Box</strong> is the ultimate symbol of luxury.</p>
+          <ul>
+            <li><strong>Core Advantage:</strong> Secure magnetic closure, premium soft-touch finish, and exceptional durability.</li>
+            <li><strong>Design Tip:</strong> Combine Spot UV, Gold Foiling, or Embossing to make your brand feel like a luxury piece the moment it's held.</li>
+          </ul>
+
+          <h3>3. The Elite Protection: Precision Foam Inserts</h3>
+          <p>The success of packaging often depends on the protection inside.</p>
+          <ul>
+            <li><strong>Core Advantage:</strong> Custom-cut high-density EVA foam or sustainable paper inserts.</li>
+            <li><strong>Design Tip:</strong> 1:1 mold-cutting ensures the racket remains static during transit and can include extra space for balls or accessories.</li>
+          </ul>
+
+          <h3>Why Sustainability Matters?</h3>
+          <p>Overseas markets, especially in Europe and North America, have reached an all-time high demand for sustainable packaging. As an FSC-certified factory, gzwoood’s Padel solutions are <strong>100% recyclable</strong>, helping your brand meet international environmental regulations.</p>
+
+          <div style="margin-top:40px; padding:30px; background:#f9f9f9; border-radius:15px; text-align:center;">
+            <p><strong>Ready to customize your Padel packaging?</strong></p>
+            <p>Guangzhou Woood offers low MOQ (100pcs) and global DDP shipping services.</p>
+            <a href="#quote" class="btn btn-gold" onclick="closeBlog('padel-blog')">Get Factory Price Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section id="reviews" class="section">
+
       <div class="container">
         <div style="text-align:center; margin-bottom:60px;">
           <span class="kicker">Voice of Customers</span>
@@ -1304,7 +1467,25 @@
 
 
   <script>
+    // Blog Modal Logic
+    function openBlog(id) {
+      document.getElementById(id).style.display = "block";
+      document.body.style.overflow = "hidden"; // Prevent scrolling
+    }
+    function closeBlog(id) {
+      document.getElementById(id).style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    // Close modal when clicking outside content
+    window.onclick = function(event) {
+      if (event.target.className === "blog-modal") {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+
     // FAQ Accordion Toggle
+
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {
         const item = button.parentElement;
