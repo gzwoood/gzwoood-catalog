@@ -85,7 +85,7 @@
     /* --- Luxopack Inspired Hero Style --- */
     .hero {
       position: relative;
-      background: #111;
+      background: #000;
       color: #fff;
       padding: 120px 0 80px;
       overflow: hidden;
@@ -180,12 +180,22 @@
     .hero-visual {
       position: relative;
     }
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to right, #000 0%, transparent 25%, transparent 75%, #000 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
     .hero-visual img {
       width: 100%;
       border-radius: var(--radius);
       box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
       transform: perspective(1000px) rotateY(-5deg);
       transition: 0.5s var(--transition);
+      display: block;
     }
     .hero-visual:hover img {
       transform: perspective(1000px) rotateY(0deg) translateY(-10px);
@@ -691,7 +701,7 @@
           </div>
         </div>
         <div class="hero-visual">
-          <img src="assets/hero-luxo.webp" alt="Luxury Packaging Collection - gzwoood" loading="eager">
+          <img src="assets/hero-v2.webp" alt="Luxury Packaging Collection - gzwoood" loading="eager">
         </div>
       </div>
     </section>
