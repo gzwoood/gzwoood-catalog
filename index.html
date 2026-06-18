@@ -400,10 +400,21 @@
     .industry-item:hover{color:var(--gold);padding-left:12px;border-bottom-color:var(--gold)}
     .industry-item span{font-size:16px;opacity:0.3}
 
-    .finish-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;margin-top:60px}
-    .finish-item{padding:24px;border-radius:24px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:15px;display:flex;align-items:center;gap:14px;transition:0.3s}
-    .finish-item:hover{border-color:var(--gold);background:var(--light)}
-    .finish-item .check{color:var(--gold);font-size:18px}
+    /* Finishing Options Redesign */
+    .finishing-section { background: #000; padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+    .finishing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; margin-top: 60px; }
+    .finish-card { display: flex; flex-direction: column; gap: 15px; }
+    .finish-icon { font-size: 28px; margin-bottom: 5px; }
+    .finish-card h3 { font-size: 20px; margin: 0; font-weight: 700; color: #fff; }
+    .finish-best-for { font-size: 12px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .finish-desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 0; }
+
+    @media (max-width: 992px) {
+      .finishing-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .finishing-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
 
     .process-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:40px}
     .process-card{padding:48px;border-radius:40px;background:#1a1a1a;border:1px solid #333;transition:0.3s}
@@ -1178,25 +1189,66 @@
       </div>
     </section>
 
-    <section id="finishes" class="section section-light">
+    <section id="finishes" class="finishing-section">
       <div class="container">
         <div style="text-align:center;max-width:820px;margin:auto">
-          <span class="kicker">Premium Finishings</span>
-          <h2 class="section-title">Elevate Your Unboxing</h2>
-          <p class="section-desc">From sensory textures to metallic highlights, our range of surface treatments ensures your packaging leaves a lasting impression.</p>
+          <span class="kicker">Finishing Options</span>
+          <h2 class="section-title">Premium Craftsmanship. <span style="color:var(--gold)">Exceptional Identity.</span></h2>
+          <p class="section-desc" style="color:rgba(255,255,255,0.6); margin: 0 auto;">The perfect finishing touch transforms your packaging into a powerful brand statement. Select from our range of high-end techniques to create a lasting first impression.</p>
         </div>
-        <div class="finish-grid">
-          <div class="finish-item"><span class="check">✓</span> Soft-touch Lamination</div>
-          <div class="finish-item"><span class="check">✓</span> Metallic Foil Stamping</div>
-          <div class="finish-item"><span class="check">✓</span> High-gloss Spot UV</div>
-          <div class="finish-item"><span class="check">✓</span> Multi-level Embossing</div>
-          <div class="finish-item"><span class="check">✓</span> Anti-scratch Matte Film</div>
-          <div class="finish-item"><span class="check">✓</span> FSC Certified Paper</div>
-          <div class="finish-item"><span class="check">✓</span> Biodegradable Adhesives</div>
-          <div class="finish-item"><span class="check">✓</span> Recyclable Soy Inks</div>
+        
+        <div class="finishing-grid">
+          <!-- 1. Gold / Silver Foil Stamping -->
+          <div class="finish-card">
+            <div class="finish-icon">✨</div>
+            <h3>Gold / Silver Foil Stamping</h3>
+            <span class="finish-best-for">Ideal for: Luxury Packaging, Jewelry, Cosmetics</span>
+            <p class="finish-desc">Metallic foil is pressed onto the packaging surface using heat and pressure, creating a premium reflective logo or design. Available in gold, silver, rose gold, holographic, and other custom finishes to enhance brand recognition.</p>
+          </div>
+
+          <!-- 2. Soft Touch Lamination -->
+          <div class="finish-card">
+            <div class="finish-icon">🖐️</div>
+            <h3>Soft Touch Lamination</h3>
+            <span class="finish-best-for">Ideal for: Beauty, Fashion, Premium Consumer Brands</span>
+            <p class="finish-desc">A smooth velvet-like coating that delivers a luxurious tactile experience. Reduces glare while enriching color depth. Often paired with foil stamping or Spot UV to create a sophisticated contrast effect.</p>
+          </div>
+
+          <!-- 3. Spot UV Coating -->
+          <div class="finish-card">
+            <div class="finish-icon">💎</div>
+            <h3>Spot UV Coating</h3>
+            <span class="finish-best-for">Ideal for: Corporate Packaging, Electronics, Premium Retail</span>
+            <p class="finish-desc">A glossy coating applied to selected areas of the design, highlighting logos, graphics, or patterns. Creates visual depth and a premium look while adding a subtle tactile effect.</p>
+          </div>
+
+          <!-- 4. Embossing / Debossing -->
+          <div class="finish-card">
+            <div class="finish-icon">💼</div>
+            <h3>Embossing / Debossing</h3>
+            <span class="finish-best-for">Ideal for: Stationery, Candles, Lifestyle Products</span>
+            <p class="finish-desc">Create raised or recessed logo effects directly on the packaging surface. This technique adds texture and dimension without additional ink, delivering a refined and professional appearance.</p>
+          </div>
+
+          <!-- 5. Full CMYK Printing -->
+          <div class="finish-card">
+            <div class="finish-icon">🌈</div>
+            <h3>Full CMYK Printing</h3>
+            <span class="finish-best-for">Ideal for: E-commerce, Subscription Boxes, Food Packaging</span>
+            <p class="finish-desc">High-resolution full-color printing for vibrant branding and product presentation. Suitable for both exterior and interior printing, with Pantone color matching available upon request.</p>
+          </div>
+
+          <!-- 6. Custom Inserts & Interior Linings -->
+          <div class="finish-card">
+            <div class="finish-icon">🎗️</div>
+            <h3>Custom Inserts & Interior Linings</h3>
+            <span class="finish-best-for">Ideal for: Jewelry, Watches, Electronics, Perfume</span>
+            <p class="finish-desc">Custom inserts made from EVA foam, velvet, satin, paperboard, or other materials to securely hold products in place. Designed to enhance protection, presentation, and the overall unboxing experience.</p>
+          </div>
         </div>
       </div>
     </section>
+
 
     <section id="process" class="section section-dark">
       <div class="container">
