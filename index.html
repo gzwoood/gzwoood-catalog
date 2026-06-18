@@ -584,21 +584,27 @@
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; padding: 0 24px; color: var(--gray); font-size: 15px; line-height: 1.6; }
     .faq-item.active .faq-answer { max-height: 500px; padding-bottom: 24px; }
 
-    /* Video Section Styles */
-    .video-section { background: var(--light); border-radius: 40px; padding: 60px; margin: 40px 0; }
-    .video-wrapper { position: relative; width: 100%; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); background: #000; }
-    .video-wrapper video { width: 100%; display: block; }
-    .video-info { margin-top: 32px; text-align: center; }
-    .video-info h3 { font-size: 24px; margin-bottom: 12px; color: var(--black); }
-    .video-info p { color: var(--gray); max-width: 600px; margin: auto; font-size: 16px; }
+    /* Video & Factory Section Styles */
+    .factory-strength-section { background: #000; padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+    .factory-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; margin-bottom: 30px; }
+    .video-box { position: relative; background: #111; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; border: 1px solid rgba(255,255,255,0.1); }
+    .video-box video { width: 100%; height: 100%; object-fit: cover; }
+    .stats-box { background: linear-gradient(135deg, #111 0%, #050505 100%); padding: 40px; border-radius: var(--radius); display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; border: 1px solid rgba(201,163,78,0.2); align-content: center; }
+    .stat-row { display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px; }
+    .stat-icon { font-size: 20px; color: var(--gold); opacity: 0.8; }
+    .stat-text h4 { font-size: 18px; margin: 0; color: var(--white); font-weight: 700; letter-spacing: 0.5px; }
+    .stat-text p { font-size: 10px; color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; opacity: 0.7; }
+    .image-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .gallery-item { border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; border: 1px solid rgba(255,255,255,0.1); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .trust-row { display: flex; justify-content: space-around; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 60px; flex-wrap: wrap; gap: 30px; text-align: center; }
+    .trust-item strong { display: block; font-size: 18px; color: var(--gold); margin-bottom: 5px; }
+    .trust-item span { font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; }
 
-    /* Responsive Adjustments for Video Section */
-    @media (max-width: 768px) {
-      .video-section { padding: 30px 20px; border-radius: 24px; margin: 24px 0; }
-      .video-wrapper { border-radius: 16px; }
-      .video-info { margin-top: 20px; }
-      .video-info h3 { font-size: 20px; }
-      .video-info p { font-size: 14px; }
+    @media (max-width: 992px) {
+      .factory-grid { grid-template-columns: 1fr; }
+      .image-gallery { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 
@@ -1080,61 +1086,76 @@
       </div>
     </section>
 
-    <section id="about" class="section section-light">
+    <section id="factory" class="factory-strength-section">
       <div class="container">
-        <div class="about-content">
-          <div>
-            <span class="kicker">About Woood Packaging</span>
-            <h2 class="section-title">Your Hassle-Free Packaging Expert</h2>
-            <p class="section-desc" style="margin-top:24px">
-              Guangzhou Woood Trading Co., Ltd. is a custom packaging manufacturer based in Guangzhou, China. With over 10 years of industry experience, we specialize in paper packaging solutions, including rigid gift boxes, magnetic folding boxes, corrugated mailer boxes, paper bags, stickers, tissue paper, and other supporting packaging materials.
-            </p>
-            <p class="section-desc" style="margin-top:16px">
-              We help brands create packaging that is practical, attractive, and cost-effective. Customers can share product photos, dimensions, quantity, and design requirements, and our team will provide a detailed quotation and professional suggestions within 24 hours.
-            </p>
-            <p class="section-desc" style="margin-top:16px">
-              Whether you are developing a new packaging project or looking to optimize your current packaging cost, Woood Packaging is ready to support you from concept to delivery.
-            </p>
-          </div>
-          <div class="why-us">
-            <h3>Why Work With Us</h3>
-            <ul class="why-list">
-              <li>One-on-one service</li>
-              <li>Fast response within 2 working hours</li>
-              <li>Competitive factory pricing</li>
-              <li>Custom sample support</li>
-              <li>Reliable after-sales service</li>
-            </ul>
-          </div>
-        </div>
+        <span class="kicker">True Manufacturing Power</span>
+        <h2 class="section-title">DIRECT FROM OUR <span class="highlight-gold" style="background:none; color:var(--gold); padding:0;">GUANGZHOU</span> FACTORY</h2>
         
-        <div class="factory-gallery">
-          <div class="factory-img"><img src="assets/factory_1.webp" alt="Woood Packaging Factory Exterior - Professional Box Manufacturer in China" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_2.webp" alt="FSC Certified Sustainable Packaging Production Line" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_3.webp" alt="Heidelberg Printing Press - High Precision Custom Box Printing" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_4.webp" alt="Automatic Box Assembly - Rigid Box Production" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_5.webp" alt="Packaging Workshop and Assembly Floor" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_6.webp" alt="Precision Cutting Equipment for Custom Box Shapes" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_7.webp" alt="Automatic Folder Gluer - High Speed Packaging Solutions" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_8.webp" alt="Paper Stock and Warehouse - Wholesale Packaging Materials" loading="lazy"></div>
-          <div class="factory-img"><img src="assets/factory_9.webp" alt="Packaging Production Equipment - Custom Box Manufacturing" loading="lazy"></div>
-        </div>
-
-        <!-- Factory Video Highlight -->
-        <div class="video-section">
-          <div class="video-wrapper">
-            <video controls autoplay muted loop playsinline poster="assets/home_hero.webp">
-              <source src="assets/guangzhou-factory-source.mp4" type="video/mp4">
-              Your browser does not support the video tag.
+        <div class="factory-grid">
+          <div class="video-box">
+            <video autoplay muted loop playsinline>
+              <source src="assets/factory-tour.mp4" type="video/mp4">
             </video>
           </div>
-          <div class="video-info">
-            <span class="kicker">Direct Source Factory</span>
-            <h3>Manufacturing Excellence in Guangzhou</h3>
-            <p>Direct from the heart of China's packaging hub. We specialize in premium magnetic boxes, durable corrugated shipping solutions, and high-end paper products for global brands.</p>
+          <div class="stats-box">
+            <div class="stat-row">
+              <div class="stat-icon">🏭</div>
+              <div class="stat-text">
+                <p>Facility Size</p>
+                <h4>10,000+ sqm</h4>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-icon">⚙️</div>
+              <div class="stat-text">
+                <p>Monthly Output</p>
+                <h4>3M+ Units</h4>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-icon">🔍</div>
+              <div class="stat-text">
+                <p>Quality Control</p>
+                <h4>3-Stage Inspection</h4>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-icon">🌍</div>
+              <div class="stat-text">
+                <p>Brands Served</p>
+                <h4>2,000+ Global</h4>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-icon">⚡</div>
+              <div class="stat-text">
+                <p>Fast Sampling</p>
+                <h4>3-5 Days</h4>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-icon">🛡️</div>
+              <div class="stat-text">
+                <p>Certificates</p>
+                <h4>ISO & FSC</h4>
+              </div>
+            </div>
           </div>
         </div>
 
+        <div class="image-gallery">
+          <div class="gallery-item"><img src="assets/factory-1.jpg" alt="Woood Packaging Factory Exterior"></div>
+          <div class="gallery-item"><img src="assets/factory-2.jpg" alt="Premium Sample Showroom"></div>
+          <div class="gallery-item"><img src="assets/factory-4.jpg" alt="Automated Production Line"></div>
+          <div class="gallery-item"><img src="assets/factory-6.jpg" alt="Quality Inspection & Packing"></div>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item"><strong>Verified Manufacturer</strong><span>Source Authority</span></div>
+          <div class="trust-item"><strong>8-10 Years Exp</strong><span>Industry Expertise</span></div>
+          <div class="trust-item"><strong>Global DDP</strong><span>Logistics Support</span></div>
+          <div class="trust-item"><strong>100 PCS MOQ</strong><span>Low Entry Barrier</span></div>
+        </div>
       </div>
     </section>
 
