@@ -4,14 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Google tag (gtag.js) -->
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR"></script>
+  <!-- Google tag (gtag.js) - Optimized Loading -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    function loadGA() {
+      var script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR";
+      script.defer = true;
+      document.head.appendChild(script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8KBKPMQ3FR');
+    }
 
-    gtag('config', 'G-8KBKPMQ3FR');
+    // Delay GA loading until interaction or 3 seconds
+    var gaLoaded = false;
+    function initGA() {
+      if (!gaLoaded) {
+        gaLoaded = true;
+        loadGA();
+        window.removeEventListener('scroll', initGA);
+        window.removeEventListener('mousemove', initGA);
+        window.removeEventListener('touchstart', initGA);
+      }
+    }
+    window.addEventListener('scroll', initGA);
+    window.addEventListener('mousemove', initGA);
+    window.addEventListener('touchstart', initGA);
+    setTimeout(initGA, 3000);
   </script>
 
   <meta name="google-site-verification" content="RtPGel4gFz_kWSQYgmIBWt3-078U-LiKkMXjD6Fdk1g" />
