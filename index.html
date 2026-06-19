@@ -339,28 +339,21 @@
 
 
     .section{padding:100px 0}
-    .section-light{background:var(--light)}
-    .section-dark{background:#111;color:#fff}
-    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px}
-    .kicker{color:var(--gold);font-size:13px;font-weight:900;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:12px;display:block}
-    .section-title{font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-0.04em}
-    .section-desc{max-width:680px;color:var(--gray);font-size:17px}
-    .section-dark .section-desc{color:rgba(255,255,255,0.7)}
-
-    .trust-badges{padding:40px 0;border-bottom:1px solid var(--line);background:#fff}
-    .badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 20px;text-align:center}
-    .badge-item{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:14px;color:#111}
-    .badge-item strong { font-weight: 800; }
-    .badge-item span { font-size: 32px; }
-
-    .search-bar{margin-bottom:48px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;background:var(--light);padding:16px;border-radius:24px}
-    .search-input{flex:1;min-width:300px;min-height:54px;padding:0 24px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:16px;outline:none;transition:0.2s}
-    .search-input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,163,78,0.1)}
-    .filter-group{display:flex;flex-wrap:wrap;gap:10px;padding: 4px 0 12px;}
-    @media (max-width: 992px) {
-      .filter-group { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-      .filter-group::-webkit-scrollbar { display: none; }
+    .section-light{background:var(--light); color:#111}
+    .section-light .section-desc, .section-light p { color: #555; }
+    .product-card{background:#fff; color:#111; border-radius:36px;overflow:hidden;transition:0.4s var(--transition);border:1px solid var(--line);display:flex;flex-direction:column}
+    .product-card p { color: #666; }
+    .quote-form{padding:48px;background:#fff;color:#111; border-radius:48px}
+    .blog-modal-content {
+      background: #fff;
+      color: #111;
+      margin: 50px auto;
+      width: min(900px, 90%);
+      border-radius: var(--radius);
+      padding: 60px;
+      position: relative;
     }
+
 
     .filter-btn{padding:0 22px;min-height:44px;border-radius:999px;font-size:13px;font-weight:700;background:#fff;border:1px solid var(--line);cursor:pointer;white-space:nowrap;transition:0.3s}
     .filter-btn:hover{border-color:var(--black)}
@@ -372,7 +365,7 @@
       .container { padding: 0 24px; }
       .section { padding: 60px 0; }
       .product-grid { grid-template-columns: 1fr; gap: 24px; }
-      .search-input { min-width: 100%; }
+      .search-input { min-width: 100%; color: #111; }
       .section-head { margin-bottom: 32px; }
       .badge-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
       .badge-item { font-size: 11px; }
@@ -545,6 +538,18 @@
       .footer-inner{flex-direction:column;align-items:center;text-align:center}
       .footer-links{justify-content:center}
     }
+
+    /* Visibility Fixes for Light Backgrounds */
+    .section-light, .section-light h2, .section-light h3, .section-light p, .section-light span:not(.kicker) { color: #111 !important; }
+    .product-card, .product-card h3, .product-card p { color: #111 !important; }
+    .product-card p { color: #666 !important; }
+    .quote-form, .quote-form h2, .quote-form p, .quote-form label { color: #111 !important; }
+    .field, .textarea, .search-input { color: #111 !important; background: #fff !important; }
+    .search-input::placeholder { color: #888 !important; }
+    .blog-modal-content, .blog-modal-content h2, .blog-modal-content h3, .blog-modal-content p, .blog-modal-content li { color: #111 !important; }
+    .filter-btn:not(.active) { color: #111 !important; background: #fff !important; }
+    .badge { color: #111 !important; }
+    .why-us, .why-us h3, .why-us li { color: #111 !important; }
     @media (max-width:600px){
       .top-bar .container{justify-content:center}
       .top-bar span:last-child{display:none}
