@@ -1666,16 +1666,25 @@
       }
     }
 
-    // FAQ Accordion Toggle
+    /* --- Performance Optimization: TBT Reduction --- */
+    // Helper to defer non-critical tasks
+    const idleRun = (fn) => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(fn);
+      } else {
+        setTimeout(fn, 1);
+      }
+    };
 
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.parentElement;
-        item.classList.toggle('active');
-        
-        // Optional: Close other open items
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-          if (otherItem !== item) otherItem.classList.remove('active');
+    // FAQ Accordion Toggle - Deferred
+    idleRun(() => {
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement;
+          item.classList.toggle('active');
+          document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== item) otherItem.classList.remove('active');
+          });
         });
       });
     });
@@ -1700,23 +1709,21 @@
 
     let currentCategory = 'All';
 
+    // Throttled Search/Filter to reduce CPU task duration
+    let filterTimeout;
     function filterProducts() {
-
-      const keyword = searchInput.value.trim().toLowerCase();
-      productCards.forEach(card => {
-        const category = card.dataset.category;
-        const searchText = card.dataset.search.toLowerCase();
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        
-        const matchCategory = currentCategory === 'All' || category === currentCategory;
-        const matchSearch = !keyword || searchText.includes(keyword) || title.includes(keyword);
-        
-        if(matchCategory && matchSearch) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      clearTimeout(filterTimeout);
+      filterTimeout = setTimeout(() => {
+        const keyword = searchInput.value.trim().toLowerCase();
+        productCards.forEach(card => {
+          const category = card.dataset.category;
+          const searchText = card.dataset.search.toLowerCase();
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const matchCategory = currentCategory === 'All' || category === currentCategory;
+          const matchSearch = !keyword || searchText.includes(keyword) || title.includes(keyword);
+          card.style.display = (matchCategory && matchSearch) ? 'flex' : 'none';
+        });
+      }, 50); // Small debounce to break long tasks
     }
 
     filterButtons.forEach(button => {
