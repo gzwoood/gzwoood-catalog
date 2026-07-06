@@ -491,10 +491,7 @@
     .why-list{list-style:none}
     .why-list li{margin-bottom:16px;display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px}
     .why-list li::before{content:'✓';color:var(--gold);font-weight:900}
-    .factory-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:60px…19480 tokens truncated…</p>
-
-          <div class="blog-cta-box" style="margin-top:40px; padding:35px; background:linear-gradient(135deg, #1a1a1a 0%, #000 100%); border:1px solid var(--gold); border-radius:15px; text-align:center; color:#fff;">
-            <h4 style="color:var(--gold); font-size:24px; margin-bottom:15px;">Boost Your Padel Brand with Premium Packaging</h4>
+    .factory-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:60px…19599 tokens truncated…--gold); font-size:24px; margin-bottom:15px;">Boost Your Padel Brand with Premium Packaging</h4>
             <p style="margin-bottom:25px; color:rgba(255,255,255,0.8);">Low MOQ (100pcs), Free 3D Design & Global DDP Shipping. Get your factory-direct quote in 24 hours.</p>
             <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
               <a href="#quote" class="btn btn-gold" onclick="closeBlog('padel-blog')" style="min-width:200px;">Get Factory Price Now →</a>
@@ -592,11 +589,17 @@
             </div>
           </div>
           <div class="quote-form-column">
-          <form class="quote-form" id="contactForm">
+          <form class="quote-form" id="contactForm" action="https://formsubmit.co/timwu@gzwoood.com" method="POST">
+            <input type="hidden" name="_subject" value="New Packaging Inquiry from gzwoood.com">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://gzwoood.com/?inquiry=success#quote">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
             <div class="form-grid">
-              <input class="field" type="text" placeholder="Full Name" required>
-              <input class="field" type="text" placeholder="Email or WhatsApp" required>
-              <select class="field" aria-label="Box Type">
+              <p class="form-status" id="formStatus" role="status">Thank you. Your inquiry has been sent successfully. Our packaging team will contact you shortly.</p>
+              <input class="field" type="text" name="Full Name" placeholder="Full Name" autocomplete="name" required>
+              <input class="field" type="text" name="Email or WhatsApp" placeholder="Email or WhatsApp" autocomplete="email" required>
+              <select class="field" name="Box Type" aria-label="Box Type">
                 <option value="">Box Type</option>
                 <option>Magnetic Box</option>
                 <option>Mailer Box</option>
@@ -604,14 +607,14 @@
                 <option>Luxury Gift Box</option>
                 <option>Other</option>
               </select>
-              <select class="field" aria-label="Order Quantity">
+              <select class="field" name="Order Quantity" aria-label="Order Quantity">
                 <option value="">Quantity</option>
                 <option>500 - 1,000 pcs</option>
                 <option>1,000 - 3,000 pcs</option>
                 <option>5,000+ pcs</option>
               </select>
-              <input class="field-full" type="text" placeholder="Box Size (L x W x H)">
-              <textarea class="field-full" placeholder="Material preferences, printing colors, or special requests..."></textarea>
+              <input class="field-full" type="text" name="Box Size" placeholder="Box Size (L x W x H)">
+              <textarea class="field-full" name="Project Details" placeholder="Material preferences, printing colors, or special requests..."></textarea>
               <button class="btn btn-gold field-full" type="submit">Submit Inquiry</button>
             </div>
           </form>
@@ -771,28 +774,11 @@
 
     searchInput.addEventListener('input', filterProducts);
 
-    // WhatsApp Form Integration
-    const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const inputs = contactForm.querySelectorAll('input, select, textarea');
-        const data = {};
-        inputs.forEach(input => {
-          const key = input.placeholder || input.ariaLabel || 'Field';
-          data[key] = input.value;
-        });
-        
-        const message = `Inquiry from Website:
-Name: ${data['Full Name']}
-Contact: ${data['Email or WhatsApp']}
-Product: ${data['Box Type']}
-Quantity: ${data['Order Quantity']}
-Size: ${data['Box Size (L x W x H)']}
-Note: ${data['Material preferences, printing colors, or special requests...']}`;
-
-        window.open(`https://wa.me/8613189018213?text=${encodeURIComponent(message)}`, '_blank');
-      });
+    // Show confirmation after the form service redirects back to the quote section.
+    const inquiryParams = new URLSearchParams(window.location.search);
+    const formStatus = document.getElementById('formStatus');
+    if (formStatus && inquiryParams.get('inquiry') === 'success') {
+      formStatus.classList.add('show');
     }
 
     // Scroll to Top
