@@ -577,6 +577,15 @@
     .back-to-top{width:50px;height:50px;background:var(--white);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transition:0.3s;box-shadow:var(--shadow)}
 
 
+    /* Trust Section Styling - Brand Logos */
+    .trust-container { margin-top: 40px; text-align: center; width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; grid-column: 1 / -1; }
+    .trust-label { font-size: 11px; color: var(--gold) !important; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; display: block; font-weight: 800; }
+    .trust-icons { display: flex; flex-wrap: wrap; gap: 35px; align-items: center; justify-content: center; }
+    .trust-icon-item { display: flex; align-items: center; gap: 10px; transition: 0.3s; color: #fff !important; }
+    .trust-icon-item img { height: 28px; width: auto; object-fit: contain; }
+    .trust-icon-item span { font-size: 13px; font-weight: 800; letter-spacing: -0.2px; color: #fff !important; }
+    .trust-icon-item:hover { transform: translateY(-2px); opacity: 0.9; }
+
     @media (max-width:992px){
       .industry-grid, .quote-wrap, .advantage-grid, .about-content{grid-template-columns:1fr;gap:60px}
       .factory-gallery{grid-template-columns:1fr 1fr}
@@ -1842,6 +1851,32 @@
               <button class="btn btn-gold field-full" type="submit">Submit Inquiry</button>
             </div>
           </form>
+
+          <div class="trust-container">
+            <span class="trust-label">Secure Payment & Global Logistics</span>
+            <div class="trust-icons">
+              <div class="trust-icon-item" title="PayPal Accepted">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Logo">
+                <span>PayPal</span>
+              </div>
+              <div class="trust-icon-item" title="Alibaba Trade Assurance">
+                <img src="https://img.alicdn.com/tfs/TB16z_5RXXXXXb9XFXXXXXXXXXX-100-100.png" alt="Trade Assurance Logo">
+                <span>Trade Assurance</span>
+              </div>
+              <div class="trust-icon-item" title="FSC Certified">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/FSC_logo.svg" alt="FSC Logo">
+                <span>FSC Certified</span>
+              </div>
+              <div class="trust-icon-item" title="DHL Global Shipping">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/DHL_Logo.svg" alt="DHL Logo">
+                <span>DHL</span>
+              </div>
+              <div class="trust-icon-item" title="FedEx Shipping">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/FedEx_Logo.svg" alt="FedEx Logo">
+                <span>FedEx</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
