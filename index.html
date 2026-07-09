@@ -597,7 +597,7 @@
     }
 
     /* Visibility Fixes for Light Backgrounds */
-    .section-light, .section-light h2, .section-light h3, .section-light p, .section-light span:not(.kicker):not(.filter-group span) { color: #111 !important; }
+    .section-light, .section-light h2, .section-light h3, .section-light p, .section-light span:not(.kicker):not(.filter-group-label) { color: #111 !important; }
     .product-card, .product-card h3, .product-card p { color: #111 !important; }
     .product-card p { color: #666 !important; }
     .quote-form, .quote-form h2, .quote-form p, .quote-form label { color: #111 !important; }
@@ -616,7 +616,18 @@
     .review-card, .review-card h3, .review-card p, .review-text, .customer-name { color: #111 !important; }
     .review-text { color: #444 !important; }
     .stat-item p { color: #666 !important; }
-    .search-bar span { color: #111 !important; }
+    
+    /* Trust Section Styling - Vibrant Brand Colors */
+    .trust-container { margin-top: 60px; text-align: center; width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; grid-column: 1 / -1; }
+    .trust-label { font-size: 11px; color: #c9a34e !important; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; display: block; font-weight: 800; }
+    .trust-icons { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; }
+    .trust-icon-item { display: flex; align-items: center; gap: 12px; transition: transform 0.3s ease; }
+    .trust-icon-item img { height: 28px; width: auto; object-fit: contain; display: block; background: #fff; padding: 4px; border-radius: 6px; }
+    .trust-icon-item span { font-size: 13px; font-weight: 800; letter-spacing: -0.2px; color: #fff !important; }
+    .trust-icon-item:hover { transform: translateY(-5px); }
+
+    /* Shop By Industry Label - High Visibility Gold */
+    .filter-group-label { font-size: 14px !important; color: #c9a34e !important; font-weight: 800 !important; margin-right: 15px; text-transform: uppercase; letter-spacing: 1.5px; }
     @media (max-width:600px){
       .top-bar .container{justify-content:center}
       .top-bar span:last-child{display:none}
@@ -824,7 +835,7 @@
         <div class="search-bar">
           <input type="text" id="searchInput" class="search-input" placeholder="Search by style, material, or keyword (e.g. 'Eco-friendly', 'Rigid')..." aria-label="Search Products">
           <div class="filter-group">
-            <span style="font-weight: 600; margin-right: 15px; color: var(--dark); font-size: 14px;">Shop By Industry:</span>
+            <span class="filter-group-label">Shop By Industry:</span>
             <button class="filter-btn active" data-category="All">All Items</button>
             <button class="filter-btn" data-category="Perfume & Essential Oil">Perfume & Essential Oil</button>
             <button class="filter-btn" data-category="Shipping Corrugated box">Shipping Corrugated box</button>
@@ -1860,44 +1871,32 @@
             <div class="trust-icons">
               <!-- PayPal -->
               <div class="trust-icon-item" title="PayPal Accepted">
-                <div class="logo-box">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/paypal.svg" style="filter: invert(18%) sepia(91%) rotate(205deg) saturate(3821%) brightness(88%) contrast(105%);" alt="PayPal">
-                </div>
+                <img src="assets/paypal.png" alt="PayPal" onerror="this.src='https://cdn.simpleicons.org/paypal/003087'">
                 <span>PayPal</span>
               </div>
               <!-- Alibaba -->
               <div class="trust-icon-item" title="Alibaba Trade Assurance">
-                <div class="logo-box">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/alibaba.svg" style="filter: invert(53%) sepia(97%) saturate(2256%) brightness(101%) contrast(101%);" alt="Alibaba">
-                </div>
+                <img src="assets/alibaba.png" alt="Alibaba" onerror="this.src='https://cdn.simpleicons.org/alibaba/ff6600'">
                 <span>Alibaba</span>
               </div>
               <!-- FSC -->
               <div class="trust-icon-item" title="FSC Certified">
-                <div class="logo-box">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fsc.svg" style="filter: invert(19%) sepia(85%) saturate(1518%) brightness(23%) contrast(100%);" alt="FSC">
-                </div>
+                <img src="assets/fsc.png" alt="FSC" onerror="this.src='https://cdn.simpleicons.org/fsc/006633'">
                 <span>FSC</span>
               </div>
               <!-- DHL -->
               <div class="trust-icon-item" title="DHL Global Shipping">
-                <div class="logo-box">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dhl.svg" style="filter: invert(12%) sepia(88%) saturate(6646%) brightness(88%) contrast(103%);" alt="DHL">
-                </div>
+                <img src="assets/dhl.png" alt="DHL" onerror="this.src='https://cdn.simpleicons.org/dhl/d40511'">
                 <span>DHL</span>
               </div>
               <!-- FedEx -->
               <div class="trust-icon-item" title="FedEx Shipping">
-                <div class="logo-box">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fedex.svg" style="filter: invert(12%) sepia(74%) saturate(4646%) brightness(95%) contrast(106%);" alt="FedEx">
-                </div>
+                <img src="assets/fedex.png" alt="FedEx" onerror="this.src='https://cdn.simpleicons.org/fedex/4d148c'">
                 <span>FedEx</span>
               </div>
               <!-- UPS -->
               <div class="trust-icon-item" title="UPS Global Shipping">
-                <div class="logo-box">
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ups.svg" style="filter: invert(10%) sepia(18%) saturate(1376%) brightness(93%) contrast(92%);" alt="UPS">
-                </div>
+                <img src="assets/ups.png" alt="UPS" onerror="this.src='https://cdn.simpleicons.org/ups/351c15'">
                 <span>UPS</span>
               </div>
             </div>
