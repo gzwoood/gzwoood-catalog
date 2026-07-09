@@ -405,17 +405,17 @@
     .filter-btn:hover{border-color:var(--black)}
     .filter-btn.active{background:#111;color:#fff;border-color:#111}
 
-    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:40px}
-    
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
     .product-specs { display: flex; gap: 24px; margin: 18px 0; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 18px; }
     .spec-item { display: flex; flex-direction: column; gap: 2px; }
     .spec-label { font-size: 9px; color: #888; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; }
     .spec-value { font-size: 13px; font-weight: 800; color: #111; }
-    
+    @media (max-width: 1200px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 768px) {
-      .container { padding: 0 24px; }
-      .section { padding: 60px 0; }
       .product-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
       .search-input { min-width: 100%; color: #111; }
       .section-head { margin-bottom: 32px; }
       .badge-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
@@ -913,6 +913,23 @@
           </article>
 
           <article class="product-card" data-category="Wig Packaging" data-search="satin fabric inner magnetic box premium foldable flat shipping wig cosmetics beauty">
+            <div class="product-image">
+              <img src="assets/satin_box.webp" alt="Custom Satin Inner Magnetic Gift Box Manufacturer - Luxury Wig and Cosmetic Packaging" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
+              <span class="badge">Wig Packaging</span>
+            </div>
+            <div class="product-body">
+              <h3>Satin Fabric Inner Magnetic Box</h3>
+              <p>Premium magnetic box with satin inner tray and foldable structure for flat shipping. Suitable for wigs, cosmetics, and beauty products.</p>
+              <div class="product-specs">
+                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
+                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
+                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
+              </div>
+              <div class="product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+              </div>
+            </div>
+          </article>
 
           <article class="product-card" data-category="Cosmetics Packaging" data-search="magnetic box with handle luxury rigid box packaging clothing cosmetics bags retail">
             <div class="product-image">
