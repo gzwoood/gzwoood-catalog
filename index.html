@@ -577,14 +577,16 @@
     .back-to-top{width:50px;height:50px;background:var(--white);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transition:0.3s;box-shadow:var(--shadow)}
 
 
-    /* Trust Section Styling - Vibrant Brand Colors */
+    /* Trust Section Styling - Vibrant & Stable */
     .trust-container { margin-top: 60px; text-align: center; width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; grid-column: 1 / -1; }
     .trust-label { font-size: 11px; color: var(--gold) !important; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 25px; display: block; font-weight: 800; }
     .trust-icons { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; }
     .trust-icon-item { display: flex; align-items: center; gap: 12px; transition: transform 0.3s ease; }
-    .trust-icon-item img { height: 28px; width: auto; object-fit: contain; display: block; background: #fff; padding: 4px; border-radius: 4px; }
+    .trust-icon-item .logo-box { width: 36px; height: 36px; background: #fff; border-radius: 8px; display: grid; place-items: center; padding: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+    .trust-icon-item .logo-box img { width: 100%; height: 100%; object-fit: contain; }
     .trust-icon-item span { font-size: 13px; font-weight: 800; letter-spacing: -0.2px; color: #fff !important; }
     .trust-icon-item:hover { transform: translateY(-5px); }
+
 
     @media (max-width:992px){
       .industry-grid, .quote-wrap, .advantage-grid, .about-content{grid-template-columns:1fr;gap:60px}
@@ -1852,37 +1854,50 @@
             </div>
           </form>
 
+          <!-- Trust Section - Vibrant Brand Logos with Protective Containers -->
           <div class="trust-container">
             <span class="trust-label">Verified Payment & Logistics Partners</span>
             <div class="trust-icons">
               <!-- PayPal -->
               <div class="trust-icon-item" title="PayPal Accepted">
-                <img src="https://static-00.iconduck.com/assets.00/paypal-icon-2048x2048-356v0y4v.png" alt="PayPal">
+                <div class="logo-box">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/paypal.svg" style="filter: invert(18%) sepia(91%) rotate(205deg) saturate(3821%) brightness(88%) contrast(105%);" alt="PayPal">
+                </div>
                 <span>PayPal</span>
               </div>
               <!-- Alibaba -->
               <div class="trust-icon-item" title="Alibaba Trade Assurance">
-                <img src="https://sc02.alicdn.com/kf/H8570087756f74352b210e7555877f0a8r.png" alt="Alibaba">
+                <div class="logo-box">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/alibaba.svg" style="filter: invert(53%) sepia(97%) saturate(2256%) brightness(101%) contrast(101%);" alt="Alibaba">
+                </div>
                 <span>Alibaba</span>
               </div>
               <!-- FSC -->
               <div class="trust-icon-item" title="FSC Certified">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/FSC_logo.svg/1200px-FSC_logo.svg.png" alt="FSC">
+                <div class="logo-box">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fsc.svg" style="filter: invert(19%) sepia(85%) saturate(1518%) brightness(23%) contrast(100%);" alt="FSC">
+                </div>
                 <span>FSC</span>
               </div>
               <!-- DHL -->
               <div class="trust-icon-item" title="DHL Global Shipping">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/DHL_Logo.svg/1280px-DHL_Logo.svg.png" alt="DHL">
+                <div class="logo-box">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dhl.svg" style="filter: invert(12%) sepia(88%) saturate(6646%) brightness(88%) contrast(103%);" alt="DHL">
+                </div>
                 <span>DHL</span>
               </div>
               <!-- FedEx -->
               <div class="trust-icon-item" title="FedEx Shipping">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/FedEx_Express.svg/1200px-FedEx_Express.svg.png" alt="FedEx">
+                <div class="logo-box">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fedex.svg" style="filter: invert(12%) sepia(74%) saturate(4646%) brightness(95%) contrast(106%);" alt="FedEx">
+                </div>
                 <span>FedEx</span>
               </div>
               <!-- UPS -->
               <div class="trust-icon-item" title="UPS Global Shipping">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/UPS_Logo_vector.svg/1200px-UPS_Logo_vector.svg.png" alt="UPS">
+                <div class="logo-box">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ups.svg" style="filter: invert(10%) sepia(18%) saturate(1376%) brightness(93%) contrast(92%);" alt="UPS">
+                </div>
                 <span>UPS</span>
               </div>
             </div>
