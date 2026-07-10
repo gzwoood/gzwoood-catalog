@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -38,9 +38,9 @@
   <meta name="google-site-verification" content="RtPGel4gFz_kWSQYgmIBWt3-078U-LiKkMXjD6Fdk1g" />
 
   <link rel="preload" as="image" href="assets/hero-v2.webp" fetchpriority="high">
-  <title>Custom Padel Box Manufacturer | Premium Packaging for Global Racket Brands</title>
-  <meta name="description" content="Custom padel packaging boxes manufacturer for global brands. Low MOQ, free design support, fast sampling. We offer rigid magnetic boxes and corrugated mailers with EVA inserts and foil logos." />
-  <meta name="keywords" content="custom padel packaging, padel racket box, luxury padel boxes, corrugated padel mailers, padel box manufacturer, bespoke sports packaging, EVA inserts, foil stamping" />
+  <title>Premium Custom Packaging Manufacturer | Sustainable Luxury Boxes | USA & Europe Shipping</title>
+  <meta name="description" content="Custom packaging solutions for premium US & EU brands. Direct factory for FSC certified luxury gift boxes, eco-friendly mailers, and paper bags. DDP shipping to USA, UK, and Europe. Request your free 3D mockup and sample today!" />
+  <meta name="keywords" content="custom packaging USA, sustainable gift boxes Europe, FSC certified packaging factory, DDP shipping packaging China, luxury box manufacturer UK, wholesale eco-friendly mailers, bespoke retail packaging" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -56,7 +56,7 @@
     "@type": "Organization",
     "name": "gzwoood.com",
     "url": "https://gzwoood.com",
-    "logo": "https://gzwoood.com/logo-placeholder.png",
+    "logo": "https://gzwoood.com/assets/gzwoood-navigation-logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-318-901-8213",
@@ -86,13 +86,14 @@
     .top-bar strong{color:#fff}
 
 
-    .header{position:sticky;top:0;z-index:100;background:#000;backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,0.1)}
-    .nav{height:70px;display:flex;align-items:center;gap:40px}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:18px;letter-spacing:-0.5px;color:#fff;flex-shrink:0}
-    .logo-mark{width:40px;height:40px;border-radius:12px;background:var(--gold);color:#fff;display:grid;place-items:center;font-size:20px}
-    .logo small{display:block;font-weight:500;color:rgba(255,255,255,0.6);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
-    .nav-menu{display:flex;gap:36px;font-weight:700;font-size:15px;color:#fff;margin-left:auto}
-    .nav-menu a:hover{color:var(--gold)}
+    .header{position:sticky;top:0;z-index:100;background:#000;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .header .container{width:min(1360px,100%);padding-inline:24px}
+    .nav{height:70px;display:flex;align-items:center;gap:48px}
+    .logo{display:block;position:relative;width:270px;height:54px;flex:0 0 270px;overflow:hidden}
+    .logo img{position:absolute;left:50%;top:50%;width:360px;max-width:none;height:auto;transform:translate(-50%,-50%)}
+    .nav-menu{display:flex;align-self:stretch;align-items:center;gap:34px;margin-left:auto;font-weight:750;font-size:16px;color:#fff}
+    .nav-menu a{display:flex;align-items:center;height:100%;border-bottom:2px solid transparent}
+    .nav-menu a:hover,.nav-menu a:focus-visible{color:var(--gold);border-bottom-color:var(--gold)}
 
 
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;background:#111;color:#fff;font-weight:800;border:1px solid #111;cursor:pointer;transition:0.3s var(--transition);white-space:nowrap;font-size:14px;letter-spacing:0.5px}
@@ -143,26 +144,8 @@
       margin: 0 auto;
     }
     .hero-content {
-      max-width: 650px;
+      max-width: 600px;
       padding: 80px 0;
-    }
-    .hero-nav {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 50px;
-      flex-wrap: wrap;
-    }
-    .hero-nav a {
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      opacity: 0.85;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .hero-nav a:hover {
-      opacity: 1;
-      color: var(--gold);
     }
     .hero h1 {
       font-size: clamp(40px, 5.5vw, 68px);
@@ -423,17 +406,12 @@
     .filter-btn:hover{border-color:var(--black)}
     .filter-btn.active{background:#111;color:#fff;border-color:#111}
 
-    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-    .product-specs { display: flex; gap: 24px; margin: 18px 0; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 18px; }
-    .spec-item { display: flex; flex-direction: column; gap: 2px; }
-    .spec-label { font-size: 9px; color: #888; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; }
-    .spec-value { font-size: 13px; font-weight: 800; color: #111; }
-    @media (max-width: 1200px) {
-      .product-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:40px}
+    
     @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .section { padding: 60px 0; }
       .product-grid { grid-template-columns: 1fr; gap: 24px; }
-    }
       .search-input { min-width: 100%; color: #111; }
       .section-head { margin-bottom: 32px; }
       .badge-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
@@ -441,7 +419,8 @@
       .badge-item span { font-size: 24px; }
       
       /* Mobile Nav: Horizontal Scroll */
-      .nav { flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+      .header .container { padding-inline: 20px; }
+      .nav { height: auto; min-height: 70px; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding-top: 10px; }
       .nav-menu { 
         display: flex; 
         order: 3; 
@@ -449,7 +428,8 @@
         overflow-x: auto; 
         white-space: nowrap; 
         gap: 20px; 
-        padding: 10px 0;
+        margin-left: 0;
+        padding: 8px 0 12px;
         scrollbar-width: none; /* Hide scrollbar Firefox */
         -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
       }
@@ -458,8 +438,6 @@
       .nav-menu a:hover { color: var(--gold); }
 
 
-    }
-    @media (max-width: 768px) {
       .footer-inner { flex-direction: column; gap: 40px; text-align: center; align-items: center; }
       .footer-links { flex-direction: column; gap: 16px; align-items: center; }
       .footer-brand p { margin: 20px auto 0; }
@@ -532,9 +510,16 @@
     .field-full{grid-column:1/-1}
     .textarea{width:100%;min-height:160px;padding:20px 24px;border-radius:16px;border:1px solid var(--line);background:#fff;font-size:15px;resize:vertical;outline:none;transition:0.2s}
     .textarea:focus{border-color:var(--gold)}
+    .quote-trust{margin-top:24px;padding:22px 24px;border:1px solid var(--line);border-radius:24px;background:#fff}
+    .quote-trust-title{margin:0 0 16px;color:#666;font-size:12px;font-weight:800;letter-spacing:.08em;text-align:center;text-transform:uppercase}
+    .quote-trust-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:center}
+    .quote-trust-item{display:flex;min-width:0;align-items:center;justify-content:center;gap:8px;color:#222;font-size:12px;font-weight:800;line-height:1.2;text-align:center}
+    .quote-trust-item svg{width:26px;height:26px;flex:0 0 26px;color:var(--gold)}
+    .form-status{display:none;grid-column:1/-1;margin:0;padding:14px 18px;border:1px solid #b9dfc5;border-radius:14px;background:#eef9f1;color:#176b35;font-size:14px;font-weight:700}
+    .form-status.show{display:block}
 
     .footer{padding:50px 0 30px;border-top:1px solid var(--line);background:var(--white)}
-    .footer-inner{display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;text-align:center}
+    .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:60px;flex-wrap:wrap}
     .footer-brand strong{font-size:28px;letter-spacing:-1px}
     .footer-brand p{max-width:360px;margin-top:20px;color:var(--gray);font-size:15px}
     .social-links{display:flex;gap:14px;margin-top:32px}
@@ -602,18 +587,6 @@
     .back-to-top{width:50px;height:50px;background:var(--white);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transition:0.3s;box-shadow:var(--shadow)}
 
 
-    /* Trust Section Styling - Elite Brand Integration */
-    .trust-container { margin-top: 60px; text-align: center; width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; grid-column: 1 / -1; }
-    .trust-label { font-size: 11px; color: #c9a34e !important; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 30px; display: block; font-weight: 800; }
-    .trust-icons { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; }
-    .trust-icon-item { display: flex; align-items: center; gap: 10px; transition: transform 0.3s ease; }
-    .trust-icon-item img { height: 32px; width: auto; display: block; filter: none !important; }
-    .trust-icon-item span { font-size: 14px; font-weight: 800; letter-spacing: -0.2px; color: #fff !important; }
-    .trust-icon-item:hover { transform: translateY(-5px); }
-
-
-
-
     @media (max-width:992px){
       .industry-grid, .quote-wrap, .advantage-grid, .about-content{grid-template-columns:1fr;gap:60px}
       .factory-gallery{grid-template-columns:1fr 1fr}
@@ -623,7 +596,7 @@
     }
 
     /* Visibility Fixes for Light Backgrounds */
-    .section-light, .section-light h2, .section-light h3, .section-light p, .section-light span:not(.kicker):not(.filter-group-label) { color: #111 !important; }
+    .section-light, .section-light h2, .section-light h3, .section-light p, .section-light span:not(.kicker):not(.filter-group span) { color: #111 !important; }
     .product-card, .product-card h3, .product-card p { color: #111 !important; }
     .product-card p { color: #666 !important; }
     .quote-form, .quote-form h2, .quote-form p, .quote-form label { color: #111 !important; }
@@ -642,19 +615,19 @@
     .review-card, .review-card h3, .review-card p, .review-text, .customer-name { color: #111 !important; }
     .review-text { color: #444 !important; }
     .stat-item p { color: #666 !important; }
-    
-
-
-    /* Shop By Industry Label - High Visibility Gold */
-    .filter-group-label { font-size: 14px !important; color: #c9a34e !important; font-weight: 800 !important; margin-right: 15px; text-transform: uppercase; letter-spacing: 1.5px; }
+    .search-bar span { color: #111 !important; }
     @media (max-width:600px){
       .top-bar .container{justify-content:center}
       .top-bar span:last-child{display:none}
-      .nav{height:70px}
-      .logo-mark{width:34px;height:34px}
+      .nav{height:auto;min-height:70px}
+      .logo{width:220px;height:44px;flex-basis:220px}
+      .logo img{width:292px}
       .search-bar{padding:12px;border-radius:20px}
       .quote-form{padding:32px;border-radius:32px}
       .form-grid{grid-template-columns:1fr}
+      .quote-trust{padding:20px 16px}
+      .quote-trust-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+      .quote-trust-item:last-child{grid-column:1/-1}
       .testimonials-stats { grid-template-columns: 1fr; gap: 30px; }
       .stat-divider { border-left: none; border-top: 1px solid var(--line); padding-top: 30px; }
     }
@@ -766,7 +739,7 @@
       "name": "Guangzhou Woood Trading Co., Ltd.",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://gzwoood.com/assets/logo.png",
+        "url": "https://gzwoood.com/assets/gzwoood-navigation-logo.png",
         "width": 60,
         "height": 60
       }
@@ -787,9 +760,9 @@
   <header class="header">
     <div class="container nav">
       <a href="/" class="logo" aria-label="gzwoood Home">
-        <div class="logo-mark">W</div>
-        <span>gzwoood.com <small>Custom Box Manufacturer</small></span>
+        <img src="assets/gzwoood-navigation-logo.png" width="1872" height="832" alt="gzwoood.com — Custom Box Manufacturer">
       </a>
+
 
       <nav class="nav-menu">
         <a href="#products">Products</a>
@@ -804,7 +777,6 @@
 
   <main>
     <h1 style="display:none">Custom Packaging Manufacturer | Luxury Gift Boxes & Sustainable Mailers</h1>
-
     <section class="hero">
       <div class="hero-visual">
         <img src="assets/hero-v2.webp" alt="Luxury Packaging Collection - gzwoood" loading="eager" fetchpriority="high">
@@ -814,7 +786,6 @@
           <span class="kicker">GUANGZHOU ’S PREMIER PACKAGING FACTORY</span>
           <h1>Bespoke Luxury <span class="highlight-gold">Gift Boxes</span> & Premium Packaging</h1>
           <p>Elevate your brand with high-end packaging solutions. Specialized in <strong>Luxury Padel Racket Boxes</strong> and Rigid Gift Sets. Direct factory pricing with worldwide DDP delivery.</p>
-          <h2 style="font-size:16px; margin: 20px 0; color:var(--gold); letter-spacing:1px; text-transform:uppercase;">Custom Padel Box Manufacturer for Global Brands</h2>
           
           <div class="hero-stats-grid">
             <div class="stat"><span class="val">100 PCS</span> <span class="lbl">Minimum Order</span></div>
@@ -853,7 +824,7 @@
         <div class="search-bar">
           <input type="text" id="searchInput" class="search-input" placeholder="Search by style, material, or keyword (e.g. 'Eco-friendly', 'Rigid')..." aria-label="Search Products">
           <div class="filter-group">
-            <span class="filter-group-label">Shop By Industry:</span>
+            <span style="font-weight: 600; margin-right: 15px; color: var(--dark); font-size: 14px;">Shop By Industry:</span>
             <button class="filter-btn active" data-category="All">All Items</button>
             <button class="filter-btn" data-category="Perfume & Essential Oil">Perfume & Essential Oil</button>
             <button class="filter-btn" data-category="Shipping Corrugated box">Shipping Corrugated box</button>
@@ -874,78 +845,19 @@
 
         <div class="product-grid" id="productGrid">
           <!-- Product Cards with Optimized Images -->
-          <article class="product-card" data-category="Jewelry Packaging" data-search="gloss wood grain jewelry box led light ring necklace bracelet premium luxury gift">
-            <div class="product-image">
-              <img src="assets/gloss_wood_grain_led.webp" alt="Gloss Wood Grain Jewelry Box with LED - Premium Luxury Packaging" loading="lazy" decoding="async">
-              <span class="badge">Jewelry Packaging</span>
-            </div>
-            <div class="product-body">
-              <h3>Gloss Wood Grain Jewelry Box</h3>
-              <p>Luxury glossy jewelry box with LED light design for premium rings, necklaces, bracelets, and high-end jewelry presentation. Suitable for jewelry brands, gift sets, and retail display.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Wood Grain</span></div>
-              </div>
-              <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="Jewelry Packaging" data-search="high gloss lacquer jewelry box led light piano lacquer luxury ring earring necklace gift">
-            <div class="product-image">
-              <img src="assets/high_gloss_lacquer_led.webp" alt="High Gloss Lacquer Jewelry Box with LED - Luxury Jewelry Display" loading="lazy" decoding="async">
-              <span class="badge">Jewelry Packaging</span>
-            </div>
-            <div class="product-body">
-              <h3>High Gloss Lacquer Jewelry Box</h3>
-              <p>Elegant piano lacquer jewelry box with built-in LED lighting, designed to enhance the brilliance of rings, earrings, and necklaces. Ideal for luxury jewelry packaging and premium gift presentation.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Piano Lacquer</span></div>
-              </div>
-              <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="Gift Packaging" data-search="valentine surprise jewelry box double door flower drawer ring romantic proposal gift customizable">
-            <div class="product-image">
-              <img src="assets/valentine_flower_box.webp" alt="Valentine Surprise Jewelry Box - Creative Flower Gift Box" loading="lazy" decoding="async">
-              <span class="badge">Gift Packaging</span>
-            </div>
-            <div class="product-body">
-              <h3>Valentine Surprise Jewelry Box</h3>
-              <p>Creative double-door jewelry box with preserved flower and drawer design, perfect for rings, romantic gifts, proposal sets, and Valentine’s Day packaging. Fully customizable for jewelry and gift brands.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Specialty Paper</span></div>
-              </div>
-              <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
-              </div>
-            </div>
-          </article>
-
           <article class="product-card" data-category="Wig Packaging" data-search="satin fabric inner magnetic box premium foldable flat shipping wig cosmetics beauty">
             <div class="product-image">
               <img src="assets/satin_box.webp" alt="Custom Satin Inner Magnetic Gift Box Manufacturer - Luxury Wig and Cosmetic Packaging" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
               <span class="badge">Wig Packaging</span>
             </div>
+
             <div class="product-body">
               <h3>Satin Fabric Inner Magnetic Box</h3>
               <p>Premium magnetic box with satin inner tray and foldable structure for flat shipping. Suitable for wigs, cosmetics, and beauty products.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Magnetic Closure</span><span class="tag">Flat Shipping</span><span class="tag">Fully Customizable</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -959,13 +871,10 @@
             <div class="product-body">
               <h3>Magnetic Box with Handle</h3>
               <p>Luxury rigid box with handle design for premium product packaging. Suitable for clothing, cosmetics, bags, and retail products.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Handle Design</span><span class="tag">Fully Customizable</span><span class="tag">Rigid Cardboard</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -975,16 +884,14 @@
               <img src="assets/luxury_box.webp" alt="Premium Custom Gift Box Factory - Elegant Wedding and Special Occasion Packaging" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
+
             <div class="product-body">
               <h3>Luxury Gift Boxes</h3>
               <p>Elegant custom gift boxes for premium gifting and special occasions. Suitable for weddings, birthdays, and luxury gift packaging.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Art Paper</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Magnetic Closure</span><span class="tag">Personalized Customization</span><span class="tag">Luxury Packaging</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -998,13 +905,10 @@
             <div class="product-body">
               <h3>Magnetic Closure Boxes</h3>
               <p>Sophisticated rigid magnetic boxes for premium retail. 100% recyclable materials and FSC certified sustainability.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Industrial Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">FSC Certified</span><span class="tag">Eco-friendly</span><span class="tag">Luxury</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Spec Sheet</a>
               </div>
             </div>
           </article>
@@ -1014,16 +918,14 @@
               <img src="assets/Book_Style_Boxes.webp" alt="Book Style Rigid Packaging" loading="lazy" decoding="async">
               <span class="badge">Perfume & Essential Oil</span>
             </div>
+
             <div class="product-body">
               <h3>Book Style Boxes</h3>
               <p>Premium flap boxes with a book-like opening. Perfect for gift sets and high-end electronics.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Greyboard</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Magnetic Flap</span><span class="tag">Gift Set</span><span class="tag">Premium</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1036,13 +938,10 @@
             <div class="product-body">
               <h3>Lid & Base Food Boxes</h3>
               <p>Food-grade packaging solutions suitable for sushi, cookies, and cakes. Space-saving design that ships flat for cost-effective logistics.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">1,000 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Food-Grade Card</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Food Grade</span><span class="tag">Flat Shipping</span><span class="tag">Bakery</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1052,16 +951,14 @@
               <img src="assets/Drawer_Boxes.webp" alt="Slide Out Drawer Boxes" loading="lazy" decoding="async">
               <span class="badge">Cosmetics Packaging</span>
             </div>
+
             <div class="product-body">
               <h3>Drawer Boxes</h3>
               <p>Elegant slide-out drawers with ribbon pulls. A unique unboxing experience for accessories.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Slide-out</span><span class="tag">Ribbon Pull</span><span class="tag">Jewelry</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1075,13 +972,10 @@
             <div class="product-body">
               <h3>Custom Mailer Boxes</h3>
               <p>Durable corrugated mailers for e-commerce. FSC certified and 100% recyclable shipping boxes.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">200 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Corrugated Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Corrugated</span><span class="tag">Recyclable</span><span class="tag">E-com</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1091,16 +985,14 @@
               <img src="assets/Padel_Racket_Boxes.webp" alt="Padel Racket Packaging Boxes" loading="lazy" decoding="async">
               <span class="badge">Padel Packaging</span>
             </div>
+
             <div class="product-body">
               <h3>Padel Racket Boxes</h3>
               <p>Industrial-strength rigid packaging for rackets. Engineered for maximum protection and branding.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Sports</span><span class="tag">Protective</span><span class="tag">Custom Size</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1114,13 +1006,10 @@
             <div class="product-body">
               <h3>Cosmetic Packaging</h3>
               <p>Luxury boxes for skincare and beauty sets. High-end finishes like spot UV and foil stamping.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Art Paper</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Beauty</span><span class="tag">Foil</span><span class="tag">UV Finish</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1130,16 +1019,14 @@
               <img src="assets/perfume_box.webp" alt="Essential Oil and Perfume Box" loading="lazy" decoding="async">
               <span class="badge">Perfume & Essential Oil</span>
             </div>
+
             <div class="product-body">
               <h3>Oil & Perfume Boxes</h3>
               <p>Custom-fit packaging for fragrance bottles. Specialized inserts to ensure zero breakages.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Fragrance</span><span class="tag">Safety</span><span class="tag">Luxury</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1155,13 +1042,10 @@
             <div class="product-body">
               <h3>Folding Cartons</h3>
               <p>Lightweight retail boxes. Cost-effective folding structures with high-definition offset printing.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">1,000 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Paperboard</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Paperboard</span><span class="tag">Retail</span><span class="tag">Efficient</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1170,15 +1054,12 @@
             <div class="product-image">
               <img src="assets/Custom_Paper_Bags.webp" alt="Custom Luxury Paper Bags" loading="lazy" decoding="async">
               <span class="badge">Apparel Packaging</span></div>
+
             <div class="product-body">
               <h3>Custom Paper Bags</h3>
               <p>Premium retail bags with custom handles and materials. The perfect complement to your box.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">1,000 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Art Paper</span></div>
-              </div>
-              <div class="product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a></div>
+              <div class="tag-list"><span class="tag">Art Paper</span><span class="tag">Branding</span><span class="tag">Eco-friendly</span></div>
+              <div class="product-actions"><a href="#quote" class="btn">Get Quote</a><a href="#quote" class="btn btn-outline">Details</a></div>
             </div>
           </article>
 
@@ -1191,12 +1072,8 @@
             <div class="product-body">
               <h3>EVA Foam Inserts</h3>
               <p>High-density foam inserts for ultimate protection. Precision die-cut to fit any product shape.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">7-10 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">EVA Foam</span></div>
-              </div>
-              <div class="product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a></div>
+              <div class="tag-list"><span class="tag">Protective</span><span class="tag">Custom Fit</span><span class="tag">High Density</span></div>
+              <div class="product-actions"><a href="#quote" class="btn">Get Quote</a><a href="#quote" class="btn btn-outline">Details</a></div>
             </div>
           </article>
 
@@ -1205,15 +1082,12 @@
               <img src="assets/Stickers_Labels.webp" alt="Custom Printed Stickers and Labels for Packaging Branding" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
+
             <div class="product-body">
               <h3>Stickers & Labels</h3>
               <p>Final touch accessories. Custom printed labels, stickers, and decorative sealing elements.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">1,000 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">7-10 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Adhesive Paper</span></div>
-              </div>
-              <div class="product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a></div>
+              <div class="tag-list"><span class="tag">Branding</span><span class="tag">Stickers</span><span class="tag">Logo</span></div>
+              <div class="product-actions"><a href="#quote" class="btn">Get Quote</a><a href="#quote" class="btn btn-outline">Details</a></div>
             </div>
           </article>
 
@@ -1225,13 +1099,10 @@
             <div class="product-body">
               <h3>Handle Jewelry Box</h3>
               <p>Elegant white rigid jewelry box with a convenient handle. High cost-performance choice for retail branding.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Handle Design</span><span class="tag">Cost-Effective</span><span class="tag">Jewelry</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1244,13 +1115,10 @@
             <div class="product-body">
               <h3>Luxury Jewelry Set</h3>
               <p>Premium textured rigid box with velvet insert and matching luxury shopping bag for a complete brand experience.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Textured Paper</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Complete Set</span><span class="tag">Velvet Insert</span><span class="tag">Luxury</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1263,13 +1131,10 @@
             <div class="product-body">
               <h3>Sustainable Ring Box</h3>
               <p>Eco-friendly minimalist jewelry boxes in black and white. Sustainable luxury solution for engagement rings.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">300 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">10-12 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Recyclable Paper</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">Recyclable</span><span class="tag">Minimalist</span><span class="tag">Eco-Friendly</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1282,19 +1147,15 @@
             <div class="product-body">
               <h3>Corrugated Padel Racket Box</h3>
               <p>Durable corrugated cardboard box designed for e-commerce shipping. Lightweight yet strong to protect your padel racket during transit.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-15 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">E-Flute Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">MOQ: 100</span><span class="tag">Eco-friendly</span><span class="tag">Corrugated</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
 
           <article class="product-card" data-category="Padel Packaging" data-search="luxury magnetic padel racket box rigid gift packaging magnetic closure">
-
             <div class="product-image">
               <img src="assets/padel-luxury-magnetic.webp" alt="Luxury Magnetic Padel Racket Gift Box - Premium Rigid Sports Packaging" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
               <span class="badge">Luxury Rigid</span>
@@ -1302,13 +1163,10 @@
             <div class="product-body">
               <h3>Luxury Magnetic Padel Box</h3>
               <p>Premium rigid box with a secure magnetic closure. Perfect for high-end brand presentation and luxury padel racket gifting.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">15-18 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">MOQ: 100</span><span class="tag">Magnetic Closure</span><span class="tag">Luxury</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1321,13 +1179,10 @@
             <div class="product-body">
               <h3>Padel Box with Foam Insert</h3>
               <p>High-end display box featuring a custom-cut foam insert. Provides ultimate protection and a premium unboxing experience for elite rackets.</p>
-              <div class="product-specs">
-                <div class="spec-item"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div>
-                <div class="spec-item"><span class="spec-label">LEAD TIME</span><span class="spec-value">15-18 days</span></div>
-                <div class="spec-item"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Board + EVA</span></div>
-              </div>
+              <div class="tag-list"><span class="tag">MOQ: 100</span><span class="tag">Foam Padding</span><span class="tag">Display Box</span></div>
               <div class="product-actions">
-                <a href="https://api.whatsapp.com/send/?phone=8613189018213&text&type=phone_number&app_absent=0" class="btn">Get Quote</a>
+                <a href="#quote" class="btn">Get Quote</a>
+                <a href="#quote" class="btn btn-outline">Details</a>
               </div>
             </div>
           </article>
@@ -1598,26 +1453,26 @@
 
         <div class="blog-grid">
           <article class="blog-card" style="border: 1px solid var(--gold);">
-            <div class="blog-image">
-              <img src="assets/padel-mailer-solution.webp" alt="Custom Corrugated Padel Mailer Box Solution">
-              <span style="position:absolute; top:15px; left:15px; background:var(--gold); color:#fff; padding:5px 12px; font-size:10px; font-weight:900; border-radius:4px;">E-COMMERCE READY</span>
-            </div>
+            <a class="blog-image" href="/blog/custom-padel-mailer-box/" aria-label="Read Custom Padel Mailer Box for Padel Racket Brands">
+              <img src="/assets/blog/custom-padel-mailer-box-for-padel-racket-packaging.webp" width="800" height="800" loading="lazy" alt="Custom corrugated padel mailer box for padel racket packaging">
+              <span style="position:absolute; top:15px; left:15px; background:var(--gold); color:#fff; padding:5px 12px; font-size:10px; font-weight:900; border-radius:4px;">NEW GUIDE</span>
+            </a>
             <div class="blog-body">
-              <span class="blog-date">June 26, 2026</span>
-              <h3>Custom Padel Mailer Box: A Cost-Effective Packaging Solution for Growing Brands</h3>
-              <p>Discover why custom corrugated mailers are the smart choice for Padel brands. From flat-pack shipping to 100% customization...</p>
-              <button class="btn btn-outline" onclick="openBlog('padel-mailer-solution-blog')">Read Guide →</button>
+              <span class="blog-date">July 1, 2026</span>
+              <h3>Custom Padel Mailer Box for Padel Racket Brands</h3>
+              <p>Learn how corrugated padel mailer boxes help racket brands balance protection, branding, flat-pack logistics, and cost control.</p>
+              <a class="btn btn-outline" href="/blog/custom-padel-mailer-box/">Read SEO Guide →</a>
             </div>
           </article>
 
-          <article class="blog-card">
+          <article class="blog-card" style="border: 1px solid var(--gold);">
             <div class="blog-image">
               <img src="assets/padel-comparison-v2.webp" alt="Rigid vs. Corrugated Padel Racket Packaging">
               <span style="position:absolute; top:15px; left:15px; background:var(--gold); color:#fff; padding:5px 12px; font-size:10px; font-weight:900; border-radius:4px;">BUYER'S GUIDE</span>
             </div>
             <div class="blog-body">
               <span class="blog-date">June 25, 2026</span>
-              <h3>Rigid Box vs. Corrugated Mailer: Choosing the Right Padel Racket Packaging</h3>
+              <h3>Rigid Box vs. Corrugated Mailer: Which Padel Racket Box is Right for Your Brand?</h3>
               <p>Choosing the right packaging is a critical business decision. We compare premium rigid boxes against efficient mailers across cost, protection, and ROI...</p>
               <button class="btn btn-outline" onclick="openBlog('padel-comparison-blog')">Read Expert Guide →</button>
             </div>
@@ -1676,40 +1531,6 @@
         </div>
       </div>
     </section>
-
-    <div id="padel-mailer-solution-blog" class="blog-modal">
-      <div class="blog-modal-content">
-        <span class="close-modal" onclick="closeBlog('padel-mailer-solution-blog')">&times;</span>
-        <div class="blog-full-content">
-          <span class="blog-date">June 26, 2026</span>
-          <h2>Custom Padel Mailer Box: The Practical Growth Solution for Sports Brands</h2>
-          <p>As Padel explodes in popularity, racket brands face a scaling challenge: how to ship rackets globally without skyrocketing packaging and logistics costs. While rigid magnetic boxes offer ultimate luxury, the <strong>Custom Corrugated Mailer Box</strong> is emerging as the strategic choice for e-commerce and high-volume distribution.</p>
-          
-          <h3>1. Why Mailers are the Smart Choice</h3>
-          <p>For growing brands, cost control is key. Our padel mailer boxes use high-strength E-flute corrugated board, offering a professional look with 40-60% lower production costs compared to rigid boxes. More importantly, they ship flat, saving up to 80% on international freight and warehouse space.</p>
-
-          <h3>2. Protection Without the Weight</h3>
-          <p>Lightweight doesn't mean fragile. A custom-engineered corrugated structure ensures the racket is secured during transit. We can also integrate <strong>Custom Foam Inserts</strong> or reinforced edges for brands that want extra security for their mid-to-high range products.</p>
-
-          <h3>3. Unlimited Branding Potential</h3>
-          <p>A mailer box is a blank canvas. We support:</p>
-          <ul>
-            <li><strong>Hot Foil Stamping:</strong> For that premium metallic logo finish.</li>
-            <li><strong>Spot UV:</strong> To make your brand graphics pop against a matte background.</li>
-            <li><strong>Inside Printing:</strong> A powerful way to tell your brand story during the unboxing moment.</li>
-          </ul>
-
-          <div class="blog-cta-box" style="margin-top:40px; padding:35px; background:linear-gradient(135deg, #1a1a1a 0%, #000 100%); border:1px solid var(--gold); border-radius:15px; text-align:center; color:#fff;">
-            <h4 style="color:var(--gold); font-size:24px; margin-bottom:15px;">Scale Your Padel Brand Effortlessly</h4>
-            <p style="margin-bottom:25px; color:rgba(255,255,255,0.8);">Looking for the perfect balance between protection, branding, and ROI? Request your free 3D mockup and factory quote today.</p>
-            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-              <a href="#quote" class="btn btn-gold" onclick="closeBlog('padel-mailer-solution-blog')" style="min-width:200px;">Get Factory Price →</a>
-              <a href="https://wa.me/8613189018213" class="btn btn-outline" style="min-width:200px; background:transparent; color:#fff; border-color:rgba(255,255,255,0.3);">Expert Consultation</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div id="padel-comparison-blog" class="blog-modal">
       <div class="blog-modal-content">
@@ -2022,11 +1843,18 @@
               <div>📍 Guangzhou, China HQ</div>
             </div>
           </div>
-          <form class="quote-form" id="contactForm">
+          <div class="quote-form-column">
+          <form class="quote-form" id="contactForm" action="https://formsubmit.co/timwu@gzwoood.com" method="POST">
+            <input type="hidden" name="_subject" value="New Packaging Inquiry from gzwoood.com">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://gzwoood.com/?inquiry=success#quote">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
             <div class="form-grid">
-              <input class="field" type="text" placeholder="Full Name" required>
-              <input class="field" type="text" placeholder="Email or WhatsApp" required>
-              <select class="field" aria-label="Box Type">
+              <p class="form-status" id="formStatus" role="status">Thank you. Your inquiry has been sent successfully. Our packaging team will contact you shortly.</p>
+              <input class="field" type="text" name="Full Name" placeholder="Full Name" autocomplete="name" required>
+              <input class="field" type="text" name="Email or WhatsApp" placeholder="Email or WhatsApp" autocomplete="email" required>
+              <select class="field" name="Box Type" aria-label="Box Type">
                 <option value="">Box Type</option>
                 <option>Magnetic Box</option>
                 <option>Mailer Box</option>
@@ -2034,52 +1862,42 @@
                 <option>Luxury Gift Box</option>
                 <option>Other</option>
               </select>
-              <select class="field" aria-label="Order Quantity">
+              <select class="field" name="Order Quantity" aria-label="Order Quantity">
                 <option value="">Quantity</option>
                 <option>500 - 1,000 pcs</option>
                 <option>1,000 - 3,000 pcs</option>
                 <option>5,000+ pcs</option>
               </select>
-              <input class="field-full" type="text" placeholder="Box Size (L x W x H)">
-              <textarea class="field-full" placeholder="Material preferences, printing colors, or special requests..."></textarea>
+              <input class="field-full" type="text" name="Box Size" placeholder="Box Size (L x W x H)">
+              <textarea class="field-full" name="Project Details" placeholder="Material preferences, printing colors, or special requests..."></textarea>
               <button class="btn btn-gold field-full" type="submit">Submit Inquiry</button>
             </div>
           </form>
-
-          <!-- Trust Section - Pure Brand Logo Integration -->
-          <div class="trust-container">
-            <span class="trust-label">Verified Payment & Logistics Partners</span>
-            <div class="trust-icons">
-              <!-- PayPal -->
-              <div class="trust-icon-item" title="PayPal Accepted">
-                <img src="assets/paypal.png" alt="PayPal">
+          <aside class="quote-trust" aria-label="Payment, certification and shipping options">
+            <p class="quote-trust-title">Secure payment · Responsible materials · Global delivery</p>
+            <div class="quote-trust-list">
+              <div class="quote-trust-item" title="PayPal payment option">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h7.2c3.5 0 5.5 1.8 5.1 4.9-.5 4-3.2 5.8-7.1 5.8H10.4L9.7 18H5.5L7 3Zm3.9 3.3-.5 4.1h1.5c1.8 0 2.9-.7 3.1-2.2.2-1.3-.6-1.9-2.3-1.9h-1.8Z"/></svg>
                 <span>PayPal</span>
               </div>
-              <!-- Alibaba -->
-              <div class="trust-icon-item" title="Alibaba Trade Assurance">
-                <img src="assets/alibaba.png" alt="Alibaba">
-                <span>Alibaba</span>
+              <div class="quote-trust-item" title="Alibaba Trade Assurance option">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 21 6v6c0 5.4-3.8 9.2-9 10-5.2-.8-9-4.6-9-10V6l9-4Zm0 4.1L7 8.3V12c0 3.1 1.9 5.2 5 5.9 3.1-.7 5-2.8 5-5.9V8.3l-5-2.2Zm-1.1 8.6-2.4-2.4 1.4-1.4 1 1 3.2-3.2 1.4 1.4-4.6 4.6Z"/></svg>
+                <span>Trade Assurance</span>
               </div>
-              <!-- FSC -->
-              <div class="trust-icon-item" title="FSC Certified">
-                <img src="assets/fsc.png" alt="FSC">
+              <div class="quote-trust-item" title="FSC-certified material options">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.8 2.4c-1.1 3.2-3.2 4.5-5 6.2-2.2 2-3.2 4-2.4 6.4.8 2.5 3.2 4.1 6 4.1h.1V22h2v-3.1c3.3-.7 5.5-3 5.6-6 .1-3.8-3.1-7.2-6.3-10.5Zm.7 14.4v-4.1l2.8-2.2.9 1.2-3.7 2.9v2.2Zm-2 0c-2.1 0-3.6-.9-4.1-2.4-.5-1.6.2-2.9 1.8-4.4 1.2-1.1 2.6-2.2 3.7-3.7 2.2 2.4 4.3 4.7 4.2 6.6-.1 1.8-1.5 3.3-3.6 3.9v-6.2h-2v6.2Z"/></svg>
+                <span>FSC</span>
               </div>
-              <!-- DHL -->
-              <div class="trust-icon-item" title="DHL Global Shipping">
-                <img src="assets/dhl.png" alt="DHL">
+              <div class="quote-trust-item" title="DHL shipping option">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 6h11.5c3.2 0 5.5 1.7 6.5 4.4H9.4l-.6 1.5H21c-.1.7-.4 1.4-.7 2H8l-.6 1.5h11.7c-1.2 1.6-3.2 2.6-5.7 2.6H3l4.8-12H3Z"/></svg>
                 <span>DHL</span>
               </div>
-              <!-- FedEx -->
-              <div class="trust-icon-item" title="FedEx Shipping">
-                <img src="assets/fedex.png" alt="FedEx">
+              <div class="quote-trust-item" title="FedEx shipping option">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 6h9v3H6v2h4.5v3H6v4H2V6Zm10 4h3l1.5 2.1L18 10h3.5L18.2 14l3.5 4H18l-1.7-2.3-1.6 2.3H11l3.5-4-2.5-4Z"/></svg>
                 <span>FedEx</span>
               </div>
-              <!-- UPS -->
-              <div class="trust-icon-item" title="UPS Global Shipping">
-                <img src="assets/ups.png" alt="UPS">
-                <span>UPS</span>
-              </div>
             </div>
+          </aside>
           </div>
         </div>
       </div>
@@ -2211,28 +2029,11 @@
 
     searchInput.addEventListener('input', filterProducts);
 
-    // WhatsApp Form Integration
-    const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const inputs = contactForm.querySelectorAll('input, select, textarea');
-        const data = {};
-        inputs.forEach(input => {
-          const key = input.placeholder || input.ariaLabel || 'Field';
-          data[key] = input.value;
-        });
-        
-        const message = `Inquiry from Website:
-Name: ${data['Full Name']}
-Contact: ${data['Email or WhatsApp']}
-Product: ${data['Box Type']}
-Quantity: ${data['Order Quantity']}
-Size: ${data['Box Size (L x W x H)']}
-Note: ${data['Material preferences, printing colors, or special requests...']}`;
-
-        window.open(`https://wa.me/8613189018213?text=${encodeURIComponent(message)}`, '_blank');
-      });
+    // Show confirmation after the form service redirects back to the quote section.
+    const inquiryParams = new URLSearchParams(window.location.search);
+    const formStatus = document.getElementById('formStatus');
+    if (formStatus && inquiryParams.get('inquiry') === 'success') {
+      formStatus.classList.add('show');
     }
 
     // Scroll to Top
@@ -2248,6 +2049,8 @@ Note: ${data['Material preferences, printing colors, or special requests...']}`;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
+  <!-- Deployment refresh: 2026-07-07 -->
 </body>
 </html>
+
 
