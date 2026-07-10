@@ -510,22 +510,30 @@
     .field-full{grid-column:1/-1}
     .textarea{width:100%;min-height:160px;padding:20px 24px;border-radius:16px;border:1px solid var(--line);background:#fff;font-size:15px;resize:vertical;outline:none;transition:0.2s}
     .textarea:focus{border-color:var(--gold)}
-    .quote-trust{margin-top:24px;padding:22px 24px;border:1px solid var(--line);border-radius:24px;background:#fff}
-    .quote-trust-title{margin:0 0 16px;color:#666;font-size:12px;font-weight:800;letter-spacing:.08em;text-align:center;text-transform:uppercase}
-    .quote-trust-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:center}
-    .quote-trust-item{display:flex;min-width:0;align-items:center;justify-content:center;gap:8px;color:#222;font-size:12px;font-weight:800;line-height:1.2;text-align:center}
-    .quote-trust-item svg{width:26px;height:26px;flex:0 0 26px;color:var(--gold)}
+    .quote-trust{margin-top:24px;padding:24px;border:1px solid rgba(201,163,78,.35);border-radius:24px;background:#000}
+    .quote-trust-title{margin:0 0 18px;color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.12em;text-align:center;text-transform:uppercase}
+    .quote-trust-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;align-items:center}
+    .quote-trust-item{display:flex;min-width:0;align-items:center;justify-content:center;gap:9px;color:#fff;font-size:12px;font-weight:800;line-height:1.2;text-align:center}
+    .quote-trust-item img{width:34px;height:34px;flex:0 0 34px;border-radius:5px;object-fit:contain;background:transparent}
     .form-status{display:none;grid-column:1/-1;margin:0;padding:14px 18px;border:1px solid #b9dfc5;border-radius:14px;background:#eef9f1;color:#176b35;font-size:14px;font-weight:700}
     .form-status.show{display:block}
 
-    .footer{padding:50px 0 30px;border-top:1px solid var(--line);background:var(--white)}
+    .footer{padding:54px 0 34px;border-top:1px solid var(--line);background:var(--white)}
     .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:60px;flex-wrap:wrap}
     .footer-brand strong{font-size:28px;letter-spacing:-1px}
     .footer-brand p{max-width:360px;margin-top:20px;color:var(--gray);font-size:15px}
     .social-links{display:flex;gap:14px;margin-top:32px}
     .social-icon{width:44px;height:44px;border-radius:50%;background:var(--light);display:grid;place-items:center;transition:0.3s}
     .social-icon:hover{background:var(--gold);color:#fff;transform:translateY(-4px)}
-    .footer-links{display:flex;gap:48px;font-weight:700;font-size:15px}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:clamp(24px,3vw,48px);max-width:100%;padding-top:8px;font-weight:700;font-size:15px}
+    .footer-utilities{position:relative;display:flex;align-items:flex-end;gap:36px;margin-top:42px;padding-top:34px;border-top:0}
+    .footer-utilities::before{content:"";position:absolute;top:0;left:20px;right:20px;height:3px;background:#111}
+    .footer-utilities .social-links{flex:0 0 auto;margin-top:0}
+    .footer-utilities .quote-trust{width:min(690px,100%);margin:0 0 0 auto;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+    .footer-utilities .quote-trust-title{margin-bottom:10px;color:var(--gold) !important;font-size:10px}
+    .footer-utilities .quote-trust-item span{color:#111 !important}
+    .footer-utilities .quote-trust-item:first-child{justify-content:flex-start}
+    .footer-utilities .quote-trust-item:last-child{justify-content:flex-end}
 
     /* Floating Buttons */
     .float-container {
@@ -593,6 +601,12 @@
       .section-head{flex-direction:column;align-items:flex-start;text-align:left}
       .footer-inner{flex-direction:column;align-items:center;text-align:center}
       .footer-links{justify-content:center}
+      .footer-utilities{width:100%;flex-direction:column;align-items:center}
+      .footer-utilities::before{left:0;right:0}
+      .footer-utilities .quote-trust{width:100%;margin:0}
+      .footer-utilities .social-links{justify-content:center}
+      .footer-utilities .quote-trust-item:first-child,
+      .footer-utilities .quote-trust-item:last-child{justify-content:center}
     }
 
     /* Visibility Fixes for Light Backgrounds */
@@ -627,7 +641,7 @@
       .form-grid{grid-template-columns:1fr}
       .quote-trust{padding:20px 16px}
       .quote-trust-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
-      .quote-trust-item:last-child{grid-column:1/-1}
+      .quote-trust-item:last-child{grid-column:auto}
       .testimonials-stats { grid-template-columns: 1fr; gap: 30px; }
       .stat-divider { border-left: none; border-top: 1px solid var(--line); padding-top: 30px; }
     }
@@ -1851,31 +1865,6 @@
               <button class="btn btn-gold field-full" type="submit">Submit Inquiry</button>
             </div>
           </form>
-          <aside class="quote-trust" aria-label="Payment, certification and shipping options">
-            <p class="quote-trust-title">Secure payment · Responsible materials · Global delivery</p>
-            <div class="quote-trust-list">
-              <div class="quote-trust-item" title="PayPal payment option">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h7.2c3.5 0 5.5 1.8 5.1 4.9-.5 4-3.2 5.8-7.1 5.8H10.4L9.7 18H5.5L7 3Zm3.9 3.3-.5 4.1h1.5c1.8 0 2.9-.7 3.1-2.2.2-1.3-.6-1.9-2.3-1.9h-1.8Z"/></svg>
-                <span>PayPal</span>
-              </div>
-              <div class="quote-trust-item" title="Alibaba Trade Assurance option">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 21 6v6c0 5.4-3.8 9.2-9 10-5.2-.8-9-4.6-9-10V6l9-4Zm0 4.1L7 8.3V12c0 3.1 1.9 5.2 5 5.9 3.1-.7 5-2.8 5-5.9V8.3l-5-2.2Zm-1.1 8.6-2.4-2.4 1.4-1.4 1 1 3.2-3.2 1.4 1.4-4.6 4.6Z"/></svg>
-                <span>Trade Assurance</span>
-              </div>
-              <div class="quote-trust-item" title="FSC-certified material options">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.8 2.4c-1.1 3.2-3.2 4.5-5 6.2-2.2 2-3.2 4-2.4 6.4.8 2.5 3.2 4.1 6 4.1h.1V22h2v-3.1c3.3-.7 5.5-3 5.6-6 .1-3.8-3.1-7.2-6.3-10.5Zm.7 14.4v-4.1l2.8-2.2.9 1.2-3.7 2.9v2.2Zm-2 0c-2.1 0-3.6-.9-4.1-2.4-.5-1.6.2-2.9 1.8-4.4 1.2-1.1 2.6-2.2 3.7-3.7 2.2 2.4 4.3 4.7 4.2 6.6-.1 1.8-1.5 3.3-3.6 3.9v-6.2h-2v6.2Z"/></svg>
-                <span>FSC</span>
-              </div>
-              <div class="quote-trust-item" title="DHL shipping option">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 6h11.5c3.2 0 5.5 1.7 6.5 4.4H9.4l-.6 1.5H21c-.1.7-.4 1.4-.7 2H8l-.6 1.5h11.7c-1.2 1.6-3.2 2.6-5.7 2.6H3l4.8-12H3Z"/></svg>
-                <span>DHL</span>
-              </div>
-              <div class="quote-trust-item" title="FedEx shipping option">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 6h9v3H6v2h4.5v3H6v4H2V6Zm10 4h3l1.5 2.1L18 10h3.5L18.2 14l3.5 4H18l-1.7-2.3-1.6 2.3H11l3.5-4-2.5-4Z"/></svg>
-                <span>FedEx</span>
-              </div>
-            </div>
-          </aside>
           </div>
         </div>
       </div>
@@ -1887,11 +1876,6 @@
       <div class="footer-brand">
         <strong>gzwoood.com</strong>
         <p>Premium factory-direct manufacturer of luxury and eco-friendly packaging. Certified quality, global shipping.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/tim-wu-387668257/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-          <a href="https://www.instagram.com/gzwoood/" target="_blank" rel="noopener" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-          <a href="mailto:timwu@gzwoood.com" class="social-icon" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.517 7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 8.138h-18.745l5.479-8.133zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z"/></svg></a>
-        </div>
       </div>
       <div class="footer-links">
         <a href="#products">Products</a>
@@ -1900,6 +1884,24 @@
         <a href="#finishes">Finishes</a>
         <a href="#quote">Contact</a>
       </div>
+    </div>
+    <div class="container footer-utilities">
+      <div class="social-links" aria-label="Social media and contact links">
+        <a href="https://www.linkedin.com/in/tim-wu-387668257/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <a href="https://www.instagram.com/gzwoood/" target="_blank" rel="noopener" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="mailto:timwu@gzwoood.com" class="social-icon" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.517 7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 8.138h-18.745l5.479-8.133zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z"/></svg></a>
+      </div>
+      <aside class="quote-trust" aria-label="Payment, certification and shipping options">
+        <p class="quote-trust-title">Verified Payment &amp; Logistics Partners</p>
+        <div class="quote-trust-list">
+          <div class="quote-trust-item" title="PayPal payment option"><img src="assets/partner-paypal.png" width="300" height="300" loading="lazy" alt="PayPal logo"><span>PayPal</span></div>
+          <div class="quote-trust-item" title="Alibaba Trade Assurance option"><img src="assets/partner-alibaba.png" width="300" height="300" loading="lazy" alt="Alibaba.com logo"><span>Alibaba</span></div>
+          <div class="quote-trust-item" title="FSC-certified material options"><img src="assets/partner-fsc.png" width="300" height="300" loading="lazy" alt="FSC logo"><span>FSC</span></div>
+          <div class="quote-trust-item" title="DHL shipping option"><img src="assets/partner-dhl.png" width="300" height="300" loading="lazy" alt="DHL logo"><span>DHL</span></div>
+          <div class="quote-trust-item" title="FedEx shipping option"><img src="assets/partner-fedex.png" width="300" height="300" loading="lazy" alt="FedEx logo"><span>FedEx</span></div>
+          <div class="quote-trust-item" title="UPS shipping option"><img src="assets/partner-ups.png" width="300" height="300" loading="lazy" alt="UPS logo"><span>UPS</span></div>
+        </div>
+      </aside>
     </div>
   </footer>
 
