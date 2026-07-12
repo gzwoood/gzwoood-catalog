@@ -348,15 +348,16 @@
       margin-bottom: 40px;
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      background: transparent;
-      padding: 0;
-      border-radius: 0;
+      gap: 18px;
+      background: #0b0b0b;
+      padding: 24px;
+      border: 1px solid rgba(201,163,78,0.28);
+      border-radius: 20px;
     }
     .search-input {
       width: 100%;
-      max-width: 500px;
-      min-height: 48px;
+      max-width: none;
+      min-height: 52px;
       padding: 0 20px;
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.1);
@@ -367,13 +368,9 @@
       transition: 0.2s;
     }
     .search-input:focus { border-color: var(--gold); background: rgba(255,255,255,0.1); }
-    .filter-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-    .filter-group-label { display:inline-flex; align-items:center; min-height:36px; padding:7px 14px; margin-right:5px; border-radius:7px; background:var(--gold); color:#000 !important; font-size:13px !important; font-weight:900 !important; text-transform:uppercase; letter-spacing:1px; opacity:1 !important; }
+    .filter-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .filter-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+    .filter-group-label { display:inline-flex; align-items:center; width:max-content; min-height:36px; padding:7px 14px; border-radius:7px; background:var(--gold); color:#000 !important; font-size:13px !important; font-weight:900 !important; text-transform:uppercase; letter-spacing:1px; opacity:1 !important; }
     .filter-btn {
       padding: 8px 22px;
       border-radius: 8px;
@@ -402,9 +399,10 @@
     }
 
 
-    .filter-btn{padding:0 22px;min-height:44px;border-radius:999px;font-size:13px;font-weight:700;background:#fff;border:1px solid var(--line);cursor:pointer;white-space:nowrap;transition:0.3s}
-    .filter-btn:hover{border-color:var(--black)}
-    .filter-btn.active{background:#111;color:#fff;border-color:#111}
+    .filter-btn{width:100%;padding:0 16px;min-height:44px;border-radius:12px;font-size:13px;font-weight:750;background:#fff;color:#111 !important;border:1px solid rgba(255,255,255,.14);cursor:pointer;white-space:nowrap;transition:0.25s}
+    .filter-btn:hover{border-color:var(--gold);background:#f7f1e5;transform:translateY(-2px)}
+    .filter-btn.active{background:var(--gold);color:#000 !important;border-color:var(--gold);box-shadow:0 6px 18px rgba(201,163,78,.22)}
+    .category-description{margin:2px 0 0;max-width:900px;color:rgba(255,255,255,.62);font-size:14px;line-height:1.65}
 
     .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:40px}
     
@@ -837,8 +835,10 @@
 
         <div class="search-bar">
           <input type="text" id="searchInput" class="search-input" placeholder="Search by style, material, or keyword (e.g. 'Eco-friendly', 'Rigid')..." aria-label="Search Products">
+          <div class="filter-heading">
+            <span class="filter-group-label">Shop By Industry</span>
+          </div>
           <div class="filter-group">
-            <span class="filter-group-label">Shop By Industry:</span>
             <button class="filter-btn active" data-category="All">All Items</button>
             <button class="filter-btn" data-category="Perfume & Essential Oil">Perfume & Essential Oil</button>
             <button class="filter-btn" data-category="Shipping Corrugated box">Shipping Corrugated box</button>
@@ -851,7 +851,7 @@
 
            </div>
 
-          <div id="categoryDesc" class="category-description" style="margin-top: 15px; font-size: 14px; color: #666; max-width: 800px; line-height: 1.6;">
+          <div id="categoryDesc" class="category-description">
             Discover our full range of premium custom packaging solutions. From luxury rigid boxes to eco-friendly shipping mailers, we provide high-quality, factory-direct products tailored to your brand's unique needs.
           </div>
 
