@@ -56,7 +56,7 @@
     "@type": "Organization",
     "name": "gzwoood.com",
     "url": "https://gzwoood.com",
-    "logo": "https://gzwoood.com/assets/gzwoood-navigation-logo.png",
+    "logo": "https://gzwoood.com/assets/gzwoood-navigation-logo-480.webp",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-318-901-8213",
@@ -76,6 +76,8 @@
     :root{--black:#000;--gray:#666;--light:#f6f6f6;--line:#e6e6e6;--white:#fff;--gold:#c9a34e;--radius:28px;--shadow:0 18px 50px rgba(0,0,0,.08);--transition: cubic-bezier(0.4, 0, 0.2, 1)}
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:#000; color:#fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height:1.6; -webkit-font-smoothing: antialiased}
+    .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
     a{text-decoration:none;color:inherit;transition:0.2s var(--transition)}
     img{max-width:100%;display:block;height:auto}
     .container{width:min(1200px, 100%); padding: 0 20px; margin:auto}
@@ -706,6 +708,7 @@
     .factory-strength-section { background: #000; padding: 50px 0; border-top: 1px solid rgba(255,255,255,0.05); }
     .factory-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; margin-bottom: 30px; }
     .video-box { position: relative; background: #111; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; border: 1px solid rgba(255,255,255,0.1); }
+    .video-box video{width:100%;height:100%;object-fit:cover;display:block}
     .video-box video { width: 100%; height: 100%; object-fit: cover; }
     .stats-box { background: linear-gradient(135deg, #111 0%, #050505 100%); padding: 40px; border-radius: var(--radius); display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; border: 1px solid rgba(201,163,78,0.2); align-content: center; }
     .stat-row { display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px; }
@@ -724,6 +727,10 @@
       .factory-grid { grid-template-columns: 1fr; }
       .image-gallery { grid-template-columns: repeat(2, 1fr); }
     }
+    @media (prefers-reduced-motion: reduce) {
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
   </style>
 
 
@@ -735,11 +742,11 @@
     "name": "Guangzhou Woood Packaging Factory Production Highlight",
     "description": "Exclusive tour of the Guangzhou Woood Packaging factory. Watch our automatic production lines for luxury magnetic boxes and FSC certified sustainable packaging.",
     "thumbnailUrl": [
-      "https://gzwoood.com/assets/home_hero.webp"
+      "https://gzwoood.com/assets/factory-video-poster.webp"
     ],
     "uploadDate": "2026-06-05T08:00:00+08:00",
     "duration": "PT0M45S",
-    "contentUrl": "https://gzwoood.com/assets/guangzhou-factory-source.mp4",
+    "contentUrl": "https://gzwoood.com/assets/factory-tour.mp4",
     "embedUrl": "https://gzwoood.com/",
     "interactionStatistic": {
       "@type": "InteractionCounter",
@@ -751,9 +758,9 @@
       "name": "Guangzhou Woood Trading Co., Ltd.",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://gzwoood.com/assets/gzwoood-navigation-logo.png",
-        "width": 60,
-        "height": 60
+        "url": "https://gzwoood.com/assets/gzwoood-navigation-logo-480.webp",
+        "width": 480,
+        "height": 214
       }
     }
   }
@@ -772,7 +779,7 @@
   <header class="header">
     <div class="container nav">
       <a href="/" class="logo" aria-label="gzwoood Home">
-        <img src="assets/gzwoood-navigation-logo.png" width="1872" height="832" alt="gzwoood.com — Custom Box Manufacturer">
+        <img src="assets/gzwoood-navigation-logo-480.webp" width="480" height="214" alt="gzwoood.com — Custom Box Manufacturer" decoding="async">
       </a>
 
 
@@ -788,10 +795,9 @@
   </header>
 
   <main>
-    <h1 style="display:none">Custom Packaging Manufacturer | Luxury Gift Boxes & Sustainable Mailers</h1>
     <section class="hero">
       <div class="hero-visual">
-        <img src="assets/hero-v2.webp" alt="Luxury Packaging Collection - gzwoood" loading="eager" fetchpriority="high">
+        <img src="assets/hero-v2.webp" width="1235" height="937" alt="Luxury Packaging Collection - gzwoood" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="container">
         <div class="hero-content">
@@ -839,15 +845,15 @@
             <span class="filter-group-label">Shop By Industry</span>
           </div>
           <div class="filter-group">
-            <button class="filter-btn active" data-category="All">All Items</button>
-            <button class="filter-btn" data-category="Perfume & Essential Oil">Perfume & Essential Oil</button>
-            <button class="filter-btn" data-category="Shipping Corrugated box">Shipping Corrugated box</button>
-            <button class="filter-btn" data-category="Wig Packaging">Wig Packaging</button>
-            <button class="filter-btn" data-category="Apparel Packaging">Apparel Packaging</button>
-            <button class="filter-btn" data-category="Jewelry Packaging">Jewelry Packaging</button>
-            <button class="filter-btn" data-category="Cosmetics Packaging">Cosmetics Packaging</button>
-             <button class="filter-btn" data-category="Gift Packaging">Gift Packaging</button>
-            <button class="filter-btn" data-category="Padel Packaging" style="border-color:var(--gold);">Padel Packaging</button>
+            <button class="filter-btn active" type="button" data-category="All">All Items</button>
+            <button class="filter-btn" type="button" data-category="Perfume & Essential Oil">Perfume & Essential Oil</button>
+            <button class="filter-btn" type="button" data-category="Shipping Corrugated box">Shipping Corrugated box</button>
+            <button class="filter-btn" type="button" data-category="Wig Packaging">Wig Packaging</button>
+            <button class="filter-btn" type="button" data-category="Apparel Packaging">Apparel Packaging</button>
+            <button class="filter-btn" type="button" data-category="Jewelry Packaging">Jewelry Packaging</button>
+            <button class="filter-btn" type="button" data-category="Cosmetics Packaging">Cosmetics Packaging</button>
+             <button class="filter-btn" type="button" data-category="Gift Packaging">Gift Packaging</button>
+            <button class="filter-btn" type="button" data-category="Padel Packaging" style="border-color:var(--gold);">Padel Packaging</button>
 
            </div>
 
@@ -861,7 +867,7 @@
           <!-- Product Cards with Optimized Images -->
           <article class="product-card" data-category="Wig Packaging" data-search="satin fabric inner magnetic box premium foldable flat shipping wig cosmetics beauty">
             <div class="product-image">
-              <img src="assets/satin_box.webp" alt="Custom Satin Inner Magnetic Gift Box Manufacturer - Luxury Wig and Cosmetic Packaging" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
+              <img src="assets/satin_box.webp" width="800" height="800" srcset="assets/satin_box-480.webp 480w, assets/satin_box-768.webp 768w, assets/satin_box.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom Satin Inner Magnetic Gift Box Manufacturer - Luxury Wig and Cosmetic Packaging" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
               <span class="badge">Wig Packaging</span>
             </div>
 
@@ -877,7 +883,7 @@
 
           <article class="product-card" data-category="Cosmetics Packaging" data-search="magnetic box with handle luxury rigid box packaging clothing cosmetics bags retail">
             <div class="product-image">
-              <img src="assets/handle_box.webp" alt="Luxury Rigid Box with Handle Wholesale - Premium Apparel and Retail Packaging Factory" loading="lazy" decoding="async">
+              <img src="assets/handle_box.webp" width="800" height="800" srcset="assets/handle_box-480.webp 480w, assets/handle_box-768.webp 768w, assets/handle_box.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury Rigid Box with Handle Wholesale - Premium Apparel and Retail Packaging Factory" loading="lazy" decoding="async">
               <span class="badge">Cosmetics Packaging</span>
             </div>
 
@@ -893,7 +899,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="luxury gift boxes elegant custom premium gifting weddings birthdays luxury packaging">
             <div class="product-image">
-              <img src="assets/luxury_box.webp" alt="Premium Custom Gift Box Factory - Elegant Wedding and Special Occasion Packaging" loading="lazy" decoding="async">
+              <img src="assets/luxury_box.webp" width="800" height="800" srcset="assets/luxury_box-480.webp 480w, assets/luxury_box-768.webp 768w, assets/luxury_box.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Premium Custom Gift Box Factory - Elegant Wedding and Special Occasion Packaging" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
 
@@ -909,7 +915,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="magnetic closure box rigid luxury packaging foil stamping eco-friendly fsc sustainability">
             <div class="product-image">
-              <img src="assets/Magnetic_Closure_Boxes.webp" alt="Sustainable Luxury Magnetic Closure Boxes - FSC Certified Packaging" loading="lazy" decoding="async">
+              <img src="assets/Magnetic_Closure_Boxes.webp" width="1200" height="900" srcset="assets/Magnetic_Closure_Boxes-480.webp 480w, assets/Magnetic_Closure_Boxes-768.webp 768w, assets/Magnetic_Closure_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Sustainable Luxury Magnetic Closure Boxes - FSC Certified Packaging" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
 
@@ -926,7 +932,7 @@
 
           <article class="product-card" data-category="Perfume & Essential Oil" data-search="book style boxes rigid gift box magnetic lid closure luxury packaging">
             <div class="product-image">
-              <img src="assets/Book_Style_Boxes.webp" alt="Book Style Rigid Packaging" loading="lazy" decoding="async">
+              <img src="assets/Book_Style_Boxes.webp" width="1200" height="900" srcset="assets/Book_Style_Boxes-480.webp 480w, assets/Book_Style_Boxes-768.webp 768w, assets/Book_Style_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Book Style Rigid Packaging" loading="lazy" decoding="async">
               <span class="badge">Perfume & Essential Oil</span>
             </div>
 
@@ -942,7 +948,7 @@
 
           <article class="product-card" data-category="Cartons" data-search="lid and base food boxes bakery pastry sushi cookies cakes flat shipping eco-friendly fsc">
             <div class="product-image">
-              <img src="assets/Bakery_Pastry_Boxes.webp" alt="Bakery and Food Packaging Boxes" loading="lazy" decoding="async">
+              <img src="assets/Bakery_Pastry_Boxes.webp" width="1200" height="900" srcset="assets/Bakery_Pastry_Boxes-480.webp 480w, assets/Bakery_Pastry_Boxes-768.webp 768w, assets/Bakery_Pastry_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Bakery and Food Packaging Boxes" loading="lazy" decoding="async">
               <span class="badge">Cartons</span>
             </div>
             <div class="product-body">
@@ -957,7 +963,7 @@
 
           <article class="product-card" data-category="Cosmetics Packaging" data-search="drawer boxes slide boxes rigid gift box matchbox jewelry accessories">
             <div class="product-image">
-              <img src="assets/Drawer_Boxes.webp" alt="Slide Out Drawer Boxes" loading="lazy" decoding="async">
+              <img src="assets/Drawer_Boxes.webp" width="1200" height="900" srcset="assets/Drawer_Boxes-480.webp 480w, assets/Drawer_Boxes-768.webp 768w, assets/Drawer_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Slide Out Drawer Boxes" loading="lazy" decoding="async">
               <span class="badge">Cosmetics Packaging</span>
             </div>
 
@@ -973,7 +979,7 @@
 
           <article class="product-card" data-category="Shipping Corrugated box" data-search="custom mailer boxes corrugated shipping e-commerce biodegradable apparel">
             <div class="product-image">
-              <img src="assets/Corrugated_Mailer_Boxes.webp" alt="Eco-friendly Mailer Boxes" loading="lazy" decoding="async">
+              <img src="assets/Corrugated_Mailer_Boxes.webp" width="1200" height="900" srcset="assets/Corrugated_Mailer_Boxes-480.webp 480w, assets/Corrugated_Mailer_Boxes-768.webp 768w, assets/Corrugated_Mailer_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Eco-friendly Mailer Boxes" loading="lazy" decoding="async">
               <span class="badge">Shipping Corrugated box</span>
             </div>
 
@@ -989,7 +995,7 @@
 
           <article class="product-card" data-category="Padel Packaging" data-search="padel racket boxes sports packaging large rigid box sports equipment">
             <div class="product-image">
-              <img src="assets/Padel_Racket_Boxes.webp" alt="Padel Racket Packaging Boxes" loading="lazy" decoding="async">
+              <img src="assets/Padel_Racket_Boxes.webp" width="1200" height="900" srcset="assets/Padel_Racket_Boxes-480.webp 480w, assets/Padel_Racket_Boxes-768.webp 768w, assets/Padel_Racket_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Padel Racket Packaging Boxes" loading="lazy" decoding="async">
               <span class="badge">Padel Packaging</span>
             </div>
 
@@ -1005,7 +1011,7 @@
 
           <article class="product-card" data-category="Cosmetics Packaging" data-search="cosmetic packaging skincare makeup cream luxury beauty foil stamping">
             <div class="product-image">
-              <img src="assets/cosmetic_box.webp" alt="Beauty and Cosmetic Packaging" loading="lazy" decoding="async">
+              <img src="assets/cosmetic_box.webp" width="1200" height="900" srcset="assets/cosmetic_box-480.webp 480w, assets/cosmetic_box-768.webp 768w, assets/cosmetic_box.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Beauty and Cosmetic Packaging" loading="lazy" decoding="async">
               <span class="badge">Cosmetics Packaging</span>
             </div>
 
@@ -1021,7 +1027,7 @@
 
           <article class="product-card" data-category="Perfume & Essential Oil" data-search="essential oil boxes perfume boxes fragrance scents">
             <div class="product-image">
-              <img src="assets/perfume_box.webp" alt="Essential Oil and Perfume Box" loading="lazy" decoding="async">
+              <img src="assets/perfume_box.webp" width="1200" height="900" srcset="assets/perfume_box-480.webp 480w, assets/perfume_box-768.webp 768w, assets/perfume_box.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Essential Oil and Perfume Box" loading="lazy" decoding="async">
               <span class="badge">Perfume & Essential Oil</span>
             </div>
 
@@ -1037,7 +1043,7 @@
 
           <article class="product-card" data-category="Shipping Corrugated box" data-search="folding cartons paper card boxes retail lightweight custom bakery">
             <div class="product-image">
-              <img src="assets/Folding_Carton_Boxes.webp" alt="Retail Folding Cartons" loading="lazy" decoding="async">
+              <img src="assets/Folding_Carton_Boxes.webp" width="1200" height="900" srcset="assets/Folding_Carton_Boxes-480.webp 480w, assets/Folding_Carton_Boxes-768.webp 768w, assets/Folding_Carton_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Retail Folding Cartons" loading="lazy" decoding="async">
               <span class="badge">Shipping Corrugated box</span>
             </div>
 
@@ -1055,7 +1061,7 @@
 
           <article class="product-card" data-category="Apparel Packaging" data-search="custom paper bags luxury retail bag shopping branding eco-friendly">
             <div class="product-image">
-              <img src="assets/Custom_Paper_Bags.webp" alt="Custom Luxury Paper Bags" loading="lazy" decoding="async">
+              <img src="assets/Custom_Paper_Bags.webp" width="1200" height="900" srcset="assets/Custom_Paper_Bags-480.webp 480w, assets/Custom_Paper_Bags-768.webp 768w, assets/Custom_Paper_Bags.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom Luxury Paper Bags" loading="lazy" decoding="async">
               <span class="badge">Apparel Packaging</span></div>
 
             <div class="product-body">
@@ -1068,7 +1074,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="eva foam inserts cavity protection black eva luxury electronics">
             <div class="product-image">
-              <img src="assets/EVA_Foam_Inserts.webp" alt="Precision EVA Foam Inserts" loading="lazy" decoding="async">
+              <img src="assets/EVA_Foam_Inserts.webp" width="1200" height="900" srcset="assets/EVA_Foam_Inserts-480.webp 480w, assets/EVA_Foam_Inserts-768.webp 768w, assets/EVA_Foam_Inserts.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Precision EVA Foam Inserts" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
 
@@ -1082,7 +1088,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="stickers labels logo sticker sealing paper card branding tissue">
             <div class="product-image">
-              <img src="assets/Stickers_Labels.webp" alt="Custom Printed Stickers and Labels for Packaging Branding" loading="lazy" decoding="async">
+              <img src="assets/Stickers_Labels.webp" width="1200" height="900" srcset="assets/Stickers_Labels-480.webp 480w, assets/Stickers_Labels-768.webp 768w, assets/Stickers_Labels.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom Printed Stickers and Labels for Packaging Branding" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
 
@@ -1096,7 +1102,7 @@
 
           <article class="product-card" data-category="Jewelry Packaging" data-search="gloss wood grain jewelry box led light rings necklaces bracelets luxury presentation">
             <div class="product-image">
-              <img src="assets/gloss-wood-grain-jewelry-box.webp" width="1254" height="1254" alt="Gloss wood grain jewelry boxes with LED lights for rings, earrings and necklaces" loading="lazy" decoding="async">
+              <img src="assets/gloss-wood-grain-jewelry-box.webp" width="1254" height="1254" srcset="assets/gloss-wood-grain-jewelry-box-480.webp 480w, assets/gloss-wood-grain-jewelry-box-768.webp 768w, assets/gloss-wood-grain-jewelry-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Gloss wood grain jewelry boxes with LED lights for rings, earrings and necklaces" loading="lazy" decoding="async">
               <span class="badge">Jewelry Packaging</span>
             </div>
             <div class="product-body">
@@ -1111,7 +1117,7 @@
 
           <article class="product-card" data-category="Jewelry Packaging" data-search="high gloss lacquer jewelry box piano lacquer led light rings earrings necklaces luxury display">
             <div class="product-image">
-              <img src="assets/high-gloss-lacquer-jewelry-box.webp" width="1254" height="1254" alt="High gloss piano lacquer jewelry boxes with built-in LED lighting" loading="lazy" decoding="async">
+              <img src="assets/high-gloss-lacquer-jewelry-box.webp" width="1254" height="1254" srcset="assets/high-gloss-lacquer-jewelry-box-480.webp 480w, assets/high-gloss-lacquer-jewelry-box-768.webp 768w, assets/high-gloss-lacquer-jewelry-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="High gloss piano lacquer jewelry boxes with built-in LED lighting" loading="lazy" decoding="async">
               <span class="badge">Jewelry Packaging</span>
             </div>
             <div class="product-body">
@@ -1126,7 +1132,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="valentine surprise jewelry gift box double door preserved flower drawer ring proposal romantic customizable">
             <div class="product-image">
-              <img src="assets/valentine-surprise-jewelry-box.webp" width="1254" height="1254" alt="Valentine surprise double-door jewelry gift box with preserved flower and ring drawer" loading="lazy" decoding="async">
+              <img src="assets/valentine-surprise-jewelry-box.webp" width="1254" height="1254" srcset="assets/valentine-surprise-jewelry-box-480.webp 480w, assets/valentine-surprise-jewelry-box-768.webp 768w, assets/valentine-surprise-jewelry-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Valentine surprise double-door jewelry gift box with preserved flower and ring drawer" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
             <div class="product-body">
@@ -1141,7 +1147,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="double door vape display box rigid foam insert vape kits cartridges promotional retail brand launch">
             <div class="product-image">
-              <img src="assets/double-door-vape-display-box.webp" width="1254" height="1254" alt="Premium double-door rigid vape display box with custom foam insert" loading="lazy" decoding="async">
+              <img src="assets/double-door-vape-display-box.webp" width="1254" height="1254" srcset="assets/double-door-vape-display-box-480.webp 480w, assets/double-door-vape-display-box-768.webp 768w, assets/double-door-vape-display-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Premium double-door rigid vape display box with custom foam insert" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
             <div class="product-body">
@@ -1156,7 +1162,7 @@
 
           <article class="product-card" data-category="Apparel Packaging" data-search="luxury apparel gift box ribbon handle clothing scarves lingerie accessories fashion rigid cardboard">
             <div class="product-image">
-              <img src="assets/luxury-apparel-gift-box.webp" width="1254" height="1254" alt="Luxury rigid apparel gift boxes with ribbon handles for premium fashion packaging" loading="lazy" decoding="async">
+              <img src="assets/luxury-apparel-gift-box.webp" width="1254" height="1254" srcset="assets/luxury-apparel-gift-box-480.webp 480w, assets/luxury-apparel-gift-box-768.webp 768w, assets/luxury-apparel-gift-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury rigid apparel gift boxes with ribbon handles for premium fashion packaging" loading="lazy" decoding="async">
               <span class="badge">Apparel Packaging</span>
             </div>
             <div class="product-body">
@@ -1171,7 +1177,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="luxury whiskey gift box magnetic closure gold foil foam insert spirits glassware bar gift set">
             <div class="product-image">
-              <img src="assets/luxury-whiskey-gift-box.webp" width="1254" height="1254" alt="Luxury magnetic whiskey gift box with gold foil details and custom foam insert" loading="lazy" decoding="async">
+              <img src="assets/luxury-whiskey-gift-box.webp" width="1254" height="1254" srcset="assets/luxury-whiskey-gift-box-480.webp 480w, assets/luxury-whiskey-gift-box-768.webp 768w, assets/luxury-whiskey-gift-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury magnetic whiskey gift box with gold foil details and custom foam insert" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
             <div class="product-body">
@@ -1186,7 +1192,7 @@
 
           <article class="product-card" data-category="Cosmetics Packaging" data-search="luxury cosmetic gift box satin insert skincare perfume makeup beauty promotional rigid">
             <div class="product-image">
-              <img src="assets/luxury-cosmetic-gift-box-satin-insert.webp" width="1254" height="1254" alt="Luxury rigid cosmetic gift box with soft satin insert for skincare, perfume and makeup sets" loading="lazy" decoding="async">
+              <img src="assets/luxury-cosmetic-gift-box-satin-insert.webp" width="1254" height="1254" srcset="assets/luxury-cosmetic-gift-box-satin-insert-480.webp 480w, assets/luxury-cosmetic-gift-box-satin-insert-768.webp 768w, assets/luxury-cosmetic-gift-box-satin-insert.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury rigid cosmetic gift box with soft satin insert for skincare, perfume and makeup sets" loading="lazy" decoding="async">
               <span class="badge">Cosmetics Packaging</span>
             </div>
             <div class="product-body">
@@ -1201,7 +1207,7 @@
 
           <article class="product-card" data-category="Apparel Packaging" data-search="luxury lingerie gift box intimate apparel sleepwear fashion magnetic anti scratch matte film">
             <div class="product-image">
-              <img src="assets/luxury-lingerie-gift-box.webp" width="1254" height="1254" alt="Luxury magnetic lingerie gift box with customizable interior for intimate apparel and sleepwear" loading="lazy" decoding="async">
+              <img src="assets/luxury-lingerie-gift-box.webp" width="1254" height="1254" srcset="assets/luxury-lingerie-gift-box-480.webp 480w, assets/luxury-lingerie-gift-box-768.webp 768w, assets/luxury-lingerie-gift-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury magnetic lingerie gift box with customizable interior for intimate apparel and sleepwear" loading="lazy" decoding="async">
               <span class="badge">Lingerie Packaging</span>
             </div>
             <div class="product-body">
@@ -1216,7 +1222,7 @@
 
           <article class="product-card" data-category="Gift Packaging" data-search="custom flower gift box preserved flowers ribbon valentine wedding seasonal gold foil romantic rigid">
             <div class="product-image">
-              <img src="assets/custom-flower-gift-box.webp" width="1254" height="1254" alt="Custom rigid flower gift box with ribbon closure and gold-foiled logo" loading="lazy" decoding="async">
+              <img src="assets/custom-flower-gift-box.webp" width="1254" height="1254" srcset="assets/custom-flower-gift-box-480.webp 480w, assets/custom-flower-gift-box-768.webp 768w, assets/custom-flower-gift-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom rigid flower gift box with ribbon closure and gold-foiled logo" loading="lazy" decoding="async">
               <span class="badge">Gift Packaging</span>
             </div>
             <div class="product-body">
@@ -1231,7 +1237,7 @@
 
           <article class="product-card" data-category="Padel Packaging" data-search="padel racket corrugated box ecommerce shipping mailer sports packaging">
             <div class="product-image">
-              <img src="assets/padel-corrugated.webp" alt="Custom Corrugated Padel Racket Box - Durable E-commerce Shipping Solution" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
+              <img src="assets/padel-corrugated.webp" width="800" height="800" srcset="assets/padel-corrugated-480.webp 480w, assets/padel-corrugated-768.webp 768w, assets/padel-corrugated.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom Corrugated Padel Racket Box - Durable E-commerce Shipping Solution" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
               <span class="badge">Padel Packaging</span>
             </div>
             <div class="product-body">
@@ -1246,7 +1252,7 @@
 
           <article class="product-card" data-category="Padel Packaging" data-search="luxury magnetic padel racket box rigid gift packaging magnetic closure">
             <div class="product-image">
-              <img src="assets/padel-luxury-magnetic.webp" alt="Luxury Magnetic Padel Racket Gift Box - Premium Rigid Sports Packaging" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
+              <img src="assets/padel-luxury-magnetic.webp" width="800" height="800" srcset="assets/padel-luxury-magnetic-480.webp 480w, assets/padel-luxury-magnetic-768.webp 768w, assets/padel-luxury-magnetic.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury Magnetic Padel Racket Gift Box - Premium Rigid Sports Packaging" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
               <span class="badge">Luxury Rigid</span>
             </div>
             <div class="product-body">
@@ -1261,7 +1267,7 @@
 
           <article class="product-card" data-category="Padel Packaging" data-search="padel racket box with foam insert protective sports packaging premium display">
             <div class="product-image">
-              <img src="assets/padel-foam-insert.webp" alt="Padel Racket Packaging with Foam Insert - Maximum Protection Sports Box" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
+              <img src="assets/padel-foam-insert.webp" width="800" height="800" srcset="assets/padel-foam-insert-480.webp 480w, assets/padel-foam-insert-768.webp 768w, assets/padel-foam-insert.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Padel Racket Packaging with Foam Insert - Maximum Protection Sports Box" loading="lazy" decoding="async" style="object-fit: contain; background: #fff;">
               <span class="badge">Protective</span>
             </div>
             <div class="product-body">
@@ -1285,9 +1291,7 @@
         
         <div class="factory-grid">
           <div class="video-box">
-            <video autoplay muted loop playsinline preload="none">
-              <source src="assets/factory-tour.mp4" type="video/mp4">
-            </video>
+            <video muted loop playsinline preload="none" poster="assets/factory-video-poster.webp" controls aria-label="Guangzhou Woood Packaging factory tour" data-src="assets/factory-tour.mp4"></video>
           </div>
           <div class="stats-box">
             <div class="stat-row">
@@ -1458,8 +1462,8 @@
 
         <div class="faq-grid">
           <div class="faq-item">
-            <button class="faq-question">What’s your MOQ?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">What’s your MOQ?</button>
+            <div class="faq-answer" id="faq-answer-1">
               <p>Our standard MOQ is:<br>
               • 100 pcs for rigid and magnetic boxes<br>
               • 200 pcs for mailer boxes and paper bags<br>
@@ -1468,36 +1472,36 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Can you help with packaging design?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">Can you help with packaging design?</button>
+            <div class="faq-answer" id="faq-answer-2">
               <p>Yes. We provide free mockups and 3D previews before production. You can send us your artwork, or our team can help create the design for you.</p>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Do you provide samples?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">Do you provide samples?</button>
+            <div class="faq-answer" id="faq-answer-3">
               <p>Absolutely. We provide a physical pre-production sample for approval before mass production begins. Sample lead time is usually 3–5 working days.</p>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">How long is production?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">How long is production?</button>
+            <div class="faq-answer" id="faq-answer-4">
               <p>Standard production time is around 12–18 days after sample approval. Rush production is available for selected projects.</p>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Can you match Pantone colors?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">Can you match Pantone colors?</button>
+            <div class="faq-answer" id="faq-answer-5">
               <p>Yes. We support Pantone color matching and work with AI, PDF, and editable artwork files.</p>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">What finishing options do you offer?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6">What finishing options do you offer?</button>
+            <div class="faq-answer" id="faq-answer-6">
               <p>We offer a wide range of premium finishes, including:<br>
               • Matte / Gloss Lamination<br>
               • Soft-touch Finish<br>
@@ -1510,8 +1514,8 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">What payment methods do you accept?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7">What payment methods do you accept?</button>
+            <div class="faq-answer" id="faq-answer-7">
               <p>We accept:<br>
               • T/T Bank Transfer<br>
               • PayPal<br>
@@ -1521,8 +1525,8 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-question">Do you ship internationally?</button>
-            <div class="faq-answer">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-8">Do you ship internationally?</button>
+            <div class="faq-answer" id="faq-answer-8">
               <p>Yes — we ship worldwide. We offer sea freight, air freight, and express shipping based on your timeline and budget. DDP shipping is also available for selected countries.</p>
             </div>
           </div>
@@ -1934,9 +1938,12 @@
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
             <div class="form-grid">
               <p class="form-status" id="formStatus" role="status">Thank you. Your inquiry has been sent successfully. Our packaging team will contact you shortly.</p>
-              <input class="field" type="text" name="Full Name" placeholder="Full Name" autocomplete="name" required>
-              <input class="field" type="text" name="Email or WhatsApp" placeholder="Email or WhatsApp" autocomplete="email" required>
-              <select class="field" name="Box Type" aria-label="Box Type">
+              <label class="visually-hidden" for="fullName">Full Name</label>
+              <input class="field" id="fullName" type="text" name="Full Name" placeholder="Full Name" autocomplete="name" required>
+              <label class="visually-hidden" for="contactMethod">Email or WhatsApp</label>
+              <input class="field" id="contactMethod" type="text" name="Email or WhatsApp" placeholder="Email or WhatsApp" autocomplete="email" required>
+              <label class="visually-hidden" for="boxType">Box Type</label>
+              <select class="field" id="boxType" name="Box Type">
                 <option value="">Box Type</option>
                 <option>Magnetic Box</option>
                 <option>Mailer Box</option>
@@ -1944,14 +1951,17 @@
                 <option>Luxury Gift Box</option>
                 <option>Other</option>
               </select>
-              <select class="field" name="Order Quantity" aria-label="Order Quantity">
+              <label class="visually-hidden" for="orderQuantity">Order Quantity</label>
+              <select class="field" id="orderQuantity" name="Order Quantity">
                 <option value="">Quantity</option>
                 <option>500 - 1,000 pcs</option>
                 <option>1,000 - 3,000 pcs</option>
                 <option>5,000+ pcs</option>
               </select>
-              <input class="field-full" type="text" name="Box Size" placeholder="Box Size (L x W x H)">
-              <textarea class="field-full" name="Project Details" placeholder="Material preferences, printing colors, or special requests..."></textarea>
+              <label class="visually-hidden" for="boxSize">Box Size</label>
+              <input class="field-full" id="boxSize" type="text" name="Box Size" placeholder="Box Size (L x W x H)">
+              <label class="visually-hidden" for="projectDetails">Project Details</label>
+              <textarea class="field-full" id="projectDetails" name="Project Details" placeholder="Material preferences, printing colors, or special requests..."></textarea>
               <button class="btn btn-gold field-full" type="submit">Submit Inquiry</button>
             </div>
           </form>
@@ -1996,12 +2006,12 @@
   </footer>
 
   <div class="float-container">
-    <div class="back-to-top" id="backToTop" title="Scroll to top">↑</div>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Scroll to top">↑</button>
     <a href="#quote" class="float-btn quote" title="Get a Quote">
       <span class="label">Get a Quote</span>
       <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
     </a>
-    <a href="https://wa.me/8613189018213" class="float-btn whatsapp" target="_blank" title="Chat with us on WhatsApp">
+    <a href="https://wa.me/8613189018213" class="float-btn whatsapp" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
       <span class="label">WhatsApp Chat</span>
       <svg viewBox="0 0 448 512" width="30" height="30" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.6-2.8-23.6-8.7-45-27.7-16.6-14.9-27.9-33.3-31.1-38.9-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.7z"/></svg>
     </a>
@@ -2041,13 +2051,47 @@
       document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
           const item = button.parentElement;
-          item.classList.toggle('active');
+          const willOpen = !item.classList.contains('active');
           document.querySelectorAll('.faq-item').forEach(otherItem => {
-            if (otherItem !== item) otherItem.classList.remove('active');
+            otherItem.classList.remove('active');
+            const otherButton = otherItem.querySelector('.faq-question');
+            if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
           });
+          item.classList.toggle('active', willOpen);
+          button.setAttribute('aria-expanded', String(willOpen));
         });
       });
     });
+
+    // Load the factory video only when its section approaches the viewport.
+    const factoryVideo = document.querySelector('.video-box video[data-src]');
+    if (factoryVideo) {
+      const loadFactoryVideo = () => {
+        if (factoryVideo.dataset.loaded) return;
+        factoryVideo.src = factoryVideo.dataset.src;
+        factoryVideo.dataset.loaded = 'true';
+        factoryVideo.load();
+
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const mobileViewport = window.matchMedia('(max-width: 767px)').matches;
+        const saveData = navigator.connection && navigator.connection.saveData;
+        if (!reducedMotion && !mobileViewport && !saveData) {
+          factoryVideo.play().catch(() => {});
+        }
+      };
+
+      if ('IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries, observer) => {
+          if (entries.some(entry => entry.isIntersecting)) {
+            loadFactoryVideo();
+            observer.disconnect();
+          }
+        }, { rootMargin: '300px 0px' });
+        videoObserver.observe(factoryVideo);
+      } else {
+        factoryVideo.addEventListener('click', loadFactoryVideo, { once: true });
+      }
+    }
 
     // Fix potential ReferenceError
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -2114,9 +2158,10 @@
       } else {
         btt.classList.remove('show');
       }
-    });
+    }, { passive: true });
     btt.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
     });
   </script>
   <!-- Deployment refresh: 2026-07-07 -->
