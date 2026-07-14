@@ -278,43 +278,7 @@
       margin-top: 48px;
     }
 
-    /* Modal Styling for Blog Content */
-    .blog-modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(5px);
-      overflow-y: auto;
-    }
-    .blog-modal-content {
-      background: #fff;
-      margin: 50px auto;
-      width: min(900px, 90%);
-      border-radius: var(--radius);
-      padding: 60px;
-      position: relative;
-    }
-    .close-modal {
-      position: absolute;
-      right: 30px;
-      top: 30px;
-      font-size: 30px;
-      cursor: pointer;
-      color: var(--black);
-    }
-    .blog-full-content h2 { font-size: 32px; margin-bottom: 24px; }
-    .blog-full-content h3 { font-size: 24px; margin: 32px 0 16px; color: var(--gold); }
-    .blog-full-content p { font-size: 17px; line-height: 1.8; color: var(--black); margin-bottom: 20px; }
-    .blog-full-content ul { margin-bottom: 24px; padding-left: 20px; }
-    .blog-full-content li { margin-bottom: 12px; font-size: 16px; }
-
     @media (max-width: 768px) {
-      .blog-modal-content { padding: 40px 20px; margin: 20px auto; }
       .blog-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 992px) {
@@ -391,17 +355,6 @@
     .product-card{background:#fff; color:#111; border-radius:36px;overflow:hidden;transition:0.4s var(--transition);border:1px solid var(--line);display:flex;flex-direction:column}
     .product-card p { color: #666; }
     .quote-form{padding:48px;background:#fff;color:#111; border-radius:48px}
-    .blog-modal-content {
-      background: #fff;
-      color: #111;
-      margin: 50px auto;
-      width: min(900px, 90%);
-      border-radius: var(--radius);
-      padding: 60px;
-      position: relative;
-    }
-
-
     .filter-btn{width:100%;padding:0 16px;min-height:44px;border-radius:12px;font-size:13px;font-weight:750;background:#fff;color:#111 !important;border:1px solid rgba(255,255,255,.14);cursor:pointer;white-space:nowrap;transition:0.25s}
     .filter-btn:hover{border-color:var(--gold);background:#f7f1e5;transform:translateY(-2px)}
     .filter-btn.active{background:var(--gold);color:#000 !important;border-color:var(--gold);box-shadow:0 6px 18px rgba(201,163,78,.22)}
@@ -617,7 +570,6 @@
     .quote-form, .quote-form h2, .quote-form p, .quote-form label { color: #111 !important; }
     .field, .textarea, .search-input { color: #111 !important; background: #fff !important; }
     .search-input::placeholder { color: #888 !important; }
-    .blog-modal-content, .blog-modal-content h2, .blog-modal-content h3, .blog-modal-content p, .blog-modal-content li { color: #111 !important; }
     .filter-btn:not(.active) { color: #111 !important; background: #fff !important; }
     .badge { color: #111 !important; }
     .why-us, .why-us h3, .why-us li { color: #111 !important; }
@@ -1559,291 +1511,66 @@
 
           <article class="blog-card" style="border: 1px solid var(--gold);">
             <div class="blog-image">
-              <img src="assets/padel-comparison-v2.webp" alt="Rigid vs. Corrugated Padel Racket Packaging">
+              <img src="assets/padel-comparison-v2.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="Rigid vs. Corrugated Padel Racket Packaging">
             </div>
             <div class="blog-body">
               <span class="blog-date">June 25, 2026</span>
               <h3>Rigid Box vs. Corrugated Mailer: Which Padel Racket Box is Right for Your Brand?</h3>
               <p>Choosing the right packaging is a critical business decision. We compare premium rigid boxes against efficient mailers across cost, protection, and ROI...</p>
-              <button class="btn btn-outline" onclick="openBlog('padel-comparison-blog')">Read Expert Guide →</button>
+              <a class="btn btn-outline" href="/blog/rigid-vs-corrugated-padel-racket-packaging/">Read Expert Guide →</a>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="assets/padel-corrugated-mailer.webp" alt="Corrugated Padel Mailer Box Trend 2026">
+              <img src="assets/padel-corrugated-mailer.webp" width="800" height="800" loading="lazy" decoding="async" alt="Corrugated Padel Mailer Box Trend 2026">
             </div>
             <div class="blog-body">
               <span class="blog-date">June 23, 2026</span>
               <h3>Why Corrugated Padel Mailer Boxes Are the Smart Choice for Growing Brands</h3>
               <p>Explore why cost-effective corrugated solutions are taking over the padel market for e-commerce and club merchandise...</p>
-              <button class="btn btn-outline" onclick="openBlog('padel-mailer-blog')">Read Guide →</button>
+              <a class="btn btn-outline" href="/blog/corrugated-padel-mailer-boxes-growing-brands/">Read Guide →</a>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="assets/fake-book-box.webp" alt="Decorative Fake Book Box Trend 2026">
+              <img src="assets/fake-book-box.webp" width="800" height="800" loading="lazy" decoding="async" alt="Decorative Fake Book Box Trend 2026">
             </div>
             <div class="blog-body">
               <span class="blog-date">June 22, 2026</span>
               <h3>Decorative Fake Book Box: The Home Décor Storage Trend Taking Amazon by Storm</h3>
               <p>Discover why luxury hardcover fake book boxes are becoming the top choice for home storage and interior styling in 2026...</p>
-              <button class="btn btn-outline" onclick="openBlog('book-blog')">Read Guide →</button>
+              <a class="btn btn-outline" href="/blog/decorative-fake-book-box/">Read Guide →</a>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="assets/padel-luxury-magnetic.webp" alt="Padel Racket Packaging Trends 2026">
+              <img src="assets/padel-luxury-magnetic.webp" width="800" height="800" loading="lazy" decoding="async" alt="Padel Racket Packaging Trends 2026">
             </div>
             <div class="blog-body">
               <span class="blog-date">June 20, 2026</span>
               <h3>How to Choose the Ultimate Padel Racket Packaging</h3>
               <p>Specialized guide for sports brands. From eco-friendly corrugated mailers to luxury magnetic gift boxes for Padel rackets...</p>
-              <button class="btn btn-outline" onclick="openBlog('padel-blog')">Read Strategy →</button>
+              <a class="btn btn-outline" href="/blog/premium-padel-racket-packaging/">Read Strategy →</a>
             </div>
           </article>
 
           <article class="blog-card">
             <div class="blog-image">
-              <img src="assets/Magnetic_Closure_Boxes.webp" alt="Luxury Magnetic Packaging Guide">
+              <img src="assets/Magnetic_Closure_Boxes.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Luxury Magnetic Packaging Guide">
             </div>
             <div class="blog-body">
               <span class="blog-date">June 18, 2026</span>
               <h3>The Art of Unboxing: Why Magnetic Boxes are the Gold Standard</h3>
               <p>Explore why top-tier luxury brands choose magnetic rigid boxes for high-end gift sets and premium electronics...</p>
-              <button class="btn btn-outline" onclick="openBlog('magnetic-blog')">Read Guide →</button>
+              <a class="btn btn-outline" href="/blog/magnetic-closure-boxes-luxury-brands/">Read Guide →</a>
             </div>
           </article>
         </div>
       </div>
     </section>
-
-    <div id="padel-comparison-blog" class="blog-modal">
-      <div class="blog-modal-content">
-        <span class="close-modal" onclick="closeBlog('padel-comparison-blog')">&times;</span>
-        <div class="blog-full-content">
-          <span class="blog-date">June 25, 2026</span>
-          <h2>Rigid Box vs. Corrugated Mailer: Which Padel Racket Packaging is Right for You?</h2>
-          <p>As Padel scales globally—from Europe to the Middle East and Australia—brands are realizing that packaging is a critical driver of brand image and product positioning. For most owners, the choice comes down to: <strong>The Premium Rigid Magnetic Box</strong> or <strong>The Efficient Corrugated Mailer</strong>.</p>
-          
-          <h3>1. What Is a Rigid Padel Racket Box?</h3>
-          <p>Manufactured with heavy 1200–1600gsm greyboard and wrapped in premium art paper, these boxes create a high-value unboxing experience. They are the ultimate symbol of quality for high-end rackets (€150+).</p>
-          <ul>
-            <li><strong>Luxury Appearance:</strong> Instant brand prestige.</li>
-            <li><strong>Strong Structure:</strong> Exceptional protection and durability.</li>
-            <li><strong>Retail Ready:</strong> Ideal for specialty sports stores and gifting.</li>
-          </ul>
-
-          <h3>2. What Is a Corrugated Padel Mailer Box?</h3>
-          <p>Made from durable E-flute or B-flute board, these are the workhorses of e-commerce. They provide good protection while keeping total landed costs under control.</p>
-          <ul>
-            <li><strong>Cost Efficient:</strong> Lower production and freight costs.</li>
-            <li><strong>Logistics Friendly:</strong> Ships flat, saving 80% on warehouse space.</li>
-            <li><strong>Eco-Conscious:</strong> 100% recyclable and lightweight.</li>
-          </ul>
-
-          <table style="width:100%; border-collapse: collapse; margin: 30px 0; font-size: 14px; text-align: left; color: #111;">
-            <thead>
-              <tr style="background: #f6f6f6; border-bottom: 2px solid var(--gold);">
-                <th style="padding: 12px; border: 1px solid #ddd;">Comparison Factor</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Rigid Magnetic Box</th>
-                <th style="padding: 12px; border: 1px solid #ddd;">Corrugated Mailer</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">Appearance</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Premium Luxury</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Simple & Practical</td>
-              </tr>
-              <tr style="background: #fafafa;">
-                <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">Unit Cost</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Higher (Manual)</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Lower (Machine)</td>
-              </tr>
-              <tr>
-                <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">Shipping Vol.</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Assembled (Large)</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Flat-packed (Minimal)</td>
-              </tr>
-              <tr style="background: #fafafa;">
-                <td style="padding: 12px; border: 1px solid #ddd; font-weight: 700;">Unboxing</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Outstanding</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Standard</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>The ROI Verdict: Which Should You Choose?</h3>
-          <p><strong>Choose Rigid</strong> if your brand focuses on flagship models, retail presence, or sponsorship events where the "wow factor" is mandatory.</p>
-          <p><strong>Choose Corrugated</strong> if you sell primarily online, are launching a mass-market brand, or need to scale volume while protecting your margins.</p>
-          <p><strong>Our Pro Strategy:</strong> Many successful brands use both—Rigid for their "Pro" series and Corrugated for their "Standard" models. This balances brand impact with overall profitability.</p>
-
-          <div class="blog-cta-box" style="margin-top:40px; padding:35px; background:linear-gradient(135deg, #1a1a1a 0%, #000 100%); border:1px solid var(--gold); border-radius:15px; text-align:center; color:#fff;">
-            <h4 style="color:var(--gold); font-size:24px; margin-bottom:15px;">Optimize Your Padel Packaging ROI</h4>
-            <p style="margin-bottom:25px; color:rgba(255,255,255,0.8);">Low MOQ (100pcs), Free 3D Design & Factory Direct Pricing. Let our experts help you find the perfect balance.</p>
-            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-              <a href="#quote" class="btn btn-gold" onclick="closeBlog('padel-comparison-blog')" style="min-width:200px;">Get Factory Price →</a>
-              <a href="https://wa.me/8613189018213" class="btn btn-outline" style="min-width:200px; background:transparent; color:#fff; border-color:rgba(255,255,255,0.3);">Consult Specialist</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="padel-mailer-blog" class="blog-modal">
-      <div class="blog-modal-content">
-        <span class="close-modal" onclick="closeBlog('padel-mailer-blog')">&times;</span>
-        <div class="blog-full-content">
-          <span class="blog-date">June 23, 2026</span>
-          <h2>Why Corrugated Padel Mailer Boxes Are Becoming the Smart Choice for Growing Padel Brands</h2>
-          <p>As the global padel market continues to expand, more brands are looking for packaging solutions that not only protect their products but also help control costs and improve competitiveness.</p>
-          <p>For startups, e-commerce sellers, clubs, and emerging padel brands, a <strong>corrugated padel mailer box</strong> has become one of the most practical and cost-effective packaging options available.</p>
-          
-          <h3>Key Advantages of Corrugated Padel Packaging</h3>
-          <ul>
-            <li><strong>Lower Packaging Cost:</strong> Requires less material and simpler production than rigid gift boxes, resulting in lower manufacturing and storage costs.</li>
-            <li><strong>Excellent Product Protection:</strong> Durable corrugated cardboard provides strong structural protection during domestic and international shipping.</li>
-            <li><strong>Fully Customizable Branding:</strong> Supports custom dimensions, full-color printing, Spot UV, foil stamping, and inside printing to strengthen brand image.</li>
-          </ul>
-
-          <h3>Reach More Customers in Emerging Markets</h3>
-          <p>Many growing padel brands are expanding into new regions where customers prioritize value. Corrugated mailer packaging allows brands to offer more competitive pricing, enter price-sensitive markets, and increase online sales conversion by reducing shipping expenses.</p>
-
-          <h3>Sustainable and E-Commerce Friendly</h3>
-          <p>Modern consumers value environmentally responsible packaging. Our corrugated mailer boxes are 100% recyclable, lightweight, and easy to store, making them an excellent choice for brands seeking a balance between sustainability and cost efficiency.</p>
-
-          <div class="blog-cta-box" style="margin-top:40px; padding:35px; background:linear-gradient(135deg, #1a1a1a 0%, #000 100%); border:1px solid var(--gold); border-radius:15px; text-align:center; color:#fff;">
-            <h4 style="color:var(--gold); font-size:24px; margin-bottom:15px;">Optimize Your Padel Brand Costs</h4>
-            <p style="margin-bottom:25px; color:rgba(255,255,255,0.8);">Low MOQ (100pcs), Free 3D Mockups & Worldwide DDP Shipping. Request your factory-direct quote today.</p>
-            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-              <a href="#quote" class="btn btn-gold" onclick="closeBlog('padel-mailer-blog')" style="min-width:200px;">Get Factory Price Now →</a>
-              <a href="https://wa.me/8613189018213" class="btn btn-outline" style="min-width:200px; background:transparent; color:#fff; border-color:rgba(255,255,255,0.3);">Chat on WhatsApp</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="book-blog" class="blog-modal">
-      <div class="blog-modal-content">
-        <span class="close-modal" onclick="closeBlog('book-blog')">&times;</span>
-        <div class="blog-full-content">
-          <span class="blog-date">June 22, 2026</span>
-          <h2>Decorative Fake Book Box: The Home Décor Storage Trend Taking Amazon by Storm</h2>
-          <p>In today's home décor market, consumers are looking for products that combine beauty and practicality. One product that has become increasingly popular on Amazon, Etsy, and other Western e-commerce platforms is the <strong>Decorative Fake Book Box</strong> — a stylish storage solution designed to look like a luxury hardcover book while providing hidden storage space inside.</p>
-          
-          <h3>What Is a Decorative Fake Book Box?</h3>
-          <p>A Decorative Fake Book Box is a rigid storage box designed to resemble a classic hardcover book. Made from high-quality rigid cardboard and wrapped with premium linen fabric, it offers the appearance of an elegant coffee-table book while concealing a spacious storage compartment inside.</p>
-          <p>The box can be displayed on Bookshelves, Coffee tables, Office desks, Hotel rooms, Luxury retail displays, and Home libraries. Its timeless design makes it both a decorative accent and a practical organizer.</p>
-
-          <h3>Premium Materials for a Luxury Appearance</h3>
-          <p>Our Decorative Book Boxes are manufactured using:</p>
-          <ul>
-            <li><strong>Rigid Cardboard Construction:</strong> Durable core structure providing excellent strength.</li>
-            <li><strong>Linen Fabric Wrapping:</strong> Sophisticated texture that enhances the premium look and feel.</li>
-            <li><strong>Custom Interior Options:</strong> Choices include velvet lining, satin lining, or printed graphics.</li>
-          </ul>
-
-          <h3>Hidden Storage with Endless Possibilities</h3>
-          <p>Popular storage uses include jewelry and watches, keys and small valuables, documents and passports, remote controls, and cosmetics. The hidden compartment helps keep living spaces organized while maintaining a clean and elegant appearance.</p>
-
-          <h3>Fully Customizable for Your Brand</h3>
-          <p>As a professional packaging manufacturer, we offer complete customization services: Custom sizes, linen colors, logo foil stamping, embossing, UV printing, and magnetic closure options.</p>
-
-          <div class="blog-cta-box" style="margin-top:40px; padding:35px; background:linear-gradient(135deg, #1a1a1a 0%, #000 100%); border:1px solid var(--gold); border-radius:15px; text-align:center; color:#fff;">
-            <h4 style="color:var(--gold); font-size:24px; margin-bottom:15px;">Launch Your Own Book Box Collection</h4>
-            <p style="margin-bottom:25px; color:rgba(255,255,255,0.8);">Low MOQ (100pcs), Factory Direct Pricing & Global DDP Shipping. Get your free sample & design support.</p>
-            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-              <a href="#quote" class="btn btn-gold" onclick="closeBlog('book-blog')" style="min-width:200px;">Get Factory Quote →</a>
-              <a href="https://wa.me/8613189018213" class="btn btn-outline" style="min-width:200px; background:transparent; color:#fff; border-color:rgba(255,255,255,0.3);">Chat with Expert</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="magnetic-blog" class="blog-modal">
-      <div class="blog-modal-content">
-        <span class="close-modal" onclick="closeBlog('magnetic-blog')">&times;</span>
-        <div class="blog-full-content">
-          <span class="blog-date">June 18, 2026</span>
-          <h2>The Art of Unboxing: Why Magnetic Closure Boxes are the Gold Standard for Luxury Brands</h2>
-          <p>In the world of high-end retail, the product is only half the story. The other half is the <strong>unboxing experience</strong>. Magnetic closure boxes have emerged as the "Gold Standard" for luxury packaging, offering a unique combination of structural integrity and psychological satisfaction.</p>
-          <p>At <strong>gzwoood</strong>, we've manufactured millions of these units for perfume, jewelry, and high-end electronics. Here is why your brand should consider the "Magnetic Upgrade."</p>
-
-          <h3>1. The "Click" of Quality</h3>
-          <p>There is a distinct audible "click" when a magnetic box closes. This tactile feedback communicates high quality to the customer instantly. It signals that the contents are precious and securely protected.</p>
-
-          <h3>2. Reusability and Brand Longevity</h3>
-          <p>Unlike standard cardboard boxes that are often discarded, magnetic rigid boxes are so durable and beautiful that customers tend to keep them. This turns your packaging into a permanent piece of brand furniture in their home.</p>
-
-          <h3>3. Unlimited Customization</h3>
-          <p>Magnetic boxes offer the most versatile canvas for luxury finishes:</p>
-          <ul>
-            <li><strong>Finishes:</strong> Soft-touch lamination, anti-scratch coating, or textured linen paper.</li>
-            <li><strong>Embellishments:</strong> Gold/Silver foil stamping, Spot UV, or deep embossing for a 3D feel.</li>
-            <li><strong>Inserts:</strong> Custom EVA foam, satin linings, or eco-friendly pulp trays.</li>
-          </ul>
-
-          <div class="blog-cta-box" style="margin-top:40px; padding:35px; background:linear-gradient(135deg, #1a1a1a 0%, #000 100%); border:1px solid var(--gold); border-radius:15px; text-align:center; color:#fff;">
-            <h4 style="color:var(--gold); font-size:24px; margin-bottom:15px;">Elevate Your Product with Magnetic Luxury</h4>
-            <p style="margin-bottom:25px; color:rgba(255,255,255,0.8);">Low MOQ (100pcs), Premium Finishes & Global DDP Shipping. Request your custom sample today.</p>
-            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-              <a href="#quote" class="btn btn-gold" onclick="closeBlog('magnetic-blog')" style="min-width:200px;">Get Factory Price Now →</a>
-              <a href="https://wa.me/8613189018213" class="btn btn-outline" style="min-width:200px; background:transparent; color:#fff; border-color:rgba(255,255,255,0.3);">WhatsApp Expert Chat</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="padel-blog" class="blog-modal">
-      <div class="blog-modal-content">
-        <span class="close-modal" onclick="closeBlog('padel-blog')">&times;</span>
-        <div class="blog-full-content">
-          <span class="blog-date">June 7, 2026</span>
-          <h2>How to Choose the Ultimate Padel Racket Packaging: A Guide for Premium Sports Brands (2026)</h2>
-          <p>With the explosive growth of Padel in Europe, the USA, and the Middle East, brands are facing a new challenge: <strong>How to stand out in a crowded market through packaging?</strong></p>
-          <p>For professional racket brands, packaging is no longer just a box. It’s the first impression of your brand and the "armor" for your product during global transit. At <strong>Guangzhou Woood (gzwoood)</strong>, we specialize in high-end sports packaging. Here are the top 3 solutions favored by premium brands in 2026.</p>
-          
-          <h3>1. E-commerce Ready: The High-Strength Corrugated Solution</h3>
-          <p>If your business focuses on online sales and global DDP shipping, a high-strength <strong>Corrugated Mailer Box</strong> is your best choice.</p>
-          <ul>
-            <li><strong>Core Advantage:</strong> Lightweight, shock-resistant, and cost-effective.</li>
-            <li><strong>Design Tip:</strong> Use E-flute material and consider inside printing to tell your brand story during the unboxing experience.</li>
-          </ul>
-
-          <h3>2. The Luxury Statement: Magnetic Rigid Gift Boxes</h3>
-          <p>For retail display or limited edition rackets, a <strong>Magnetic Rigid Box</strong> is the ultimate symbol of luxury.</p>
-          <ul>
-            <li><strong>Core Advantage:</strong> Secure magnetic closure, premium soft-touch finish, and exceptional durability.</li>
-            <li><strong>Design Tip:</strong> Combine Spot UV, Gold Foiling, or Embossing to make your brand feel like a luxury piece the moment it's held.</li>
-          </ul>
-
-          <h3>3. The Elite Protection: Precision Foam Inserts</h3>
-          <p>The success of packaging often depends on the protection inside.</p>
-          <ul>
-            <li><strong>Core Advantage:</strong> Custom-cut high-density EVA foam or sustainable paper inserts.</li>
-            <li><strong>Design Tip:</strong> 1:1 mold-cutting ensures the racket remains static during transit and can include extra space for balls or accessories.</li>
-          </ul>
-
-          <h3>Why Sustainability Matters?</h3>
-          <p>Overseas markets, especially in Europe and North America, have reached an all-time high demand for sustainable packaging. As an FSC-certified factory, gzwoood’s Padel solutions are <strong>100% recyclable</strong>, helping your brand meet international environmental regulations.</p>
-
-          <div class="blog-cta-box" style="margin-top:40px; padding:35px; background:linear-gradient(135deg, #1a1a1a 0%, #000 100%); border:1px solid var(--gold); border-radius:15px; text-align:center; color:#fff;">
-            <h4 style="color:var(--gold); font-size:24px; margin-bottom:15px;">Boost Your Padel Brand with Premium Packaging</h4>
-            <p style="margin-bottom:25px; color:rgba(255,255,255,0.8);">Low MOQ (100pcs), Free 3D Design & Global DDP Shipping. Get your factory-direct quote in 24 hours.</p>
-            <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
-              <a href="#quote" class="btn btn-gold" onclick="closeBlog('padel-blog')" style="min-width:200px;">Get Factory Price Now →</a>
-              <a href="https://wa.me/8613189018213" class="btn btn-outline" style="min-width:200px; background:transparent; color:#fff; border-color:rgba(255,255,255,0.3);">Chat on WhatsApp</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <section id="reviews" class="section">
 
@@ -2021,22 +1748,6 @@
 
 
   <script>
-    // Blog Modal Logic
-    function openBlog(id) {
-      document.getElementById(id).style.display = "block";
-      document.body.style.overflow = "hidden"; // Prevent scrolling
-    }
-    function closeBlog(id) {
-      document.getElementById(id).style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-    // Close modal when clicking outside content
-    window.onclick = function(event) {
-      if (event.target.className === "blog-modal") {
-        event.target.style.display = "none";
-        document.body.style.overflow = "auto";
-      }
-    }
 
     /* --- Performance Optimization: TBT Reduction --- */
     // Helper to defer non-critical tasks

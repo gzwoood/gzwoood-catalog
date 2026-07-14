@@ -24,3 +24,24 @@ Final category checks after the follow-up fixes:
 - The large transfer reduction comes mainly from deferring the 27.7 MB factory video and serving responsive product images.
 - LCP improved substantially, but remains the largest mobile performance opportunity. A later phase can evaluate a dedicated mobile hero crop without changing the current composition in this branch.
 - FCP and Speed Index varied slightly between runs; the branch does not add render-blocking CSS, JavaScript, or third-party dependencies.
+
+## Phase 2: dedicated blog pages
+
+Phase 2 was tested independently against `main` after the Phase 1 release. Lighthouse 12.8.2 mobile defaults were run three times before and three times after the change; the table uses the median.
+
+| Metric | Phase 2 baseline | Phase 2 branch | Change |
+| --- | ---: | ---: | ---: |
+| Performance score | 83 | 83 | no change |
+| Accessibility | 100 | 100 | no change |
+| Best Practices | 100 | 100 | no change |
+| SEO | 100 | 100 | no change |
+| First Contentful Paint | 1.77 s | 1.61 s | -0.16 s |
+| Largest Contentful Paint | 4.51 s | 4.66 s | +0.15 s |
+| Speed Index | 1.77 s | 1.61 s | -0.16 s |
+| Total Blocking Time | 0 ms | 0 ms | no change |
+| Cumulative Layout Shift | 0 | 0 | no change |
+| Transferred resources | 783 KiB | 763 KiB | -20 KiB |
+| Requests | 18 | 18 | no change |
+| DOM elements | 1,040 | 849 | -191 (-18.4%) |
+
+Phase 2 moves five full articles out of hidden homepage modals and into dedicated static URLs. The homepage keeps the same six visible article cards, while its HTML decreases from 138,749 to 117,569 bytes (-15.3%). The LCP result varied between runs (4.28–4.73 s after the change), so Phase 2 does not claim an LCP improvement; its measured benefit is lower parsing/DOM cost and clearer indexable article structure.
