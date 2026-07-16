@@ -45,3 +45,24 @@ Phase 2 was tested independently against `main` after the Phase 1 release. Light
 | DOM elements | 1,040 | 849 | -191 (-18.4%) |
 
 Phase 2 moves five full articles out of hidden homepage modals and into dedicated static URLs. The homepage keeps the same six visible article cards, while its HTML decreases from 138,749 to 117,569 bytes (-15.3%). The LCP result varied between runs (4.28–4.73 s after the change), so Phase 2 does not claim an LCP improvement; its measured benefit is lower parsing/DOM cost and clearer indexable article structure.
+
+## Phase 5: accessibility and SEO completion
+
+Phase 5 was tested locally on 2026-07-16 with Lighthouse 12.8.2 mobile defaults. Three complete Lighthouse runs were performed; the table reports the median rather than the highest result.
+
+| Metric | Phase 5 median |
+| --- | ---: |
+| Performance score | 89 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+| First Contentful Paint | 1.67 s |
+| Largest Contentful Paint | 2.85 s |
+| Speed Index | 1.67 s |
+| Total Blocking Time | 268 ms |
+| Cumulative Layout Shift | 0 |
+| Transferred resources | 356 KiB |
+| Requests | 15 |
+| DOM elements | 850 |
+
+The three performance scores were 88, 96 and 89, showing substantial local runtime variance even though Phase 5 does not change rendering assets or application JavaScript. Accessibility, Best Practices and SEO scored 100 in all three runs. Phase 5 adds the homepage canonical URL, replaces the external Open Graph image with a first-party image, improves search and FAQ semantics, secures new-window social links, and aligns sitemap video URLs with the video actually used on the page.
