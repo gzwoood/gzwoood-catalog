@@ -235,6 +235,14 @@
       color: var(--gold);
       font-weight: 900;
     }
+    /* Home page: three latest articles in one horizontal row. */
+    .home-latest-blog-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+    .home-latest-blog-grid .blog-card:nth-child(n+4){display:none}
+    .home-latest-blog-grid .blog-image{height:210px}
+    .home-latest-blog-grid .blog-body{padding:24px}
+    .home-latest-blog-grid .blog-card h3{font-size:20px}
+    @media (max-width:900px){.home-latest-blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:640px){.home-latest-blog-grid{grid-template-columns:1fr}.home-latest-blog-grid .blog-image{height:230px}}
   </style>
   <link rel="stylesheet" href="assets/css/main.min.css?v=20260715">
 
@@ -290,11 +298,11 @@
 
       <nav class="nav-menu">
         <a href="#products">Products</a>
+        <a href="/blog/">Blog</a>
         <a href="#about">About Us</a>
         <a href="#faq">FAQ</a>
         <a href="#industries">Industries</a>
         <a href="#finishes">Finishes</a>
-        <a href="/blog/">Blog</a>
         <a href="#quote">Contact</a>
       </nav>
     </div>
@@ -1145,7 +1153,7 @@
           <p style="color:var(--gray)">Industry trends, material selection, and design tips</p>
         </div>
 
-        <div class="blog-grid">
+        <div class="blog-grid home-latest-blog-grid">
           <article class="blog-card" style="border: 1px solid var(--gold);">
             <a class="blog-image" href="/blog/high-gloss-lacquer-jewelry-boxes/" aria-label="Read High Gloss Lacquer Jewelry Boxes for Fine Jewelry">
               <img src="/assets/high-gloss-lacquer-jewelry-box.webp" width="1254" height="1254" loading="lazy" alt="Premium black high gloss lacquer jewelry boxes with velvet interiors and LED lighting">
