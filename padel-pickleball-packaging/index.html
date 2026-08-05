@@ -66,7 +66,18 @@
       .products-head { display:block; } .products-head .btn { margin-top:20px; }
       .quote { padding:60px 0; }
     }
-  </style>
+    .products-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:20px; }
+    .product { padding:0; overflow:hidden; display:flex; flex-direction:column; min-height:0; }
+    .product-image { aspect-ratio: 16 / 9; overflow:hidden; background:#fff; }
+    .product-image img { display:block; width:100%; height:100%; object-fit:cover; }
+    .product-content { padding:26px; }
+    .product h3 { margin:15px 0 11px; }
+    .product p { min-height:44px; }
+    .product-specs { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:8px; margin-top:22px; padding-top:18px; border-top:1px solid #2a2a2f; }
+    .spec-label { display:block; color:var(--gold); font-size:10px; font-weight:900; letter-spacing:.09em; }
+    .spec-value { display:block; color:#f3f0ea; font-size:12px; font-weight:700; line-height:1.35; margin-top:4px; }
+    .product .btn { margin-top:22px; min-height:42px; font-size:13px; }
+    @media (max-width:760px) { .products-grid { grid-template-columns:1fr; } .product-content { padding:23px; } }  </style>
 </head>
 <body>
   <div class="topline"><div class="shell"><span>GUANGZHOU FACTORY · CUSTOM PACKAGING</span><span>FACTORY-DIRECT · CUSTOM MADE</span></div></div>
@@ -83,8 +94,25 @@
       <p>From protective e-commerce mailers to presentation-ready rigid boxes, we develop custom padel and pickleball packaging around your product, budget and brand identity.</p>
     </section>
     <section class="reasons"><div class="shell"><div class="section-head"><p class="eyebrow">WHY GZWOOOD</p><h2>Built for brands that need more than a standard box.</h2><p>Work directly with our Guangzhou team for structural design, custom inserts, material selection and factory-direct production.</p></div><div class="cards"><article class="card"><div class="number">01 / PROTECTION</div><h3>Made around your racket</h3><p>Custom EVA, foam or paperboard inserts help keep rackets, balls and accessories secure in transit.</p></article><article class="card"><div class="number">02 / BRANDING</div><h3>Designed for your shelf</h3><p>Choose rigid, magnetic or corrugated structures with print, foil, texture and logo finishing options.</p></article><article class="card"><div class="number">03 / PRODUCTION</div><h3>Direct factory support</h3><p>Start from 100 pcs for rigid boxes, with sampling and practical guidance from an experienced packaging team.</p></article></div></div></section>
-    <section class="products shell" id="products"><div class="products-head"><div><p class="eyebrow">POPULAR STRUCTURES</p><h2>Choose the packaging route that fits your product.</h2></div><a class="btn" href="#quote">Request Your Design</a></div><div class="products-grid"><article class="product"><small>Rigid Presentation</small><h3>Magnetic Racket Box</h3><p>Premium unboxing box with a custom insert for retail launches, gift sets and high-value rackets.</p></article><article class="product"><small>E-commerce Shipping</small><h3>Mailer Box with Foam</h3><p>Lightweight protective packaging for direct-to-consumer orders, starter kits and online retail.</p></article><article class="product"><small>Retail & Events</small><h3>Custom Gift Set Box</h3><p>Multi-piece packaging for rackets, balls, grips and branded accessories in one presentation.</p></article></div></section>
-    <section class="quote shell" id="quote"><p class="eyebrow">START YOUR PROJECT</p><h2>Tell us your racket size, quantity and packaging idea.</h2><p>Our team will recommend a suitable structure and prepare a factory-direct quotation for your custom packaging project.</p><a class="btn" href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Get a Custom Quote</a></section>
+    <section class="products shell" id="products"><div class="products-head"><div><p class="eyebrow">POPULAR STRUCTURES</p><h2>Choose the packaging route that fits your product.</h2></div><a class="btn" href="#quote">Request Your Design</a></div><div class="products-grid">
+  <article class="product">
+    <div class="product-image"><img src="/assets/magnetic-padel-racket-box.webp" width="800" height="800" alt="Custom magnetic padel racket box with foam insert" loading="lazy" decoding="async"></div>
+    <div class="product-content"><small>PREMIUM RIGID</small><h3>Magnetic Padel Racket Box</h3><p>Premium rigid magnetic box with a custom foam insert for secure, high-end racket presentation.</p><div class="product-specs"><div><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div><span class="spec-label">CLOSURE</span><span class="spec-value">Magnetic</span></div><div><span class="spec-label">INSERT</span><span class="spec-value">Custom Foam</span></div></div><a class="btn" href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Quote This Product</a></div>
+  </article>
+  <article class="product">
+    <div class="product-image"><img src="/assets/padel-foam-insert.webp" width="800" height="800" alt="Pickleball paddle display box with protective foam insert" loading="lazy" decoding="async"></div>
+    <div class="product-content"><small>PROTECTIVE DISPLAY</small><h3>Pickleball Paddle Box with Foam</h3><p>High-end display box with a custom-cut foam insert for premium protection and unboxing.</p><div class="product-specs"><div><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div><span class="spec-label">INSERT</span><span class="spec-value">Foam Insert</span></div><div><span class="spec-label">STRUCTURE</span><span class="spec-value">Display Box</span></div></div><a class="btn" href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Quote This Product</a></div>
+  </article>
+  <article class="product">
+    <div class="product-image"><img src="/assets/mailer-padel-racket-box-with-foam.webp" width="1254" height="1254" alt="Mailer padel racket box with custom foam insert" loading="lazy" decoding="async"></div>
+    <div class="product-content"><small>E-COMMERCE MAILER</small><h3>Mailer Padel Racket Box with Foam</h3><p>Durable corrugated mailer with foam protection for shipping rackets, starter kits and gift sets.</p><div class="product-specs"><div><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div><span class="spec-label">MATERIAL</span><span class="spec-value">Corrugated</span></div><div><span class="spec-label">INSERT</span><span class="spec-value">Foam Insert</span></div></div><a class="btn" href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Quote This Product</a></div>
+  </article>
+  <article class="product">
+    <div class="product-image"><img src="/assets/padel-luxury-magnetic.webp" width="800" height="800" alt="Luxury magnetic padel racket gift box" loading="lazy" decoding="async"></div>
+    <div class="product-content"><small>LUXURY GIFT SET</small><h3>Luxury Magnetic Padel Box</h3><p>Presentation-ready rigid gift packaging with a secure magnetic closure and custom insert options.</p><div class="product-specs"><div><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div><span class="spec-label">CLOSURE</span><span class="spec-value">Magnetic</span></div><div><span class="spec-label">INSERT</span><span class="spec-value">Custom Insert</span></div></div><a class="btn" href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Quote This Product</a></div>
+  </article>
+</div>    </section>
+    <section class="quote" shell" id="quote"><p class="eyebrow">START YOUR PROJECT</p><h2>Tell us your racket size, quantity and packaging idea.</h2><p>Our team will recommend a suitable structure and prepare a factory-direct quotation for your custom packaging project.</p><a class="btn" href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">Get a Custom Quote</a></section>
   </main>
   <footer><div class="shell">© 2026 gzwoood.com · Custom packaging manufacturer in Guangzhou</div></footer>
 </body>
