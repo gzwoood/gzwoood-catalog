@@ -243,7 +243,22 @@
     .home-latest-blog-grid .blog-card h3{font-size:20px}
     @media (max-width:900px){.home-latest-blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:640px){.home-latest-blog-grid{grid-template-columns:1fr}.home-latest-blog-grid .blog-image{height:230px}}
-  </style>
+    /* Wider four-column catalog on large screens: preserves product details at smaller breakpoints. */
+    @media (min-width: 1440px) {
+      #products .container {
+        width: min(1680px, calc(100% - 56px));
+        max-width: none;
+      }
+      #products .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px;
+      }
+      #products .product-body { padding: 24px; }
+      #products .product-body h3 { font-size: 23px; }
+      #products .product-body p { font-size: 14px; line-height: 1.6; }
+      #products .product-specs { gap: 8px; }
+      #products .product-actions .btn { padding-inline: 15px; font-size: 12px; }
+    }  </style>
   <link rel="stylesheet" href="assets/css/main.min.css?v=20260731">
 
 
