@@ -1391,14 +1391,9 @@
             </div>
           </div>
           <div class="quote-form-column">
-          <form class="quote-form" id="contactForm" action="https://formsubmit.co/timwu@gzwoood.com" method="POST">
-            <input type="hidden" name="_subject" value="New Packaging Inquiry from gzwoood.com">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://gzwoood.com/?inquiry=success#quote">
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <form class="quote-form" id="contactForm">
             <div class="form-grid">
-              <p class="form-status" id="formStatus" role="status">Thank you. Your inquiry has been sent successfully. Our packaging team will contact you shortly.</p>
+              <p class="form-status" id="formStatus" role="status">Your inquiry is ready. WhatsApp will open with the details pre-filled; please tap Send to reach our packaging team.</p>
               <label class="visually-hidden" for="fullName">Full Name</label>
               <input class="field" id="fullName" type="text" name="Full Name" placeholder="Full Name" autocomplete="name" required>
               <label class="visually-hidden" for="contactMethod">Email or WhatsApp</label>
@@ -1423,7 +1418,8 @@
               <input class="field-full" id="boxSize" type="text" name="Box Size" placeholder="Box Size (L x W x H)">
               <label class="visually-hidden" for="projectDetails">Project Details</label>
               <textarea class="field-full" id="projectDetails" name="Project Details" placeholder="Material preferences, printing colors, or special requests..."></textarea>
-              <button class="btn btn-gold field-full" type="submit">Submit Inquiry</button>
+              <button class="btn btn-gold field-full" type="submit">Submit Inquiry on WhatsApp</button>
+              <p class="field-full" style="margin:0;color:rgba(255,255,255,.68);font-size:13px;line-height:1.6;">Prefer email? Send your project details to <a href="mailto:timwu@gzwoood.com">timwu@gzwoood.com</a>.</p>
             </div>
           </form>
           </div>
@@ -1482,6 +1478,38 @@
 
 
   <script src="assets/js/main.min.js?v=20260715" defer></script>
+  <script>
+    (function(){
+      var quoteForm = document.getElementById('contactForm');
+      if (!quoteForm) return;
+      quoteForm.addEventListener('submit', function(event){
+        event.preventDefault();
+        var formStatus = document.getElementById('formStatus');
+        var getValue = function(id){
+          var field = document.getElementById(id);
+          return field && field.value ? field.value.trim() : '';
+        };
+        var message = [
+          'Hello GZ Woood Packaging, I would like a custom packaging quote.',
+          '',
+          'Full Name: ' + getValue('fullName'),
+          'Email or WhatsApp: ' + getValue('contactMethod'),
+          'Box Type: ' + getValue('boxType'),
+          'Quantity: ' + getValue('orderQuantity'),
+          'Box Size: ' + getValue('boxSize'),
+          'Project Details: ' + getValue('projectDetails'),
+          '',
+          'Page: ' + window.location.href
+        ].join('\n');
+        var whatsappUrl = 'https://wa.me/8613189018213?text=' + encodeURIComponent(message);
+        if (formStatus) {
+          formStatus.textContent = 'WhatsApp is opening with your inquiry details. Please tap Send to complete the request.';
+          formStatus.classList.add('show');
+        }
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      });
+    })();
+  </script>
   <!-- Deployment refresh: 2026-07-07 -->
 </body>
 </html>
