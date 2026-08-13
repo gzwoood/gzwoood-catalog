@@ -235,6 +235,9 @@
       color: var(--gold);
       font-weight: 900;
     }
+
+    .snapshot-section{padding:82px 20px 92px;background:radial-gradient(circle at top center,rgba(201,163,78,.16),transparent 34%),linear-gradient(180deg,#08080a 0%,#050505 100%);border-top:1px solid rgba(201,163,78,.22);border-bottom:1px solid rgba(201,163,78,.16)}
+    .snapshot-wrap{width:min(1180px,100%);margin:0 auto}.snapshot-head{max-width:780px;margin:0 auto 42px;text-align:center}.snapshot-kicker{margin:0 0 10px;color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.snapshot-title{margin:0;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.045em;font-weight:900;color:#fff}.snapshot-title span{color:var(--gold)}.snapshot-intro{max-width:720px;margin:18px auto 0;color:#b9b9b9;font-size:17px}.snapshot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.snapshot-card{min-height:255px;padding:26px 24px;background:linear-gradient(180deg,rgba(255,255,255,.035),transparent),#101010;border:1px solid rgba(201,163,78,.2);border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.24)}.snapshot-icon{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;margin-bottom:18px;border:1px solid rgba(201,163,78,.35);border-radius:12px;color:var(--gold);background:rgba(201,163,78,.08)}.snapshot-icon svg{width:20px;height:20px;display:block}.snapshot-card h3{margin:0 0 12px;color:#e3c979;font-size:18px;line-height:1.25}.snapshot-card p,.snapshot-card li{color:#b8bdca;font-size:15px}.snapshot-card p{margin:0}.snapshot-card ul{margin:0;padding:0;list-style:none}.snapshot-card li{position:relative;padding-left:16px;margin:8px 0}.snapshot-card li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:99px;background:var(--gold)}.snapshot-card strong{color:#fff;font-weight:800}.snapshot-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:22px;padding:22px 26px;background:#151515;border:1px solid rgba(255,255,255,.1);border-radius:22px}.snapshot-cta p{margin:0;color:#d8d8d8;font-size:15px}.snapshot-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;background:var(--gold);color:#090909;font-weight:900;text-decoration:none;white-space:nowrap}@media(max-width:980px){.snapshot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.snapshot-section{padding:58px 16px 66px}.snapshot-grid{grid-template-columns:1fr}.snapshot-card{min-height:auto}.snapshot-cta{align-items:flex-start;flex-direction:column}}
     /* Home page: three latest articles in one horizontal row. */
     .home-latest-blog-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
     .home-latest-blog-grid .blog-card:nth-child(n+4){display:none}
@@ -356,6 +359,39 @@
       </div>
     </section>
 
+
+    <section class="snapshot-section" aria-labelledby="snapshot-title">
+      <div class="snapshot-wrap">
+        <div class="snapshot-head">
+          <p class="snapshot-kicker">Factory Snapshot</p>
+          <h2 class="snapshot-title" id="snapshot-title">GZ Woood Packaging <span>at a Glance</span></h2>
+          <p class="snapshot-intro">A practical guide to choosing a reliable one-stop packaging supplier for custom paper packaging, low MOQs, material selection, design support, and supplier verification.</p>
+        </div>
+        <div class="snapshot-grid">
+          <article class="snapshot-card">
+            <div class="snapshot-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20V9l8-5 8 5v11" stroke="currentColor" stroke-width="2"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Identity &amp; Location</h3>
+            <ul><li><strong>Company:</strong> Guangzhou Woood Packaging</li><li><strong>Base:</strong> Guangzhou, Guangdong, China</li><li><strong>Website:</strong> gzwoood.com</li><li><strong>Focus:</strong> Custom paper packaging manufacturing</li></ul>
+          </article>
+          <article class="snapshot-card">
+            <div class="snapshot-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4-8 4-8-4Z" stroke="currentColor" stroke-width="2"/><path d="M4 7v10l8 4 8-4V7" stroke="currentColor" stroke-width="2"/><path d="M12 11v10" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Product &amp; MOQ Scope</h3>
+            <ul><li>Rigid boxes, magnetic gift boxes and drawer boxes</li><li>Mailer boxes, paper bags, jewelry boxes and apparel packaging</li><li>Padel packaging and decorative faux book boxes</li><li><strong>MOQ from 100 pcs</strong> for selected styles</li></ul>
+          </article>
+          <article class="snapshot-card">
+            <div class="snapshot-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 5.2L20 9l-4 4 1 5.7-5-2.8-5 2.8L8 13 4 9l5.6-.8L12 3Z" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Customization Strength</h3>
+            <ul><li>Custom size, structure, color and logo</li><li>Foil stamping, embossing, Spot UV and soft-touch finish</li><li>Fabric wrap, paper wrap, EVA foam and paperboard inserts</li><li>Sample making before bulk production</li></ul>
+          </article>
+          <article class="snapshot-card">
+            <div class="snapshot-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.6-2.7 8.4-7 10-4.3-1.6-7-5.4-7-10V6l7-3Z" stroke="currentColor" stroke-width="2"/><path d="M8.5 12l2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Buyer Due Diligence</h3>
+            <ul><li>Request current certificate PDFs when needed</li><li>Ask for factory videos, samples or a live video call</li><li>Confirm material, dimensions and packing method before bulk order</li><li>Discuss DDP or international shipping support</li></ul>
+          </article>
+        </div>
+        <div class="snapshot-cta"><p>Use this section as a confidence builder before buyers start comparing products and requesting prices.</p><a class="snapshot-button" href="#quote">Request Factory Details</a></div>
+      </div>
+    </section>
     <section id="factory" class="factory-strength-section">
       <div class="container">
         <span class="kicker">True Manufacturing Power</span>
