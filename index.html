@@ -261,7 +261,12 @@
       #products .product-body p { font-size: 14px; line-height: 1.6; }
       #products .product-specs { gap: 8px; }
       #products .product-actions .btn { padding-inline: 15px; font-size: 12px; }
-    }  </style>
+    }      .featured-product-entry{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:4px;padding:18px 20px;border:1px solid rgba(201,163,78,.45);border-radius:18px;background:linear-gradient(135deg,rgba(201,163,78,.16),rgba(255,255,255,.03));box-shadow:0 14px 36px rgba(0,0,0,.18)}
+    .featured-product-entry strong{display:block;color:#fff;font-size:16px;line-height:1.25}
+    .featured-product-entry span{display:block;margin-top:4px;color:rgba(255,255,255,.68);font-size:13px;line-height:1.45}
+    .featured-product-entry .btn{min-height:42px;padding:0 18px;white-space:nowrap}
+    @media (max-width: 768px){.featured-product-entry{align-items:flex-start;flex-direction:column}}
+  </style>
   <link rel="stylesheet" href="assets/css/main.min.css?v=20260731">
 
 
@@ -296,7 +301,17 @@
     }
   }
   </script>
-<style>.finish-icon{width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important;margin:0 0 20px!important;padding:0!important;display:block!important;font-size:0!important;line-height:0!important;overflow:hidden!important}.finish-icon svg{width:44px!important;height:44px!important;max-width:44px!important;max-height:44px!important;display:block!important;color:var(--gold)!important;filter:none!important}.finish-icon .icon-accent,.finish-icon .icon-blue,.finish-icon .icon-pink{color:var(--gold)!important}</style><style>.product-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 20px;padding-top:15px;border-top:1px solid #ece8df}.product-spec{min-width:0}.spec-label{display:block;margin-bottom:4px;color:#8c8477;font-size:.62rem;font-weight:800;letter-spacing:.1em;line-height:1.1;text-transform:uppercase}.spec-value{display:block;color:#151515;font-size:.83rem;font-weight:800;line-height:1.3;overflow-wrap:anywhere}@media(max-width:560px){.product-specs{gap:8px}.spec-label{font-size:.58rem}.spec-value{font-size:.75rem}}</style></head>
+<style>.finish-icon{width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important;margin:0 0 20px!important;padding:0!important;display:block!important;font-size:0!important;line-height:0!important;overflow:hidden!important}.finish-icon svg{width:44px!important;height:44px!important;max-width:44px!important;max-height:44px!important;display:block!important;color:var(--gold)!important;filter:none!important}.finish-icon .icon-accent,.finish-icon .icon-blue,.finish-icon .icon-pink{color:var(--gold)!important}    .featured-product-entry{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:4px;padding:18px 20px;border:1px solid rgba(201,163,78,.45);border-radius:18px;background:linear-gradient(135deg,rgba(201,163,78,.16),rgba(255,255,255,.03));box-shadow:0 14px 36px rgba(0,0,0,.18)}
+    .featured-product-entry strong{display:block;color:#fff;font-size:16px;line-height:1.25}
+    .featured-product-entry span{display:block;margin-top:4px;color:rgba(255,255,255,.68);font-size:13px;line-height:1.45}
+    .featured-product-entry .btn{min-height:42px;padding:0 18px;white-space:nowrap}
+    @media (max-width: 768px){.featured-product-entry{align-items:flex-start;flex-direction:column}}
+  </style><style>.product-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 20px;padding-top:15px;border-top:1px solid #ece8df}.product-spec{min-width:0}.spec-label{display:block;margin-bottom:4px;color:#8c8477;font-size:.62rem;font-weight:800;letter-spacing:.1em;line-height:1.1;text-transform:uppercase}.spec-value{display:block;color:#151515;font-size:.83rem;font-weight:800;line-height:1.3;overflow-wrap:anywhere}@media(max-width:560px){.product-specs{gap:8px}.spec-label{font-size:.58rem}.spec-value{font-size:.75rem}}    .featured-product-entry{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:4px;padding:18px 20px;border:1px solid rgba(201,163,78,.45);border-radius:18px;background:linear-gradient(135deg,rgba(201,163,78,.16),rgba(255,255,255,.03));box-shadow:0 14px 36px rgba(0,0,0,.18)}
+    .featured-product-entry strong{display:block;color:#fff;font-size:16px;line-height:1.25}
+    .featured-product-entry span{display:block;margin-top:4px;color:rgba(255,255,255,.68);font-size:13px;line-height:1.45}
+    .featured-product-entry .btn{min-height:42px;padding:0 18px;white-space:nowrap}
+    @media (max-width: 768px){.featured-product-entry{align-items:flex-start;flex-direction:column}}
+  </style></head>
 
 <body>
 
@@ -495,6 +510,13 @@
 
           <div id="categoryDesc" class="category-description">
             Discover our full range of premium custom packaging solutions. From luxury rigid boxes to eco-friendly shipping mailers, we provide high-quality, factory-direct products tailored to your brand's unique needs.
+          </div>
+          <div class="featured-product-entry" aria-label="Featured magnetic gift box landing page">
+            <div>
+              <strong>Custom Magnetic Gift Boxes Landing Page</strong>
+              <span>View materials, inserts, finishing, MOQ, lead time and real magnetic gift box examples.</span>
+            </div>
+            <a href="/custom-magnetic-gift-boxes/" class="btn btn-outline">Open Details Page</a>
           </div>
 
         </div>
