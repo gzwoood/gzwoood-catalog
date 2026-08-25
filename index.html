@@ -1673,6 +1673,99 @@
       });
     })();
   </script>
+  <script id="ga4-lead-tracking">
+    (function(){
+      var hasTrackedQuoteStart = false;
+
+      function sendGaEvent(eventName, params) {
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', eventName, Object.assign({
+          page_location: window.location.href,
+          page_title: document.title
+        }, params || {}));
+      }
+
+      function closestLink(element) {
+        return element && element.closest ? element.closest('a') : null;
+      }
+
+      function getProductContext(element) {
+        var card = element && element.closest ? element.closest('.product-card') : null;
+        if (!card) return {};
+        var title = card.querySelector('h3');
+        return {
+          product_name: title ? title.textContent.trim() : '',
+          product_category: card.getAttribute('data-category') || '',
+          item_list_name: 'Product Showcase'
+        };
+      }
+
+      function getButtonText(element) {
+        return element && element.textContent ? element.textContent.trim().replace(/\s+/g, ' ') : '';
+      }
+
+      document.addEventListener('click', function(event){
+        var link = closestLink(event.target);
+        var href = link ? (link.getAttribute('href') || '') : '';
+        var buttonText = link ? getButtonText(link) : '';
+
+        if (href.indexOf('wa.me/') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+          sendGaEvent('click_whatsapp', Object.assign({
+            link_url: link.href || href,
+            link_text: buttonText
+          }, getProductContext(link)));
+        }
+
+        if (href.indexOf('mailto:') === 0) {
+          sendGaEvent('click_email', {
+            link_url: href,
+            link_text: buttonText,
+            email_address: href.replace(/^mailto:/, '').split('?')[0]
+          });
+        }
+
+        if (link && link.closest('.product-card')) {
+          sendGaEvent('select_product', Object.assign({
+            link_url: link.href || href,
+            link_text: buttonText
+          }, getProductContext(link)));
+        }
+
+        var filterButton = event.target && event.target.closest ? event.target.closest('.filter-btn') : null;
+        if (filterButton) {
+          sendGaEvent('select_product', {
+            product_category: filterButton.getAttribute('data-category') || getButtonText(filterButton),
+            link_text: getButtonText(filterButton),
+            item_list_name: 'Product Category Filter'
+          });
+        }
+      }, true);
+
+      var quoteForm = document.getElementById('contactForm');
+      if (quoteForm) {
+        quoteForm.addEventListener('focusin', function(event){
+          if (hasTrackedQuoteStart) return;
+          if (event.target && event.target.matches('input, select, textarea')) {
+            hasTrackedQuoteStart = true;
+            sendGaEvent('quote_start', {
+              form_id: 'contactForm',
+              form_name: 'Homepage Quote Form'
+            });
+          }
+        });
+
+        quoteForm.addEventListener('submit', function(){
+          sendGaEvent('generate_lead', {
+            form_id: 'contactForm',
+            form_name: 'Homepage Quote Form',
+            lead_source: 'whatsapp_quote_form',
+            box_type: (document.getElementById('boxType') || {}).value || '',
+            order_quantity: (document.getElementById('orderQuantity') || {}).value || ''
+          });
+        }, true);
+      }
+    })();
+  </script>
   <!-- Deployment refresh: 2026-07-07 -->
 </body>
 </html>
