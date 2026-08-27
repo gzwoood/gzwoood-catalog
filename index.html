@@ -1704,6 +1704,19 @@
         return element && element.textContent ? element.textContent.trim().replace(/\s+/g, ' ') : '';
       }
 
+      function getFieldValue(id) {
+        var field = document.getElementById(id);
+        return field && field.value ? field.value.trim() : '';
+      }
+
+      function isDownloadLink(href) {
+        return /\.(pdf|docx?|xlsx?|pptx?|zip|rar|7z|csv)(\?|#|$)/i.test(href || '');
+      }
+
+      function hasSampleIntent(text) {
+        return /\b(sample|samples|prototype|mockup|mock-up|pre[-\s]?production|proof)\b/i.test(text || '');
+      }
+
       document.addEventListener('click', function(event){
         var link = closestLink(event.target);
         var href = link ? (link.getAttribute('href') || '') : '';
@@ -1721,6 +1734,32 @@
             link_url: href,
             link_text: buttonText,
             email_address: href.replace(/^mailto:/, '').split('?')[0]
+          });
+        }
+
+        if (href.indexOf('tel:') === 0) {
+          sendGaEvent('click_phone', {
+            link_url: href,
+            link_text: buttonText,
+            phone_number: href.replace(/^tel:/, '').split('?')[0]
+          });
+        }
+
+        if (isDownloadLink(href)) {
+          var cleanHref = href.split('#')[0].split('?')[0];
+          sendGaEvent('file_download', {
+            link_url: link.href || href,
+            link_text: buttonText,
+            file_name: cleanHref.split('/').pop() || cleanHref,
+            file_extension: (cleanHref.split('.').pop() || '').toLowerCase()
+          });
+        }
+
+        if (hasSampleIntent(buttonText)) {
+          sendGaEvent('sample_request', {
+            request_source: 'sample_link_click',
+            link_url: link ? (link.href || href) : '',
+            link_text: buttonText
           });
         }
 
@@ -1755,13 +1794,28 @@
         });
 
         quoteForm.addEventListener('submit', function(){
+          var formText = [
+            getFieldValue('boxType'),
+            getFieldValue('orderQuantity'),
+            getFieldValue('boxSize'),
+            getFieldValue('projectDetails')
+          ].join(' ');
           sendGaEvent('generate_lead', {
             form_id: 'contactForm',
             form_name: 'Homepage Quote Form',
             lead_source: 'whatsapp_quote_form',
-            box_type: (document.getElementById('boxType') || {}).value || '',
-            order_quantity: (document.getElementById('orderQuantity') || {}).value || ''
+            box_type: getFieldValue('boxType'),
+            order_quantity: getFieldValue('orderQuantity')
           });
+          if (hasSampleIntent(formText)) {
+            sendGaEvent('sample_request', {
+              form_id: 'contactForm',
+              form_name: 'Homepage Quote Form',
+              request_source: 'quote_form_sample_intent',
+              box_type: getFieldValue('boxType'),
+              order_quantity: getFieldValue('orderQuantity')
+            });
+          }
         }, true);
       }
     })();
