@@ -386,6 +386,106 @@
       }
     }
   </style>
+  <style id="real-factory-proof-draft">
+    #factory .factory-grid {
+      align-items: stretch;
+    }
+
+    #factory .stats-box {
+      padding: 30px 38px;
+      gap: 18px 30px;
+      align-content: space-between;
+    }
+
+    #factory .stat-row {
+      gap: 10px;
+      padding-bottom: 12px;
+    }
+
+    #factory .stat-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border: 1px solid rgba(201, 163, 78, 0.34);
+      border-radius: 999px;
+      color: var(--gold);
+      font-size: 11px;
+      line-height: 1;
+      background: rgba(201, 163, 78, 0.08);
+    }
+
+    #factory .factory-proof-intro {
+      max-width: 760px;
+      margin: -14px 0 34px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    #factory .factory-proof-gallery {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    #factory .factory-proof-item {
+      position: relative;
+      margin: 0;
+      background: #111;
+      border-color: rgba(201, 163, 78, 0.24);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.26);
+    }
+
+    #factory .factory-proof-item::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 46%;
+      background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.82));
+      pointer-events: none;
+    }
+
+    #factory .factory-proof-item figcaption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 14px;
+      z-index: 1;
+    }
+
+    #factory .factory-proof-item strong {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    #factory .factory-proof-item span {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 992px) {
+      #factory .factory-proof-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      #factory .factory-proof-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      #factory .factory-proof-intro {
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -484,8 +584,9 @@
     </section>
     <section id="factory" class="factory-strength-section">
       <div class="container">
-        <span class="kicker">True Manufacturing Power</span>
-        <h2 class="section-title">DIRECT FROM OUR <span class="highlight-gold" style="background:none; color:var(--gold); padding:0;">GUANGZHOU</span> FACTORY</h2>
+        <span class="kicker">Real Factory Proof</span>
+        <h2 class="section-title">REAL FACTORY, REAL <span class="highlight-gold" style="background:none; color:var(--gold); padding:0;">PACKAGING</span> PRODUCTION</h2>
+        <p class="factory-proof-intro">From printing and lamination to die-cutting, hand assembly, finished goods storage and export loading, our Guangzhou team supports custom rigid boxes, paper bags, mailer boxes and luxury gift packaging for global buyers.</p>
 
         <div class="factory-grid">
           <div class="video-box">
@@ -493,42 +594,42 @@
           </div>
           <div class="stats-box">
             <div class="stat-row">
-              <div class="stat-icon">-</div>
+                <div class="stat-icon">◆</div>
               <div class="stat-text">
                 <p>Facility Size</p>
                 <div class="stat-value">10,000+ sqm</div>
               </div>
             </div>
             <div class="stat-row">
-              <div class="stat-icon">-</div>
+                <div class="stat-icon">●</div>
               <div class="stat-text">
                 <p>Monthly Output</p>
                 <div class="stat-value">3M+ Units</div>
               </div>
             </div>
             <div class="stat-row">
-              <div class="stat-icon">-</div>
+                <div class="stat-icon">✓</div>
               <div class="stat-text">
                 <p>Quality Control</p>
                 <div class="stat-value">3-Stage Inspection</div>
               </div>
             </div>
             <div class="stat-row">
-              <div class="stat-icon">-</div>
+                <div class="stat-icon">✦</div>
               <div class="stat-text">
                 <p>Brands Served</p>
                 <div class="stat-value">1,000+ Global</div>
               </div>
             </div>
             <div class="stat-row">
-              <div class="stat-icon">-</div>
+                <div class="stat-icon">◇</div>
               <div class="stat-text">
                 <p>Fast Sampling</p>
                 <div class="stat-value">3-5 Working Days</div>
               </div>
             </div>
             <div class="stat-row">
-              <div class="stat-icon">-</div>
+                <div class="stat-icon">▣</div>
               <div class="stat-text">
                 <p>Certificates</p>
                 <div class="stat-value">ISO & FSC</div>
@@ -537,11 +638,31 @@
           </div>
         </div>
 
-        <div class="image-gallery">
-          <div class="gallery-item"><img src="assets/factory-1-768.webp" srcset="assets/factory-1-480.webp 480w, assets/factory-1-768.webp 768w, assets/factory-1-1200.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 280px" width="768" height="576" alt="Woood Packaging Factory Exterior" loading="lazy" decoding="async"></div>
-          <div class="gallery-item"><img src="assets/factory-2-768.webp" srcset="assets/factory-2-480.webp 480w, assets/factory-2-768.webp 768w, assets/factory-2-1200.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 280px" width="768" height="576" alt="Premium Sample Showroom" loading="lazy" decoding="async"></div>
-          <div class="gallery-item"><img src="assets/factory-4-768.webp" srcset="assets/factory-4-480.webp 480w, assets/factory-4-768.webp 768w, assets/factory-4-1200.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 280px" width="768" height="562" alt="Automated Production Line" loading="lazy" decoding="async"></div>
-          <div class="gallery-item"><img src="assets/factory-6-768.webp" srcset="assets/factory-6-480.webp 480w, assets/factory-6-768.webp 768w, assets/factory-6-1200.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1100px) 45vw, 280px" width="768" height="432" alt="Quality Inspection & Packing" loading="lazy" decoding="async"></div>
+        <div class="image-gallery factory-proof-gallery">
+          <figure class="gallery-item factory-proof-item">
+            <img src="assets/guangzhou-packaging-factory-entrance-768.webp" srcset="assets/guangzhou-packaging-factory-entrance-480.webp 480w, assets/guangzhou-packaging-factory-entrance-768.webp 768w, assets/guangzhou-packaging-factory-entrance-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 992px) 45vw, 360px" width="768" height="576" alt="Guangzhou Woood Packaging factory entrance and exterior building" loading="lazy" decoding="async">
+            <figcaption><strong>Real Guangzhou Factory</strong><span>Factory entrance and daily production site.</span></figcaption>
+          </figure>
+          <figure class="gallery-item factory-proof-item">
+            <img src="assets/offset-printing-workshop-768.webp" srcset="assets/offset-printing-workshop-480.webp 480w, assets/offset-printing-workshop-768.webp 768w, assets/offset-printing-workshop-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 992px) 45vw, 360px" width="768" height="576" alt="Offset printing workshop for custom paper packaging production" loading="lazy" decoding="async">
+            <figcaption><strong>Offset Printing Workshop</strong><span>Color printing for branded paper packaging.</span></figcaption>
+          </figure>
+          <figure class="gallery-item factory-proof-item">
+            <img src="assets/automatic-die-cutting-workshop-768.webp" srcset="assets/automatic-die-cutting-workshop-480.webp 480w, assets/automatic-die-cutting-workshop-768.webp 768w, assets/automatic-die-cutting-workshop-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 992px) 45vw, 360px" width="768" height="432" alt="Automatic die-cutting machines for custom packaging structures" loading="lazy" decoding="async">
+            <figcaption><strong>Automatic Die-Cutting</strong><span>Structure forming for boxes, sleeves and inserts.</span></figcaption>
+          </figure>
+          <figure class="gallery-item factory-proof-item">
+            <img src="assets/custom-rigid-box-hand-assembly-768.webp" srcset="assets/custom-rigid-box-hand-assembly-480.webp 480w, assets/custom-rigid-box-hand-assembly-768.webp 768w, assets/custom-rigid-box-hand-assembly-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 992px) 45vw, 360px" width="768" height="576" alt="Workers hand assembling custom rigid packaging boxes in the factory" loading="lazy" decoding="async">
+            <figcaption><strong>Hand Assembly Area</strong><span>Manual finishing for rigid boxes and gift packaging.</span></figcaption>
+          </figure>
+          <figure class="gallery-item factory-proof-item">
+            <img src="assets/finished-packaging-goods-area-768.webp" srcset="assets/finished-packaging-goods-area-480.webp 480w, assets/finished-packaging-goods-area-768.webp 768w, assets/finished-packaging-goods-area-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 992px) 45vw, 360px" width="768" height="432" alt="Finished custom packaging cartons stored before shipment" loading="lazy" decoding="async">
+            <figcaption><strong>Finished Goods Area</strong><span>Packed orders staged for inspection and delivery.</span></figcaption>
+          </figure>
+          <figure class="gallery-item factory-proof-item">
+            <img src="assets/export-loading-packaging-delivery-768.webp" srcset="assets/export-loading-packaging-delivery-480.webp 480w, assets/export-loading-packaging-delivery-768.webp 768w, assets/export-loading-packaging-delivery-1200.webp 1200w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 992px) 45vw, 360px" width="768" height="576" alt="Export loading area with packaged goods ready for container delivery" loading="lazy" decoding="async">
+            <figcaption><strong>Export Loading &amp; Delivery</strong><span>Bulk packaging orders prepared for global buyers.</span></figcaption>
+          </figure>
         </div>
 
         <div class="trust-row">
