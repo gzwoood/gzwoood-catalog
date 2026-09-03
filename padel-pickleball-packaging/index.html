@@ -6,6 +6,19 @@
   <meta name="description" content="Custom padel racket packaging boxes, mailer boxes, magnetic gift boxes and foam inserts for padel and pickleball brands. Factory-direct packaging from Guangzhou.">
   <link rel="canonical" href="https://gzwoood.com/padel-pickleball-packaging/">
   <title>Custom Padel Racket Packaging Boxes | Mailer & Magnetic Boxes</title>
+  <!-- Google tag (gtag.js) - Optimized Loading -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.addEventListener('load', function() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR';
+      document.head.appendChild(script);
+    });
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8KBKPMQ3FR');
+  </script>
   <style>
     :root { --black:#070708; --panel:#111114; --line:#2a2a2f; --gold:#d3ae48; --warm:#f4f0e8; --muted:#b6b1a8; }
     * { box-sizing:border-box; }
@@ -242,6 +255,73 @@
     <section class="quote shell" id="quote"><div class="quote-panel"><p class="eyebrow">START YOUR PADEL PACKAGING PROJECT</p><h2>Get a custom padel racket box quote.</h2><p>Send us your racket size, order quantity, logo requirements and preferred box style. Our team will recommend a practical structure and prepare a factory-direct quotation.</p><div class="quote-checklist" aria-label="Information to include with your quote request"><span>Racket size</span><span>Order quantity</span><span>Logo or artwork</span><span>Target market</span></div><a class="btn" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20custom%20padel%20racket%20packaging%20boxes.%20My%20racket%20size%20is%3A%20%5Bplease%20fill%5D.%20Quantity%3A%20%5Bplease%20fill%5D.%20Logo%2Fartwork%3A%20%5Bplease%20fill%5D.%20Please%20quote%20sample%20time%2C%20production%20time%20and%20shipping%20options." target="_blank" rel="noopener noreferrer">Send Padel Quote Request on WhatsApp</a><p class="quote-note">WhatsApp will open with a ready-to-send message. You can edit the size and quantity before sending.</p></div></section>
   </main>
   <footer><div class="shell">© 2026 gzwoood.com · Custom packaging manufacturer in Guangzhou</div></footer>
+  <script id="ga4-padel-page-tracking">
+    (function(){
+      function sendGaEvent(eventName, params) {
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', eventName, Object.assign({
+          page_location: window.location.href,
+          page_title: document.title,
+          page_path: window.location.pathname
+        }, params || {}));
+      }
+
+      function closestLink(element) {
+        return element && element.closest ? element.closest('a') : null;
+      }
+
+      function getText(element) {
+        return element && element.textContent ? element.textContent.trim().replace(/\s+/g, ' ') : '';
+      }
+
+      function getProductContext(element) {
+        var card = element && element.closest ? element.closest('.product') : null;
+        if (!card) return {};
+        var title = card.querySelector('h3');
+        var category = card.querySelector('small');
+        return {
+          product_name: title ? getText(title) : '',
+          product_category: category ? getText(category) : 'Padel Packaging',
+          item_list_name: 'Padel Packaging Page'
+        };
+      }
+
+      function isQuoteIntent(text, href) {
+        return /(quote|request|price|design|询价|报价)/i.test(text || '') || /wa\.me\/|api\.whatsapp\.com/i.test(href || '');
+      }
+
+      document.addEventListener('click', function(event){
+        var link = closestLink(event.target);
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+        var text = getText(link);
+        var productContext = getProductContext(link);
+
+        if (href.indexOf('wa.me/') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+          sendGaEvent('click_whatsapp', Object.assign({
+            link_url: link.href || href,
+            link_text: text,
+            lead_source: 'padel_packaging_page'
+          }, productContext));
+        }
+
+        if (isQuoteIntent(text, href)) {
+          sendGaEvent('quote_start', Object.assign({
+            link_url: link.href || href,
+            link_text: text,
+            form_name: 'Padel WhatsApp Quote CTA',
+            lead_source: 'padel_packaging_page'
+          }, productContext));
+        }
+
+        if (link.closest('.product')) {
+          sendGaEvent('select_product', Object.assign({
+            link_url: link.href || href,
+            link_text: text
+          }, productContext));
+        }
+      }, true);
+    })();
+  </script>
 </body>
 </html>
-
