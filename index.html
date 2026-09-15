@@ -5,38 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/webp" href="assets/gzwoood-navigation-logo-480.webp" />
   
-  <!-- Google tag (gtag.js) - Optimized Loading -->
+  <!-- Google tag: global queue is available before the async library loads. -->
   <script>
-    function loadGA() {
-      var script = document.createElement('script');
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR";
-      script.defer = true;
-      document.head.appendChild(script);
-      
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8KBKPMQ3FR');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8KBKPMQ3FR');
+    // Local previews queue events for testing without sending production analytics.
+    if (window.location.hostname === 'gzwoood.com' || window.location.hostname === 'www.gzwoood.com') {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR';
+      document.head.appendChild(gaScript);
     }
-
-    // Load analytics on first interaction, or after a quiet post-load delay.
-    var gaLoaded = false;
-    var gaEvents = ['scroll', 'pointerdown', 'touchstart', 'keydown'];
-    function initGA() {
-      if (!gaLoaded) {
-        gaLoaded = true;
-        loadGA();
-        gaEvents.forEach(function(eventName) {
-          window.removeEventListener(eventName, initGA);
-        });
-      }
-    }
-    gaEvents.forEach(function(eventName) {
-      window.addEventListener(eventName, initGA, { once: true, passive: true });
-    });
-    window.addEventListener('load', function() {
-      setTimeout(initGA, 30000);
-    }, { once: true });
   </script>
 
   <meta name="google-site-verification" content="RtPGel4gFz_kWSQYgmIBWt3-078U-LiKkMXjD6Fdk1g" />
@@ -1850,7 +1831,7 @@
 
         if (href.indexOf('wa.me/') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
           sendGaEvent('click_whatsapp', Object.assign({
-            link_url: link.href || href,
+            link_url: (link.href || href).split('?')[0].split('#')[0],
             link_text: buttonText
           }, getProductContext(link)));
         }
@@ -1873,8 +1854,8 @@
 
         if (isDownloadLink(href)) {
           var cleanHref = href.split('#')[0].split('?')[0];
-          sendGaEvent('file_download', {
-            link_url: link.href || href,
+          sendGaEvent('catalog_download_click', {
+            link_url: (link.href || href).split('?')[0].split('#')[0],
             link_text: buttonText,
             file_name: cleanHref.split('/').pop() || cleanHref,
             file_extension: (cleanHref.split('.').pop() || '').toLowerCase()
@@ -1884,14 +1865,14 @@
         if (hasSampleIntent(buttonText)) {
           sendGaEvent('sample_request', {
             request_source: 'sample_link_click',
-            link_url: link ? (link.href || href) : '',
+            link_url: link ? ((link.href || href).split('?')[0].split('#')[0]) : '',
             link_text: buttonText
           });
         }
 
         if (link && link.closest('.product-card')) {
           sendGaEvent('select_product', Object.assign({
-            link_url: link.href || href,
+            link_url: (link.href || href).split('?')[0].split('#')[0],
             link_text: buttonText
           }, getProductContext(link)));
         }
@@ -1908,7 +1889,7 @@
 
       var quoteForm = document.getElementById('contactForm');
       if (quoteForm) {
-        quoteForm.addEventListener('focusin', function(event){
+        quoteForm.addEventListener('input', function(event){
           if (hasTrackedQuoteStart) return;
           if (event.target && event.target.matches('input, select, textarea')) {
             hasTrackedQuoteStart = true;
@@ -1920,13 +1901,15 @@
         });
 
         quoteForm.addEventListener('submit', function(){
+          if (!quoteForm.checkValidity()) return;
           var formText = [
             getFieldValue('boxType'),
             getFieldValue('orderQuantity'),
             getFieldValue('boxSize'),
             getFieldValue('projectDetails')
           ].join(' ');
-          sendGaEvent('generate_lead', {
+          // This is a handoff request, not confirmation of a received inquiry.
+          sendGaEvent('whatsapp_form_submit', {
             form_id: 'contactForm',
             form_name: 'Homepage Quote Form',
             lead_source: 'whatsapp_quote_form',
