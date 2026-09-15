@@ -68,7 +68,7 @@
     .quote h2 { margin:0 auto 18px; max-width:720px; font-size:clamp(34px, 4.6vw, 58px); line-height:1; letter-spacing:-.055em; }
     .quote p { color:var(--muted); max-width:590px; margin:0 auto 27px; line-height:1.65; }
     .quote-panel { max-width:920px; margin:0 auto; padding:42px; border:1px solid rgba(211,174,72,.35); border-radius:24px; background:linear-gradient(135deg, rgba(211,174,72,.12), rgba(255,255,255,.03)); box-shadow:0 26px 70px rgba(0,0,0,.28); }
-    .quote-checklist { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px; margin:28px 0 30px; text-align:left; }
+    .quote-checklist { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; margin:28px 0 30px; text-align:left; }
     .quote-checklist span { display:flex; align-items:center; gap:9px; padding:14px; border:1px solid rgba(255,255,255,.08); border-radius:12px; background:#0b0b0e; color:#eee; font-size:13px; font-weight:800; line-height:1.35; }
     .quote-checklist span::before { content:""; width:8px; height:8px; border-radius:99px; background:var(--gold); box-shadow:0 0 0 4px rgba(211,174,72,.13); flex:0 0 auto; }
     .quote-note { margin-top:14px !important; font-size:13px; color:#8f8a80 !important; }
@@ -118,8 +118,47 @@
     summary::before { content:"+"; display:inline-grid; place-items:center; width:20px; height:20px; margin-right:10px; border-radius:50%; background:rgba(211,174,72,.18); color:var(--gold); font-size:15px; vertical-align:middle; }
     details[open] summary::before { content:"–"; }
     details p { margin:0; padding:0 20px 20px 50px; color:var(--muted); line-height:1.65; font-size:14px; }
-    @media (max-width:900px) { .guide-wrap, .faq-grid { grid-template-columns:1fr; } .guide-card { padding:24px; } }
-    @media (max-width:760px) { .products-grid { grid-template-columns:1fr; } .product-content { padding:23px; } .buyer-guide, .faq { padding:58px 0; } details p { padding-left:20px; } }  </style>
+    .selection-guide { padding:86px 0; border-top:1px solid var(--line); }
+    .selection-guide h2, .insert-options h2 { margin:0; max-width:850px; font-size:clamp(32px, 4vw, 52px); line-height:1; letter-spacing:-.05em; }
+    .selection-intro { max-width:760px; margin:18px 0 34px; color:var(--muted); line-height:1.7; }
+    .comparison-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:18px; background:var(--panel); }
+    .comparison-table { width:100%; min-width:980px; border-collapse:collapse; text-align:left; }
+    .comparison-table th { padding:15px 17px; background:#0b0b0d; color:var(--gold); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+    .comparison-table td { padding:18px 17px; border-top:1px solid var(--line); color:#ddd8cf; font-size:13px; line-height:1.45; vertical-align:middle; }
+    .comparison-table strong { display:block; color:#fff; font-size:15px; }
+    .comparison-table .table-number { color:var(--gold); font-weight:900; }
+    .comparison-table .table-link { display:inline-flex; padding:9px 12px; border:1px solid rgba(211,174,72,.55); border-radius:6px; color:var(--gold); font-weight:800; white-space:nowrap; }
+    .comparison-note { margin:16px 0 0; color:#8f8a80; font-size:12px; line-height:1.6; }
+    .insert-options { padding:86px 0; border-top:1px solid var(--line); }
+    .insert-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:30px; }
+    .insert-card { display:flex; min-width:0; flex-direction:column; overflow:hidden; border:1px solid var(--line); border-radius:18px; background:var(--panel); }
+    .insert-media { position:relative; overflow:hidden; background:#090909; }
+    .insert-card img { width:100%; height:220px; object-fit:cover; transition:transform .35s ease; }
+    .insert-card:hover img { transform:scale(1.025); }
+    .insert-number { position:absolute; top:14px; left:14px; display:grid; width:34px; height:34px; place-items:center; border:1px solid rgba(211,174,72,.55); border-radius:50%; background:rgba(5,5,5,.82); color:var(--gold); font-size:11px; font-weight:900; backdrop-filter:blur(4px); }
+    .insert-copy { display:flex; flex:1; flex-direction:column; padding:21px 22px 22px; }
+    .insert-best { margin:0 0 8px; color:var(--gold); font-size:10px; font-weight:900; letter-spacing:.11em; text-transform:uppercase; }
+    .insert-copy h3 { margin:0 0 10px; font-size:19px; line-height:1.25; }
+    .insert-copy p:last-child { margin:0; color:var(--muted); font-size:13px; line-height:1.6; }
+    .insert-proof { margin:18px 0 0; padding:18px 20px; border-left:3px solid var(--gold); background:rgba(211,174,72,.08); color:#e9e3d7; line-height:1.6; }
+    @media (max-width:900px) { .guide-wrap, .faq-grid { grid-template-columns:1fr; } .guide-card { padding:24px; } .insert-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .insert-card:last-child { grid-column:1 / -1; display:grid; grid-template-columns:1fr 1fr; } .insert-card:last-child .insert-media, .insert-card:last-child img { height:100%; } }
+    @media (max-width:760px) {
+      .products-grid { grid-template-columns:1fr; } .product-content { padding:23px; } .buyer-guide, .faq, .selection-guide, .insert-options { padding:58px 0; } details p { padding-left:20px; }
+      .comparison-wrap { overflow:visible; border:0; background:transparent; }
+      .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td { display:block; min-width:0; width:100%; }
+      .comparison-table thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+      .comparison-table tr { margin-bottom:14px; padding:18px; border:1px solid var(--line); border-radius:16px; background:var(--panel); }
+      .comparison-table td { display:grid; grid-template-columns:105px minmax(0,1fr); gap:12px; padding:9px 0; border:0; }
+      .comparison-table td::before { content:attr(data-label); color:var(--gold); font-size:10px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+      .comparison-table td:first-child { display:none; }
+      .comparison-table .table-link { justify-content:center; }
+      .insert-grid { grid-template-columns:1fr; gap:14px; }
+      .insert-card, .insert-card:last-child { display:grid; grid-column:auto; grid-template-columns:40% minmax(0,1fr); }
+      .insert-card .insert-media, .insert-card img, .insert-card:last-child .insert-media, .insert-card:last-child img { height:100%; min-height:210px; }
+      .insert-copy { justify-content:center; padding:20px; }
+    }
+    @media (max-width:520px) { .insert-card, .insert-card:last-child { grid-template-columns:1fr; } .insert-card .insert-media, .insert-card:last-child .insert-media { min-height:0; height:auto; } .insert-card img, .insert-card:last-child img { min-height:0; height:210px; } }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -170,7 +209,7 @@
         "name": "What is the MOQ and production time?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "MOQ can start from 100 pcs for selected structures. Sampling is usually 3-5 working days after artwork confirmation, and bulk production is usually 12-18 working days depending on structure and quantity."
+          "text": "MOQ starts from 100 pcs for selected rigid and magnetic structures, while corrugated mailer boxes generally start from 200 pcs. Sampling is usually 3-5 working days after artwork confirmation, and bulk production is usually 12-18 working days depending on structure and quantity."
         }
       }
     ]
@@ -203,13 +242,42 @@
   </article>
   <article class="product">
     <div class="product-image"><img src="../assets/mailer-padel-racket-box-with-foam.webp" width="1254" height="1254" alt="Mailer padel racket box with custom foam insert" loading="lazy" decoding="async"></div>
-    <div class="product-content"><small>E-COMMERCE MAILER</small><h3>Mailer Padel Racket Box with Foam</h3><p>Durable corrugated mailer with foam protection for shipping rackets, starter kits and gift sets.</p><div class="product-specs"><div><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div><span class="spec-label">LEAD TIME</span><span class="spec-value">12–18 working days</span></div><div><span class="spec-label">MATERIAL</span><span class="spec-value">Corrugated Cardboard + Foam</span></div></div><a class="btn" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20the%20Mailer%20Padel%20Racket%20Box%20with%20Foam.%20Please%20quote%20MOQ%2C%20sample%20time%2C%20production%20time%20and%20shipping%20options." target="_blank" rel="noopener noreferrer">Get Mailer Box Price</a></div>
+    <div class="product-content"><small>E-COMMERCE MAILER</small><h3>Mailer Padel Racket Box with Foam</h3><p>Durable corrugated mailer with foam protection for shipping rackets, starter kits and gift sets.</p><div class="product-specs"><div><span class="spec-label">MOQ</span><span class="spec-value">200 pcs</span></div><div><span class="spec-label">LEAD TIME</span><span class="spec-value">12–18 working days</span></div><div><span class="spec-label">MATERIAL</span><span class="spec-value">Corrugated Cardboard + Foam</span></div></div><a class="btn" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20the%20Mailer%20Padel%20Racket%20Box%20with%20Foam.%20Please%20quote%20MOQ%2C%20sample%20time%2C%20production%20time%20and%20shipping%20options." target="_blank" rel="noopener noreferrer">Get Mailer Box Price</a></div>
   </article>
   <article class="product">
     <div class="product-image"><img src="../assets/padel-luxury-magnetic.webp" width="800" height="800" alt="Luxury magnetic padel racket gift box" loading="lazy" decoding="async"></div>
     <div class="product-content"><small>LUXURY GIFT SET</small><h3>Luxury Magnetic Padel Box</h3><p>Presentation-ready rigid gift packaging with a secure magnetic closure and custom insert options.</p><div class="product-specs"><div><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div><span class="spec-label">LEAD TIME</span><span class="spec-value">12–18 working days</span></div><div><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><a class="btn" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20the%20Luxury%20Magnetic%20Padel%20Box.%20Please%20quote%20MOQ%2C%20sample%20time%2C%20production%20time%20and%20shipping%20options." target="_blank" rel="noopener noreferrer">Quote Luxury Padel Box</a></div>
   </article>
 </div>    </section>
+    <section class="selection-guide shell" id="structure-comparison">
+      <p class="eyebrow">RACKET BOX SELECTION GUIDE</p>
+      <h2>Compare five structures before you request a quote.</h2>
+      <p class="selection-intro">Choose around your sales channel, presentation goal, insert needs and logistics plan. Every structure can be tailored to your racket or paddle dimensions, accessories, artwork and order quantity.</p>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead><tr><th>No.</th><th>Structure</th><th>Best for</th><th>Recommended insert</th><th>Relative freight volume</th><th>Brand impact</th><th>Next step</th></tr></thead>
+          <tbody>
+            <tr><td class="table-number">01</td><td data-label="Structure"><strong>Magnetic rigid box</strong></td><td data-label="Best for">Premium retail and launch kits</td><td data-label="Insert">Custom-cut PE foam</td><td data-label="Freight volume">Higher</td><td data-label="Brand impact">High</td><td data-label="Next step"><a class="table-link" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20a%20non-foldable%20magnetic%20rigid%20racket%20box.%20Racket%20dimensions%3A%20%5Bplease%20fill%5D.%20Quantity%3A%20%5Bplease%20fill%5D.%20Destination%3A%20%5Bplease%20fill%5D." target="_blank" rel="noopener noreferrer">Request this structure</a></td></tr>
+            <tr><td class="table-number">02</td><td data-label="Structure"><strong>Drawer rigid box</strong></td><td data-label="Best for">Gift sets and signature editions</td><td data-label="Insert">Custom-cut PE foam</td><td data-label="Freight volume">Higher</td><td data-label="Brand impact">High</td><td data-label="Next step"><a class="table-link" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20a%20drawer-style%20rigid%20racket%20box.%20Racket%20dimensions%3A%20%5Bplease%20fill%5D.%20Quantity%3A%20%5Bplease%20fill%5D.%20Destination%3A%20%5Bplease%20fill%5D." target="_blank" rel="noopener noreferrer">Request this structure</a></td></tr>
+            <tr><td class="table-number">03</td><td data-label="Structure"><strong>Corrugated box</strong></td><td data-label="Best for">E-commerce and cost control</td><td data-label="Insert">Die-cut corrugated card</td><td data-label="Freight volume">Lower</td><td data-label="Brand impact">Medium</td><td data-label="Next step"><a class="table-link" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20a%20corrugated%20racket%20box%20with%20a%20paper-based%20insert.%20Racket%20dimensions%3A%20%5Bplease%20fill%5D.%20Quantity%3A%20%5Bplease%20fill%5D.%20Destination%3A%20%5Bplease%20fill%5D." target="_blank" rel="noopener noreferrer">Request this structure</a></td></tr>
+            <tr><td class="table-number">04</td><td data-label="Structure"><strong>Corrugated box with foam</strong></td><td data-label="Best for">Protected direct-to-consumer shipping</td><td data-label="Insert">Custom-cut foam</td><td data-label="Freight volume">Medium</td><td data-label="Brand impact">Medium</td><td data-label="Next step"><a class="table-link" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20a%20corrugated%20racket%20box%20with%20a%20custom%20foam%20insert.%20Racket%20dimensions%3A%20%5Bplease%20fill%5D.%20Quantity%3A%20%5Bplease%20fill%5D.%20Destination%3A%20%5Bplease%20fill%5D." target="_blank" rel="noopener noreferrer">Request this structure</a></td></tr>
+            <tr><td class="table-number">05</td><td data-label="Structure"><strong>Collapsible magnetic box</strong></td><td data-label="Best for">Premium brands shipping at scale</td><td data-label="Insert">Die-cut card insert</td><td data-label="Freight volume">Lower</td><td data-label="Brand impact">High</td><td data-label="Next step"><a class="table-link" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20a%20collapsible%20magnetic%20rigid%20racket%20box.%20Racket%20dimensions%3A%20%5Bplease%20fill%5D.%20Quantity%3A%20%5Bplease%20fill%5D.%20Destination%3A%20%5Bplease%20fill%5D." target="_blank" rel="noopener noreferrer">Request this structure</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="comparison-note">Freight volume is a relative comparison between similar-size racket boxes. Final packing volume depends on box dimensions, insert design and export-carton configuration.</p>
+    </section>
+    <section class="insert-options shell" id="insert-options">
+      <p class="eyebrow">INSERT OPTIONS</p>
+      <h2>Balance protection, presentation and freight.</h2>
+      <p class="selection-intro">The insert should hold the racket and accessories securely while supporting the presentation level and packing method your project needs.</p>
+      <div class="insert-grid">
+        <article class="insert-card"><div class="insert-media"><img src="../assets/racket-box-corrugated-insert.webp" width="1120" height="1400" loading="lazy" decoding="async" alt="Open racket packaging box with corrugated cardboard supports"><span class="insert-number">01</span></div><div class="insert-copy"><p class="insert-best">Best for flat packing</p><h3>Corrugated Cardboard Insert</h3><p>Die-cut paper-based supports hold the racket and accessories in place. A cost-conscious option that can pack flat with the outer case and can be printed or color-matched.</p></div></article>
+        <article class="insert-card"><div class="insert-media"><img src="../assets/racket-box-velvet-foam-insert.webp" width="1120" height="1400" loading="lazy" decoding="async" alt="Open racket packaging box with a velvet-lined foam insert"><span class="insert-number">02</span></div><div class="insert-copy"><p class="insert-best">Best for luxury presentation</p><h3>Foam with Velvet Lining</h3><p>A soft-touch velvet surface conceals the foam and creates a refined reveal. Recommended for luxury retail, gifting and premium limited editions.</p></div></article>
+        <article class="insert-card"><div class="insert-media"><img src="../assets/racket-box-custom-cut-foam-insert.webp" width="1120" height="1400" loading="lazy" decoding="async" alt="Open racket packaging box with a precision-cut foam insert"><span class="insert-number">03</span></div><div class="insert-copy"><p class="insert-best">Best for secure protection</p><h3>Custom-Cut Foam Insert</h3><p>Precision-cut foam follows the racket profile to improve retention and cushioning. Thickness, density, color and accessory cutouts can be tailored to the product.</p></div></article>
+      </div>
+      <p class="insert-proof">Insert geometry is confirmed from the final product sample or accurate CAD dimensions before production.</p>
+    </section>
     <section class="buyer-guide shell" id="padel-packaging-guide">
       <div class="guide-wrap">
         <div>
@@ -220,7 +288,7 @@
             <p>If your main sales channel is e-commerce, a padel racket mailer box is usually the most efficient structure. Corrugated cardboard gives better crush resistance during courier delivery, and the box can be designed as a flat-pack mailer to save warehouse space. For more protection, we can add a padel racket box with foam insert, paperboard support, or a shaped tray to stop the racket from moving inside the carton.</p>
             <p>If your product is positioned as a premium sports gift, a magnetic padel racket gift box can create a stronger retail impression. This structure is better for launch kits, influencer gifts, tournament gifts, club memberships and luxury racket sets. Rigid cardboard, hidden magnetic closure, soft-touch lamination, foil stamping, embossing and custom ribbon details can make the packaging feel more like a high-end presentation box than a simple protective carton.</p>
             <p>Pickleball paddle packaging can use many of the same ideas, but the inner dimensions and support points should be adjusted carefully. Padel rackets, pickleball paddles, balls, towels, grips and accessories all sit differently inside a box, so we recommend confirming the product size, total weight, quantity and target market before finalizing the structure. Our team can help compare mailer, rigid and magnetic options based on budget, MOQ, shipping method and brand positioning.</p>
-            <p>For most custom projects, the practical process is simple: share your product size and logo file, choose the box structure, confirm material and insert type, approve a sample, then move into bulk production. MOQ can start from 100 pcs for selected structures, sampling is usually 3–5 working days after artwork confirmation, and bulk production is usually 12–18 working days depending on quantity and finishing complexity.</p>
+            <p>For most custom projects, the practical process is simple: share your product size and logo file, choose the box structure, confirm material and insert type, approve a sample, then move into bulk production. MOQ starts from 100 pcs for selected rigid and magnetic structures, while corrugated mailer boxes generally start from 200 pcs. Sampling is usually 3–5 working days after artwork confirmation, and bulk production is usually 12–18 working days depending on quantity and finishing complexity.</p>
           </div>
         </div>
         <aside class="guide-card" aria-label="Padel packaging selection checklist">
@@ -249,11 +317,11 @@
         <details><summary>Do you make magnetic padel racket gift boxes?</summary><p>Yes. Magnetic padel racket gift boxes are suitable for premium retail, launch campaigns, sponsorship gifts, tournament gifts and high-end sports gift sets.</p></details>
         <details><summary>Can the packaging be used for pickleball paddle packaging?</summary><p>Yes. The structure, insert and artwork can be adjusted for pickleball paddle packaging, padel rackets, balls and related accessories.</p></details>
         <details><summary>Can I add logo, foil stamping or custom colors?</summary><p>Yes. Common options include CMYK printing, Pantone color matching, gold or silver foil stamping, embossing, debossing, matte lamination and soft-touch finishing.</p></details>
-        <details><summary>What is the MOQ for custom padel boxes?</summary><p>MOQ can start from 100 pcs for selected structures. The final MOQ depends on box size, material, insert, printing and finishing requirements.</p></details>
+        <details><summary>What is the MOQ for custom padel boxes?</summary><p>MOQ starts from 100 pcs for selected rigid and magnetic structures. Corrugated mailer boxes generally start from 200 pcs. The final MOQ depends on box size, material, insert, printing and finishing requirements.</p></details>
         <details><summary>How long does sampling and production take?</summary><p>Sampling is usually 3–5 working days after artwork and specifications are confirmed. Bulk production is usually 12–18 working days depending on quantity and complexity.</p></details>
       </div>
     </section>
-    <section class="quote shell" id="quote"><div class="quote-panel"><p class="eyebrow">START YOUR PADEL PACKAGING PROJECT</p><h2>Get a custom padel racket box quote.</h2><p>Send us your racket size, order quantity, logo requirements and preferred box style. Our team will recommend a practical structure and prepare a factory-direct quotation.</p><div class="quote-checklist" aria-label="Information to include with your quote request"><span>Racket size</span><span>Order quantity</span><span>Logo or artwork</span><span>Target market</span></div><a class="btn" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20custom%20padel%20racket%20packaging%20boxes.%20My%20racket%20size%20is%3A%20%5Bplease%20fill%5D.%20Quantity%3A%20%5Bplease%20fill%5D.%20Logo%2Fartwork%3A%20%5Bplease%20fill%5D.%20Please%20quote%20sample%20time%2C%20production%20time%20and%20shipping%20options." target="_blank" rel="noopener noreferrer">Send Padel Quote Request on WhatsApp</a><p class="quote-note">WhatsApp will open with a ready-to-send message. You can edit the size and quantity before sending.</p></div></section>
+    <section class="quote shell" id="quote"><div class="quote-panel"><p class="eyebrow">START YOUR PADEL PACKAGING PROJECT</p><h2>A useful quotation starts with six details.</h2><p>Share the information below and our team will recommend a practical structure, material combination and insert solution.</p><div class="quote-checklist" aria-label="Information to include with your quote request"><span>Racket or paddle dimensions</span><span>Preferred box structure</span><span>Insert type and accessories</span><span>Artwork and finishing</span><span>Quantity and destination</span><span>Required delivery date</span></div><a class="btn" href="https://wa.me/8613189018213?text=Hello%2C%20I%27m%20interested%20in%20custom%20racket%20packaging.%0A%0ARacket%20or%20paddle%20dimensions%3A%20%5Bplease%20fill%5D%0APreferred%20box%20structure%3A%20%5Bplease%20fill%5D%0AInsert%20type%20and%20accessories%3A%20%5Bplease%20fill%5D%0AArtwork%20and%20finishing%3A%20%5Bplease%20fill%5D%0AOrder%20quantity%20and%20destination%3A%20%5Bplease%20fill%5D%0ARequired%20delivery%20date%3A%20%5Bplease%20fill%5D" target="_blank" rel="noopener noreferrer">Send Racket Box Quote Request</a><p class="quote-note">WhatsApp will open with these fields ready to complete. You can edit the message before sending.</p></div></section>
   </main>
   <footer><div class="shell">© 2026 gzwoood.com · Custom packaging manufacturer in Guangzhou</div></footer>
   <script id="ga4-padel-page-tracking">
@@ -315,4 +383,3 @@
   </script>
 </body>
 </html>
-
