@@ -6,18 +6,19 @@
   <meta name="description" content="Custom padel racket packaging boxes, mailer boxes, magnetic gift boxes and foam inserts for padel and pickleball brands. Factory-direct packaging from Guangzhou.">
   <link rel="canonical" href="https://gzwoood.com/padel-pickleball-packaging/">
   <title>Custom Padel Racket Packaging Boxes | Mailer & Magnetic Boxes</title>
-  <!-- Google tag (gtag.js) - Optimized Loading -->
+  <!-- Google tag: global queue is available before the async library loads. -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    window.addEventListener('load', function() {
-      var script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR';
-      document.head.appendChild(script);
-    });
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){window.dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-8KBKPMQ3FR');
+    // Local previews queue events for testing without sending production analytics.
+    if (window.location.hostname === 'gzwoood.com' || window.location.hostname === 'www.gzwoood.com') {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR';
+      document.head.appendChild(gaScript);
+    }
   </script>
   <style>
     :root { --black:#070708; --panel:#111114; --line:#2a2a2f; --gold:#d3ae48; --warm:#f4f0e8; --muted:#b6b1a8; }
@@ -286,9 +287,6 @@
         };
       }
 
-      function isQuoteIntent(text, href) {
-        return /(quote|request|price|design|询价|报价)/i.test(text || '') || /wa\.me\/|api\.whatsapp\.com/i.test(href || '');
-      }
 
       document.addEventListener('click', function(event){
         var link = closestLink(event.target);
@@ -299,24 +297,16 @@
 
         if (href.indexOf('wa.me/') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
           sendGaEvent('click_whatsapp', Object.assign({
-            link_url: link.href || href,
+            link_url: (link.href || href).split('?')[0].split('#')[0],
             link_text: text,
             lead_source: 'padel_packaging_page'
           }, productContext));
         }
 
-        if (isQuoteIntent(text, href)) {
-          sendGaEvent('quote_start', Object.assign({
-            link_url: link.href || href,
-            link_text: text,
-            form_name: 'Padel WhatsApp Quote CTA',
-            lead_source: 'padel_packaging_page'
-          }, productContext));
-        }
 
         if (link.closest('.product')) {
           sendGaEvent('select_product', Object.assign({
-            link_url: link.href || href,
+            link_url: (link.href || href).split('?')[0].split('#')[0],
             link_text: text
           }, productContext));
         }
@@ -325,3 +315,4 @@
   </script>
 </body>
 </html>
+
