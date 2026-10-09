@@ -467,6 +467,9 @@
       }
     }
   </style>
+<style id="catalog-hubs-preview-styles">
+.preview-nav{overflow:visible!important}.nav-group{position:relative;align-self:stretch;display:flex;align-items:center}.nav-trigger span{margin-left:5px;color:var(--gold)}.nav-dropdown{position:absolute;top:calc(100% - 1px);left:-18px;display:grid;width:260px;padding:11px;background:#0b0b0b;border:1px solid #333;box-shadow:0 20px 50px rgba(0,0,0,.45);opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;z-index:100}.nav-group:hover .nav-dropdown,.nav-group:focus-within .nav-dropdown{opacity:1;visibility:visible;transform:none}.nav-dropdown a{height:auto!important;min-height:40px;padding:10px 12px;border:0!important;color:#ddd;font-size:13px}.nav-dropdown a:hover{background:#181818;color:var(--gold)}.nav-dropdown .view-all{margin-bottom:5px;border-bottom:1px solid #333!important;color:var(--gold)}.industries-menu{width:275px}.section-actions{display:flex;max-width:520px;flex-direction:column;align-items:flex-start;gap:14px}.section-actions .section-desc{max-width:none}.hub-link{display:inline-flex;padding-bottom:3px;border-bottom:1px solid var(--gold);color:var(--gold);font-size:13px;font-weight:900}.industry-hub{padding:100px 0;background:#0a0a0a;color:#fff}.industry-hub-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:34px}.industry-hub-head h2{max-width:650px;margin:7px 0 0;color:#fff;font-size:clamp(36px,4.8vw,58px);line-height:1;letter-spacing:-.055em}.industry-hub-head p{max-width:510px;margin:0;color:#aaa69e}.industry-hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.industry-hub-card{overflow:hidden;border:1px solid #2b2b2b;border-radius:16px;background:#131313;transition:.2s}.industry-hub-card:hover{transform:translateY(-4px);border-color:#806a37}.industry-hub-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:#eee}.industry-hub-media img{width:100%;height:100%;object-fit:cover;transition:.35s}.industry-hub-card:hover img{transform:scale(1.03)}.industry-hub-tag{position:absolute;left:14px;top:14px;padding:6px 9px;border:1px solid #806a37;border-radius:99px;background:#050505d9;color:var(--gold);font-size:9px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.industry-hub-copy{padding:21px}.industry-hub-copy h3{margin:0 0 8px;color:#fff;font-size:21px}.industry-hub-copy p{min-height:43px;margin:0 0 16px;color:#aaa69e;font-size:13px;line-height:1.6}.industry-hub-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:14px;border-top:1px solid #2b2b2b;color:#ddd;font-size:11px}.industry-hub-meta b{display:block;color:var(--gold);font-size:8px;letter-spacing:.09em;text-transform:uppercase}.industry-hub-link{display:block;margin-top:16px;color:var(--gold);font-size:12px;font-weight:900}.industry-hub-footer{display:flex;justify-content:center;margin-top:28px}.industry-hub-footer .btn{min-width:190px}@media(max-width:1100px){.preview-nav{gap:20px;font-size:14px}.nav-dropdown{left:auto;right:0}}@media(max-width:900px){.industry-hub-grid{grid-template-columns:repeat(2,1fr)}.industry-hub-head{display:block}.industry-hub-head p{margin-top:17px}}@media(max-width:768px){.preview-nav{display:none!important}.industry-hub{padding:64px 0}.industry-hub-grid{grid-template-columns:1fr}.industry-hub-card{display:grid;grid-template-columns:42% 58%}.industry-hub-media{height:100%;aspect-ratio:auto}.industry-hub-copy{padding:17px}.industry-hub-copy h3{font-size:18px}.industry-hub-meta{grid-template-columns:1fr}.section-actions{max-width:none}}
+</style>
 </head>
 
 <body>
@@ -485,13 +488,10 @@
       </a>
 
 
-      <nav class="nav-menu">
-        <a href="#products">Products</a>
-        <a href="/padel-pickleball-packaging/">Padel &amp; Pickleball</a>
-        <a href="/blog/">Blog</a>
-        <a href="#about">About Us</a>
-        <a href="#faq">FAQ</a>
-        <a href="/contact/">Contact</a>
+      <nav class="nav-menu preview-nav" aria-label="Main navigation">
+        <div class="nav-group"><a class="nav-trigger" href="/products/">Products <span>⌄</span></a><div class="nav-dropdown"><a class="view-all" href="/products/">View All Products</a><a href="/custom-magnetic-gift-boxes/">Magnetic Rigid Boxes</a><a href="/products/#products">Custom Mailer Boxes</a><a href="/products/#products">Drawer Boxes</a><a href="/products/#products">Folding Carton Boxes</a><a href="/products/#products">Corrugated Boxes</a><a href="/products/#products">Lid &amp; Base Boxes</a><a href="/products/#products">Custom Paper Bags</a></div></div>
+        <div class="nav-group"><a class="nav-trigger" href="/industries/">Industries <span>⌄</span></a><div class="nav-dropdown industries-menu"><a class="view-all" href="/industries/">View All Industries</a><a href="/padel-pickleball-packaging/">Padel &amp; Pickleball</a><a href="/industries/#industries">Cosmetic &amp; Skincare</a><a href="/industries/#industries">Perfume Packaging</a><a href="/industries/#industries">Jewelry Packaging</a><a href="/industries/#industries">Apparel &amp; Handbags</a><a href="/industries/#industries">Wine &amp; Spirits</a><a href="/industries/#industries">Corporate Gifts</a></div></div>
+        <a href="/blog/">Blog</a><a href="#about">About Us</a><a href="/contact/">Contact</a>
       </nav>
     </div>
   </header>
@@ -663,7 +663,7 @@
             <span class="kicker">Product Showcase</span>
             <h2 class="section-title">Fully Customizable Styles</h2>
           </div>
-          <p class="section-desc">Tailored to your product's specific dimensions and brand aesthetic. Explore our range of high-durability structures and premium materials.</p>
+          <div class="section-actions"><p class="section-desc">Tailored to your product's specific dimensions and brand aesthetic. Explore our range of high-durability structures and premium materials.</p><a class="hub-link" href="/products/">View All Products →</a></div>
         </div>
 
         <div class="featured-product-pages" aria-label="Featured product detail pages">
@@ -1210,6 +1210,14 @@
           </article>        </div>
       </div>
     </section>
+<section class="industry-hub" id="industries-preview" aria-labelledby="industry-hub-title"><div class="container"><div class="industry-hub-head"><div><span class="kicker">Packaging Solutions by Industry</span><h2 id="industry-hub-title">Choose by What You Sell.</h2></div><p>Find the right structure, insert and finish around your product, sales channel and shipping requirements.</p></div><div class="industry-hub-grid">
+<a class="industry-hub-card" href="/padel-pickleball-packaging/"><div class="industry-hub-media"><img src="assets/padel-pickleball-packaging-hero.webp" alt="Custom padel and pickleball packaging"><span class="industry-hub-tag">Sports</span></div><div class="industry-hub-copy"><h3>Padel &amp; Pickleball</h3><p>Mailer and presentation boxes sized for rackets, paddles, balls and accessories.</p><div class="industry-hub-meta"><span><b>Structures</b>Mailer / Magnetic</span><span><b>Priority</b>Racket protection</span></div><span class="industry-hub-link">Explore packaging →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/luxury-cosmetic-gift-box-satin-insert.webp" alt="Cosmetic and skincare gift packaging"><span class="industry-hub-tag">Beauty</span></div><div class="industry-hub-copy"><h3>Cosmetic &amp; Skincare</h3><p>Gift sets, PR kits and retail boxes with product-specific trays and premium finishes.</p><div class="industry-hub-meta"><span><b>Structures</b>Rigid / Drawer</span><span><b>Priority</b>Product layout</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/perfume_box.webp" alt="Custom perfume bottle packaging"><span class="industry-hub-tag">Fragrance</span></div><div class="industry-hub-copy"><h3>Perfume Packaging</h3><p>Bottle presentation boxes with secure inserts, refined papers and logo finishing.</p><div class="industry-hub-meta"><span><b>Structures</b>Magnetic / Lid-base</span><span><b>Priority</b>Bottle protection</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/high-gloss-lacquer-jewelry-box.webp" alt="Luxury jewelry presentation packaging"><span class="industry-hub-tag">Luxury retail</span></div><div class="industry-hub-copy"><h3>Jewelry Packaging</h3><p>Compact boxes with velvet, suede or foam interiors for jewelry and watches.</p><div class="industry-hub-meta"><span><b>Structures</b>Drawer / Hinged</span><span><b>Priority</b>Presentation</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/high-end-womens-fashion-packaging-leather-bag-with-handle.webp" alt="Apparel and handbag packaging"><span class="industry-hub-tag">Fashion</span></div><div class="industry-hub-copy"><h3>Apparel &amp; Handbags</h3><p>Large rigid and foldable solutions for garments, handbags and accessories.</p><div class="industry-hub-meta"><span><b>Structures</b>Foldable / Rigid</span><span><b>Priority</b>Freight volume</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/luxury-whiskey-gift-box.webp" alt="Wine and spirits presentation packaging"><span class="industry-hub-tag">Beverage</span></div><div class="industry-hub-copy"><h3>Wine &amp; Spirits</h3><p>Single-bottle and gift-set structures with stable cradles for glass.</p><div class="industry-hub-meta"><span><b>Structures</b>Rigid / Magnetic</span><span><b>Priority</b>Glass support</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+</div><div class="industry-hub-footer"><a class="btn btn-gold" href="/industries/">View All Industries →</a></div></div></section>
 
 <section class="direct-comparison" aria-labelledby="direct-comparison-title">
       <div class="container">
