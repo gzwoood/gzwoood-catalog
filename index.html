@@ -12,18 +12,33 @@
     gtag('js', new Date());
     gtag('config', 'G-8KBKPMQ3FR');
     // Local previews queue events for testing without sending production analytics.
+    // On production, load GA after the first interaction or after the page has been idle.
     if (window.location.hostname === 'gzwoood.com' || window.location.hostname === 'www.gzwoood.com') {
+      var gaLoaded = false;
+      var loadGoogleAnalytics = function(){
+        if (gaLoaded) return;
+        gaLoaded = true;
+        ['pointerdown', 'keydown', 'scroll'].forEach(function(eventName){
+          window.removeEventListener(eventName, loadGoogleAnalytics);
+        });
       var gaScript = document.createElement('script');
       gaScript.async = true;
       gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-8KBKPMQ3FR';
       document.head.appendChild(gaScript);
+      };
+      ['pointerdown', 'keydown', 'scroll'].forEach(function(eventName){
+        window.addEventListener(eventName, loadGoogleAnalytics, { once: true, passive: true });
+      });
+      window.addEventListener('load', function(){
+        window.setTimeout(loadGoogleAnalytics, 8000);
+      }, { once: true });
     }
   </script>
 
   <meta name="google-site-verification" content="RtPGel4gFz_kWSQYgmIBWt3-078U-LiKkMXjD6Fdk1g" />
 
-  <link rel="preload" as="image" href="assets/hero-v2-768.webp"
-        imagesrcset="assets/hero-v2-768.webp 768w, assets/hero-v2.webp 1235w"
+  <link rel="preload" as="image" href="assets/hero-v2-480.webp"
+        imagesrcset="assets/hero-v2-480.webp 480w, assets/hero-v2-768.webp 768w, assets/hero-v2.webp 1235w"
         imagesizes="(max-width: 992px) 100vw, 65vw" fetchpriority="high">
   <title>Custom Packaging Manufacturer | Luxury Gift Boxes | GZ Woood</title>
   <meta name="description" content="Custom packaging manufacturer for luxury gift boxes, mailer boxes, paper bags and jewelry boxes. Low MOQ, factory pricing and global delivery, with DDP available for selected countries." />
@@ -487,6 +502,7 @@
   .process-head p,
   .process-card > p,
   .process-details ul { color: rgba(255,255,255,.72); }
+  .product-card .spec-label { color: #665d51; }
 
   /* Text links inside prose should remain identifiable without relying on color alone. */
   .section-desc a,
@@ -527,7 +543,7 @@
   <main>
     <section class="hero">
       <div class="hero-visual">
-        <img src="assets/hero-v2.webp" srcset="assets/hero-v2-768.webp 768w, assets/hero-v2.webp 1235w" sizes="(max-width: 992px) 100vw, 65vw" width="1235" height="937" alt="Custom luxury rigid boxes and paper packaging by GZ Woood" loading="eager" fetchpriority="high" decoding="async">
+        <img src="assets/hero-v2.webp" srcset="assets/hero-v2-480.webp 480w, assets/hero-v2-768.webp 768w, assets/hero-v2.webp 1235w" sizes="(max-width: 992px) 100vw, 65vw" width="1235" height="937" alt="Custom luxury rigid boxes and paper packaging by GZ Woood" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="container">
         <div class="hero-content">
@@ -1263,12 +1279,12 @@
       </div>
     </section>
 <section class="industry-hub" id="industries-preview" aria-labelledby="industry-hub-title"><div class="container"><div class="industry-hub-head"><div><span class="kicker">Packaging Solutions by Industry</span><h2 id="industry-hub-title">Choose by What You Sell.</h2></div><p>Find the right structure, insert and finish around your product, sales channel and shipping requirements.</p></div><div class="industry-hub-grid">
-<a class="industry-hub-card" href="/padel-pickleball-packaging/"><div class="industry-hub-media"><img src="assets/padel-pickleball-packaging-hero.webp" alt="Custom padel and pickleball packaging"><span class="industry-hub-tag">Sports</span></div><div class="industry-hub-copy"><h3>Padel &amp; Pickleball</h3><p>Mailer and presentation boxes sized for rackets, paddles, balls and accessories.</p><div class="industry-hub-meta"><span><b>Structures</b>Mailer / Magnetic</span><span><b>Priority</b>Racket protection</span></div><span class="industry-hub-link">Explore packaging →</span></div></a>
-<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/luxury-cosmetic-gift-box-satin-insert.webp" alt="Cosmetic and skincare gift packaging"><span class="industry-hub-tag">Beauty</span></div><div class="industry-hub-copy"><h3>Cosmetic &amp; Skincare</h3><p>Gift sets, PR kits and retail boxes with product-specific trays and premium finishes.</p><div class="industry-hub-meta"><span><b>Structures</b>Rigid / Drawer</span><span><b>Priority</b>Product layout</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
-<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/perfume_box.webp" alt="Custom perfume bottle packaging"><span class="industry-hub-tag">Fragrance</span></div><div class="industry-hub-copy"><h3>Perfume Packaging</h3><p>Bottle presentation boxes with secure inserts, refined papers and logo finishing.</p><div class="industry-hub-meta"><span><b>Structures</b>Magnetic / Lid-base</span><span><b>Priority</b>Bottle protection</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
-<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/high-gloss-lacquer-jewelry-box.webp" alt="Luxury jewelry presentation packaging"><span class="industry-hub-tag">Luxury retail</span></div><div class="industry-hub-copy"><h3>Jewelry Packaging</h3><p>Compact boxes with velvet, suede or foam interiors for jewelry and watches.</p><div class="industry-hub-meta"><span><b>Structures</b>Drawer / Hinged</span><span><b>Priority</b>Presentation</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
-<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/high-end-womens-fashion-packaging-leather-bag-with-handle.webp" alt="Apparel and handbag packaging"><span class="industry-hub-tag">Fashion</span></div><div class="industry-hub-copy"><h3>Apparel &amp; Handbags</h3><p>Large rigid and foldable solutions for garments, handbags and accessories.</p><div class="industry-hub-meta"><span><b>Structures</b>Foldable / Rigid</span><span><b>Priority</b>Freight volume</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
-<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/luxury-whiskey-gift-box.webp" alt="Wine and spirits presentation packaging"><span class="industry-hub-tag">Beverage</span></div><div class="industry-hub-copy"><h3>Wine &amp; Spirits</h3><p>Single-bottle and gift-set structures with stable cradles for glass.</p><div class="industry-hub-meta"><span><b>Structures</b>Rigid / Magnetic</span><span><b>Priority</b>Glass support</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/padel-pickleball-packaging/"><div class="industry-hub-media"><img src="assets/padel-pickleball-packaging-hero-480.webp" srcset="assets/padel-pickleball-packaging-hero-480.webp 480w, assets/padel-pickleball-packaging-hero.webp 1672w" sizes="(max-width:768px) 42vw, (max-width:1100px) 50vw, 380px" width="1672" height="941" loading="lazy" decoding="async" alt="Custom padel and pickleball packaging"><span class="industry-hub-tag">Sports</span></div><div class="industry-hub-copy"><h3>Padel &amp; Pickleball</h3><p>Mailer and presentation boxes sized for rackets, paddles, balls and accessories.</p><div class="industry-hub-meta"><span><b>Structures</b>Mailer / Magnetic</span><span><b>Priority</b>Racket protection</span></div><span class="industry-hub-link">Explore packaging →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/luxury-cosmetic-gift-box-satin-insert-480.webp" srcset="assets/luxury-cosmetic-gift-box-satin-insert-480.webp 480w, assets/luxury-cosmetic-gift-box-satin-insert-768.webp 768w, assets/luxury-cosmetic-gift-box-satin-insert.webp 1254w" sizes="(max-width:768px) 42vw, (max-width:1100px) 50vw, 380px" width="1254" height="1254" loading="lazy" decoding="async" alt="Cosmetic and skincare gift packaging"><span class="industry-hub-tag">Beauty</span></div><div class="industry-hub-copy"><h3>Cosmetic &amp; Skincare</h3><p>Gift sets, PR kits and retail boxes with product-specific trays and premium finishes.</p><div class="industry-hub-meta"><span><b>Structures</b>Rigid / Drawer</span><span><b>Priority</b>Product layout</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/perfume_box-480.webp" srcset="assets/perfume_box-480.webp 480w, assets/perfume_box-768.webp 768w, assets/perfume_box.webp 1200w" sizes="(max-width:768px) 42vw, (max-width:1100px) 50vw, 380px" width="1200" height="900" loading="lazy" decoding="async" alt="Custom perfume bottle packaging"><span class="industry-hub-tag">Fragrance</span></div><div class="industry-hub-copy"><h3>Perfume Packaging</h3><p>Bottle presentation boxes with secure inserts, refined papers and logo finishing.</p><div class="industry-hub-meta"><span><b>Structures</b>Magnetic / Lid-base</span><span><b>Priority</b>Bottle protection</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/high-gloss-lacquer-jewelry-box-480.webp" srcset="assets/high-gloss-lacquer-jewelry-box-480.webp 480w, assets/high-gloss-lacquer-jewelry-box-768.webp 768w, assets/high-gloss-lacquer-jewelry-box.webp 1254w" sizes="(max-width:768px) 42vw, (max-width:1100px) 50vw, 380px" width="1254" height="1254" loading="lazy" decoding="async" alt="Luxury jewelry presentation packaging"><span class="industry-hub-tag">Luxury retail</span></div><div class="industry-hub-copy"><h3>Jewelry Packaging</h3><p>Compact boxes with velvet, suede or foam interiors for jewelry and watches.</p><div class="industry-hub-meta"><span><b>Structures</b>Drawer / Hinged</span><span><b>Priority</b>Presentation</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/high-end-womens-fashion-packaging-leather-bag-with-handle-480.webp" srcset="assets/high-end-womens-fashion-packaging-leather-bag-with-handle-480.webp 480w, assets/high-end-womens-fashion-packaging-leather-bag-with-handle-768.webp 768w, assets/high-end-womens-fashion-packaging-leather-bag-with-handle.webp 943w" sizes="(max-width:768px) 42vw, (max-width:1100px) 50vw, 380px" width="943" height="939" loading="lazy" decoding="async" alt="Apparel and handbag packaging"><span class="industry-hub-tag">Fashion</span></div><div class="industry-hub-copy"><h3>Apparel &amp; Handbags</h3><p>Large rigid and foldable solutions for garments, handbags and accessories.</p><div class="industry-hub-meta"><span><b>Structures</b>Foldable / Rigid</span><span><b>Priority</b>Freight volume</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
+<a class="industry-hub-card" href="/industries/#industries"><div class="industry-hub-media"><img src="assets/luxury-whiskey-gift-box-480.webp" srcset="assets/luxury-whiskey-gift-box-480.webp 480w, assets/luxury-whiskey-gift-box-768.webp 768w, assets/luxury-whiskey-gift-box-1200.webp 1200w" sizes="(max-width:768px) 42vw, (max-width:1100px) 50vw, 380px" width="1254" height="1254" loading="lazy" decoding="async" alt="Wine and spirits presentation packaging"><span class="industry-hub-tag">Beverage</span></div><div class="industry-hub-copy"><h3>Wine &amp; Spirits</h3><p>Single-bottle and gift-set structures with stable cradles for glass.</p><div class="industry-hub-meta"><span><b>Structures</b>Rigid / Magnetic</span><span><b>Priority</b>Glass support</span></div><span class="industry-hub-link">Preview solution →</span></div></a>
 </div><div class="industry-hub-footer"><a class="btn btn-gold" href="/industries/">View All Industries →</a></div></div></section>
 
 <section class="direct-comparison" aria-labelledby="direct-comparison-title">
