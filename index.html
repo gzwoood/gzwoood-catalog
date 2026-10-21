@@ -514,7 +514,19 @@
     text-underline-offset: 3px;
   }
 </style>
-</head>
+<style>
+  .products-cascade-menu{width:285px;padding:11px;overflow:visible}
+  .products-cascade-menu .view-all{margin-bottom:5px;border-bottom:1px solid #333!important;color:var(--gold)}
+  .product-menu-group{position:relative}
+  .products-cascade-menu .product-menu-title{display:flex;justify-content:space-between;gap:14px;min-height:42px;padding:10px 12px;color:#ddd;font-size:13px;font-weight:800;line-height:1.3}
+  .products-cascade-menu .product-menu-title::after{content:'›';color:var(--gold);font-size:18px;line-height:1}
+  .product-submenu{position:absolute;top:-11px;right:calc(100% + 10px);display:grid;width:330px;padding:11px;background:#0b0b0b;border:1px solid #333;box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateX(-8px);transition:.16s;z-index:110}
+  .product-menu-group:hover>.product-submenu,.product-menu-group:focus-within>.product-submenu{opacity:1;visibility:visible;transform:none}
+  .products-cascade-menu .product-menu-item{height:auto!important;min-height:36px;padding:8px 11px;border:0!important;color:#d7d7d7;font-size:12px;font-weight:650;line-height:1.35}
+  .products-cascade-menu .product-menu-item:hover,.products-cascade-menu .product-menu-item:focus-visible{background:#181818;color:var(--gold)}
+  .product-menu-group.is-large .product-submenu{grid-template-columns:repeat(2,minmax(0,1fr));width:610px}
+  @media(max-width:1100px){.products-cascade-menu{left:auto;right:0}.product-menu-group.is-large .product-submenu{width:560px}}
+</style></head>
 
 <body>
 
@@ -533,8 +545,90 @@
 
 
       <nav class="nav-menu preview-nav" aria-label="Main navigation">
-        <div class="nav-group"><a class="nav-trigger" href="/products/">Products <span>⌄</span></a><div class="nav-dropdown"><a class="view-all" href="/products/">View All Products</a><a href="/custom-magnetic-gift-boxes/">Magnetic Rigid Boxes</a><a href="/products/#products">Corrugated Mailer Boxes</a><a href="/products/#products">Drawer Boxes</a><a href="/decorative-faux-book-boxes/">Faux Book Boxes</a><a href="/products/#products">Custom Paper Bags</a><a href="/products/#products">Lid &amp; Base Boxes</a><a href="/products/#products">MDF Packaging Boxes</a><a href="/products/#products">Other Packaging Items</a></div></div>
-        <div class="nav-group"><a class="nav-trigger" href="/industries/">Industries <span>⌄</span></a><div class="nav-dropdown industries-menu"><a class="view-all" href="/industries/">View All Industries</a><a href="/padel-pickleball-packaging/">Padel &amp; Pickleball</a><a href="/industries/#industries">Cosmetic &amp; Skincare</a><a href="/industries/#industries">Perfume Packaging</a><a href="/industries/#industries">Jewelry Packaging</a><a href="/industries/#industries">Apparel &amp; Handbags</a><a href="/industries/#industries">Wine &amp; Spirits</a><a href="/industries/#industries">Corporate Gifts</a></div></div>
+        <div class="nav-group">
+          <a class="nav-trigger" href="/products/">Products <span>⌄</span></a>
+          <div class="nav-dropdown products-cascade-menu">
+            <a class="view-all" href="/products/">View All Products</a>
+            <div class="product-menu-group is-large">
+              <a class="product-menu-title" href="/custom-magnetic-gift-boxes/">Magnetic Rigid Boxes</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Satin Fabric Inner Magnetic Box</a>
+                <a class="product-menu-item" href="/#products">Magnetic Box with Handle</a>
+                <a class="product-menu-item" href="/#products">Luxury Gift Boxes</a>
+                <a class="product-menu-item" href="/custom-magnetic-gift-boxes/">Magnetic Closure Boxes</a>
+                <a class="product-menu-item" href="/padel-pickleball-packaging/">Padel Racket Boxes</a>
+                <a class="product-menu-item" href="/#products">Luxury Black Perfume Gift Box</a>
+                <a class="product-menu-item" href="/#products">Luxury Abaya &amp; Clothing Gift Box</a>
+                <a class="product-menu-item" href="/#products">Luxury Whiskey Gift Box</a>
+                <a class="product-menu-item" href="/#products">Luxury Cosmetic Gift Box with Satin Insert</a>
+                <a class="product-menu-item" href="/#products">Luxury Lingerie Gift Box</a>
+                <a class="product-menu-item" href="/#products">Custom Flower Gift Box</a>
+                <a class="product-menu-item" href="/products/magnetic-padel-racket-boxes/">Luxury Magnetic Padel Box</a>
+                <a class="product-menu-item" href="/products/pickleball-paddle-packaging-boxes/">Pickleball Paddle Box with Foam</a>
+                <a class="product-menu-item" href="/products/magnetic-padel-racket-boxes/">Magnetic Padel Racket Box</a>
+                <a class="product-menu-item" href="/#products">Luxury Champagne Gift Set Box</a>
+                <a class="product-menu-item" href="/#products">Luxury Women&rsquo;s Handbag Packaging Box</a>
+                <a class="product-menu-item" href="/products/vip-card-boxes/">VIP Card Boxes</a>
+                <a class="product-menu-item" href="/products/custom-advent-calendar-boxes/">Custom Advent Calendar Boxes</a>
+              </div>
+            </div>
+            <div class="product-menu-group">
+              <a class="product-menu-title" href="/products/">Corrugated Mailer Boxes</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Custom Mailer Boxes</a>
+                <a class="product-menu-item" href="/padel-pickleball-packaging/">Corrugated Padel Racket Box</a>
+                <a class="product-menu-item" href="/products/padel-racket-mailer-boxes-with-foam/">Mailer Padel Racket Box with Foam</a>
+              </div>
+            </div>
+            <div class="product-menu-group">
+              <a class="product-menu-title" href="/products/">Drawer Boxes</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Drawer Boxes</a>
+                <a class="product-menu-item" href="/#products">Luxury Apparel Gift Box</a>
+              </div>
+            </div>
+            <div class="product-menu-group">
+              <a class="product-menu-title" href="/decorative-faux-book-boxes/">Faux Book Boxes</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Book Style Boxes</a>
+                <a class="product-menu-item" href="/decorative-faux-book-boxes/">Custom Bible-Style Faux Book Box</a>
+                <a class="product-menu-item" href="/decorative-faux-book-boxes/">Linen Fabric Faux Book Storage Box</a>
+              </div>
+            </div>
+            <div class="product-menu-group">
+              <a class="product-menu-title" href="/products/">Lid &amp; Base Boxes</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Oil &amp; Perfume Boxes</a>
+                <a class="product-menu-item" href="/#products">Luxury Essential Oil Packaging Box</a>
+                <a class="product-menu-item" href="/#products">Premium Essential Oil Packaging Box</a>
+              </div>
+            </div>
+            <div class="product-menu-group">
+              <a class="product-menu-title" href="/products/">MDF Packaging Boxes</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Gloss Wood Grain Jewelry Box</a>
+                <a class="product-menu-item" href="/#products">High Gloss Lacquer Jewelry Box</a>
+                <a class="product-menu-item" href="/#products">Valentine Surprise Jewelry Box</a>
+                <a class="product-menu-item" href="/#products">Double Door Vape Display Box</a>
+              </div>
+            </div>
+            <div class="product-menu-group">
+              <a class="product-menu-title" href="/products/">Custom Paper Bags</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Custom Clothing Paper Bags</a>
+                <a class="product-menu-item" href="/#products">Custom Paper Bags</a>
+              </div>
+            </div>
+            <div class="product-menu-group">
+              <a class="product-menu-title" href="/products/">Other Packaging Items</a>
+              <div class="product-submenu">
+                <a class="product-menu-item" href="/#products">Cosmetic Packaging</a>
+                <a class="product-menu-item" href="/#products">EVA Foam Inserts</a>
+                <a class="product-menu-item" href="/#products">Stickers &amp; Labels</a>
+              </div>
+            </div>
+          </div>
+        </div>        <div class="nav-group"><a class="nav-trigger" href="/industries/">Industries <span>⌄</span></a><div class="nav-dropdown industries-menu"><a class="view-all" href="/industries/">View All Industries</a><a href="/padel-pickleball-packaging/">Padel &amp; Pickleball</a><a href="/industries/#industries">Cosmetic &amp; Skincare</a><a href="/industries/#industries">Perfume Packaging</a><a href="/industries/#industries">Jewelry Packaging</a><a href="/industries/#industries">Apparel &amp; Handbags</a><a href="/industries/#industries">Wine &amp; Spirits</a><a href="/industries/#industries">Corporate Gifts</a></div></div>
         <a href="/blog/">Blog</a><a href="#about">About Us</a><a href="/contact/">Contact</a>
       </nav>
     </div>
