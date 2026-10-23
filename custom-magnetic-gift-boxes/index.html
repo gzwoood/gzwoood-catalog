@@ -214,6 +214,58 @@
       text-transform: uppercase;
     }
 
+    .category-product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .category-product-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--white-line);
+      border-radius: 24px;
+      background: #111116;
+      box-shadow: 0 18px 46px rgba(0,0,0,.24);
+    }
+    .category-product-media {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #f3f1eb;
+    }
+    .category-product-media img { width: 100%; height: 100%; object-fit: contain; }
+    .category-product-media .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 6px 10px;
+      border: 1px solid rgba(201,163,78,.6);
+      border-radius: 999px;
+      background: rgba(7,7,9,.88);
+      color: var(--gold-soft);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .07em;
+    }
+    .category-product-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+    .category-product-body h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.25; }
+    .category-product-body > p { min-height: 68px; margin: 0; font-size: 14px; line-height: 1.6; }
+    .category-product-specs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--white-line);
+    }
+    .category-product-spec { min-width: 0; }
+    .category-product-spec .spec-label { display: block; color: var(--gold-soft); font-size: 9px; font-weight: 900; letter-spacing: .06em; }
+    .category-product-spec .spec-value { display: block; margin-top: 4px; color: #f2f2f2; font-size: 11px; line-height: 1.35; overflow-wrap: anywhere; }
+    .category-product-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: auto; padding-top: 20px; }
+    .category-product-actions .btn { min-height: 40px; padding: 9px 13px; font-size: 11px; }
+
     .feature {
       display: grid;
       grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
@@ -442,6 +494,7 @@
       .feature-intro-media { aspect-ratio: 4 / 3; }
       .stats, .spec-table, .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .category-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .image-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .nav-links { display: none; }
     }
@@ -451,6 +504,7 @@
       section { padding: 58px 0; }
       .container { width: min(100% - 24px, var(--max)); }
       .stats, .spec-table, .process, .image-grid { grid-template-columns: 1fr; }
+      .category-product-grid { grid-template-columns: 1fr; }
       .spec { border-right: 0; border-bottom: 1px solid var(--white-line); }
       .spec:last-child { border-bottom: 0; }
       .hero-actions .btn { width: 100%; }
@@ -465,6 +519,7 @@
         <span>GZ Woood</span>
       </a>
       <nav class="nav-links" aria-label="Page navigation">
+        <a href="#products">Products</a>
         <a href="#applications">Applications</a>
         <a href="#structures">Structures</a>
         <a href="#materials">Materials</a>
@@ -516,6 +571,246 @@
       </div>
     </section>
 
+    <section id="products" class="section-light">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Browse this category</span>
+          <h2>Magnetic Rigid Box Products</h2>
+          <p>Explore the products currently grouped under Magnetic Rigid Boxes in the main Products menu. Each style can be customized in size, color, logo, insert and surface finishing.</p>
+        </div>
+        <div class="category-product-grid">
+<article class="category-product-card" data-category="Wig Packaging" data-search="satin fabric inner magnetic box premium foldable flat shipping wig cosmetics beauty">
+            <div class="category-product-media">
+              <img src="../assets/satin_box.webp" width="800" height="800" srcset="../assets/satin_box-480.webp 480w, ../assets/satin_box-768.webp 768w, ../assets/satin_box.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom Satin Inner Magnetic Gift Box Manufacturer - Luxury Wig and Cosmetic Packaging" loading="lazy" decoding="async">
+              <span class="badge">Wig Packaging</span>
+            </div>
+
+            <div class="category-product-body">
+              <h3>Satin Fabric Inner Magnetic Box</h3>
+              <p>Premium magnetic box with satin inner tray and foldable structure for flat shipping. Suitable for wigs, cosmetics, and beauty products.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Satin</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Cosmetics Packaging" data-search="magnetic box with handle luxury rigid box packaging clothing cosmetics bags retail">
+            <div class="category-product-media">
+              <img src="../assets/handle_box.webp" width="800" height="800" srcset="../assets/handle_box-480.webp 480w, ../assets/handle_box-768.webp 768w, ../assets/handle_box.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury Rigid Box with Handle Wholesale - Premium Apparel and Retail Packaging Factory" loading="lazy" decoding="async">
+              <span class="badge">Cosmetics Packaging</span>
+            </div>
+
+            <div class="category-product-body">
+              <h3>Magnetic Box with Handle</h3>
+              <p>Luxury rigid box with handle design for premium product packaging. Suitable for clothing, cosmetics, bags, and retail products.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Gift Packaging" data-search="luxury gift boxes elegant custom premium gifting weddings birthdays luxury packaging">
+            <div class="category-product-media">
+              <img src="../assets/luxury_box.webp" width="800" height="800" srcset="../assets/luxury_box-480.webp 480w, ../assets/luxury_box-768.webp 768w, ../assets/luxury_box.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Premium Custom Gift Box Factory - Elegant Wedding and Special Occasion Packaging" loading="lazy" decoding="async">
+              <span class="badge">Gift Packaging</span>
+            </div>
+
+            <div class="category-product-body">
+              <h3>Luxury Gift Boxes</h3>
+              <p>Elegant custom gift boxes for premium gifting and special occasions. Suitable for weddings, birthdays, and luxury gift packaging.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Gift Packaging" data-search="magnetic closure box rigid luxury packaging foil stamping eco-friendly fsc sustainability">
+            <div class="category-product-media">
+              <img src="../assets/Magnetic_Closure_Boxes.webp" width="1200" height="900" srcset="../assets/Magnetic_Closure_Boxes-480.webp 480w, ../assets/Magnetic_Closure_Boxes-768.webp 768w, ../assets/Magnetic_Closure_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Sustainable Luxury Magnetic Closure Boxes - FSC Certified Packaging" loading="lazy" decoding="async">
+              <span class="badge">Gift Packaging</span>
+            </div>
+
+            <div class="category-product-body">
+              <h3>Magnetic Closure Boxes</h3>
+              <p>Sophisticated rigid magnetic boxes for premium retail. 100% recyclable materials and FSC certified sustainability.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">FSC Paperboard</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+                <a href="/custom-magnetic-gift-boxes/" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Padel Packaging" data-search="padel racket boxes sports packaging large rigid box sports equipment">
+            <div class="category-product-media">
+              <img src="../assets/Padel_Racket_Boxes.webp" width="1200" height="900" srcset="../assets/Padel_Racket_Boxes-480.webp 480w, ../assets/Padel_Racket_Boxes-768.webp 768w, ../assets/Padel_Racket_Boxes.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Padel Racket Packaging Boxes" loading="lazy" decoding="async">
+              <span class="badge">Padel Packaging</span>
+            </div>
+
+            <div class="category-product-body">
+              <h3>Padel Racket Boxes</h3>
+              <p>Industrial-strength rigid packaging for rackets. Engineered for maximum protection and branding.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+                <a href="/padel-pickleball-packaging/" class="btn btn-outline">View Padel Page</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Perfume & Essential Oil" data-search="luxury black perfume gift box rigid magnetic foam insert fragrance bottles sample vials foil stamping">
+            <div class="category-product-media">
+              <img src="../assets/luxury-black-perfume-gift-box.webp" width="1254" height="1254" srcset="../assets/luxury-black-perfume-gift-box-480.webp 480w, ../assets/luxury-black-perfume-gift-box-768.webp 768w, ../assets/luxury-black-perfume-gift-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury black perfume gift box with custom foam insert" loading="lazy" decoding="async">
+              <span class="badge">Perfume & Essential Oil</span>
+            </div>
+
+            <div class="category-product-body">
+              <h3>Luxury Black Perfume Gift Box</h3>
+              <p>Premium rigid magnetic box with a custom foam insert for perfume bottles and sample vials. Custom size, color, logo, insert and foil stamping are available.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Foam</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Apparel Packaging" data-search="luxury abaya clothing gift box eid dress apparel magnetic closure ribbon handles rigid cardboard custom wholesale">
+            <div class="category-product-media">
+              <img src="../assets/oem-wholesale-eid-abaya-gift-box.webp" width="1254" height="1254" srcset="../assets/oem-wholesale-eid-abaya-gift-box-480.webp 480w, ../assets/oem-wholesale-eid-abaya-gift-box-768.webp 768w, ../assets/oem-wholesale-eid-abaya-gift-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Black rigid magnetic gift box with ribbon handles for abayas, dresses and luxury clothing" loading="lazy" decoding="async">
+              <span class="badge">Apparel Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Luxury Abaya &amp; Clothing Gift Box</h3>
+              <p>Premium rigid gift box designed for abayas, dresses and luxury clothing. Features a magnetic closure and ribbon handles, with custom size, color, logo and printing available.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Ribbon Handle</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Gift Packaging" data-search="luxury whiskey gift box magnetic closure gold foil foam insert spirits glassware bar gift set">
+            <div class="category-product-media">
+              <img src="../assets/luxury-whiskey-gift-box-768.webp" width="768" height="768" srcset="../assets/luxury-whiskey-gift-box-480.webp 480w, ../assets/luxury-whiskey-gift-box-768.webp 768w, ../assets/luxury-whiskey-gift-box-1200.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury magnetic whiskey gift box with gold foil details and custom foam insert" loading="lazy" decoding="async">
+              <span class="badge">Gift Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Luxury Whiskey Gift Box</h3>
+              <p>Luxury rigid gift box with magnetic closure, gold foil details, and custom foam insert for premium whiskey, spirits, glassware, and bar gift sets. Ideal for high-end retail packaging and brand presentation.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Foam</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Cosmetics Packaging" data-search="luxury cosmetic gift box satin insert skincare perfume makeup beauty promotional rigid">
+            <div class="category-product-media">
+              <img src="../assets/luxury-cosmetic-gift-box-satin-insert.webp" width="1254" height="1254" srcset="../assets/luxury-cosmetic-gift-box-satin-insert-480.webp 480w, ../assets/luxury-cosmetic-gift-box-satin-insert-768.webp 768w, ../assets/luxury-cosmetic-gift-box-satin-insert.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury rigid cosmetic gift box with soft satin insert for skincare, perfume and makeup sets" loading="lazy" decoding="async">
+              <span class="badge">Cosmetics Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Luxury Cosmetic Gift Box with Satin Insert</h3>
+              <p>Premium rigid cosmetic gift box with soft satin lining, designed for skincare, perfume, makeup, beauty sets, and luxury promotional packaging. Fully customizable in size, color, logo, and inner layout.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Satin</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Apparel Packaging" data-search="luxury lingerie gift box intimate apparel sleepwear fashion magnetic anti scratch matte film">
+            <div class="category-product-media">
+              <img src="../assets/luxury-lingerie-gift-box-768.webp" width="768" height="768" srcset="../assets/luxury-lingerie-gift-box-480.webp 480w, ../assets/luxury-lingerie-gift-box-768.webp 768w, ../assets/luxury-lingerie-gift-box-1200.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury magnetic lingerie gift box with customizable interior for intimate apparel and sleepwear" loading="lazy" decoding="async">
+              <span class="badge">Lingerie Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Luxury Lingerie Gift Box</h3>
+              <p>Elegant rigid gift box for lingerie, intimate apparel, sleepwear, and premium fashion sets. Designed with a refined magnetic structure and customizable inner color to create a high-end unboxing experience.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Gift Packaging" data-search="custom flower gift box preserved flowers ribbon valentine wedding seasonal gold foil romantic rigid">
+            <div class="category-product-media">
+              <img src="../assets/custom-flower-gift-box-768.webp" width="768" height="768" srcset="../assets/custom-flower-gift-box-480.webp 480w, ../assets/custom-flower-gift-box-768.webp 768w, ../assets/custom-flower-gift-box-1200.webp 1200w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom rigid flower gift box with ribbon closure and gold-foiled logo" loading="lazy" decoding="async">
+              <span class="badge">Gift Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Custom Flower Gift Box</h3>
+              <p>Romantic rigid flower gift box with ribbon closure design, ideal for preserved flowers, floral arrangements, Valentine's Day gifts, wedding gifts, and premium seasonal packaging. Custom printing and structure are available.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Padel Packaging" data-search="luxury magnetic padel racket box rigid gift packaging magnetic closure">
+            <div class="category-product-media">
+              <img src="../assets/padel-luxury-magnetic.webp" width="800" height="800" srcset="../assets/padel-luxury-magnetic-480.webp 480w, ../assets/padel-luxury-magnetic-768.webp 768w, ../assets/padel-luxury-magnetic.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury Magnetic Padel Racket Gift Box - Premium Rigid Sports Packaging" loading="lazy" decoding="async">
+              <span class="badge">Luxury Rigid</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Luxury Magnetic Padel Box</h3>
+              <p>Premium rigid box with a secure magnetic closure. Perfect for high-end brand presentation and luxury padel racket gifting.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+                <a href="/products/magnetic-padel-racket-boxes/" class="btn btn-outline">View Magnetic Details</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Padel Packaging" data-search="padel racket box with foam insert protective sports packaging premium display">
+            <div class="category-product-media">
+              <img src="../assets/padel-foam-insert.webp" width="800" height="800" srcset="../assets/padel-foam-insert-480.webp 480w, ../assets/padel-foam-insert-768.webp 768w, ../assets/padel-foam-insert.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Padel Racket Packaging with Foam Insert - Maximum Protection Sports Box" loading="lazy" decoding="async">
+              <span class="badge">Protective</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Pickleball Paddle Box with Foam</h3>
+              <p>High-end display box featuring a custom-cut foam insert. Provides ultimate protection and a premium unboxing experience for elite rackets.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Foam</span></div></div><div class="category-product-actions">
+                <a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a>
+                <a href="/products/pickleball-paddle-packaging-boxes/" class="btn btn-outline">View Details</a>
+              </div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Padel Packaging" data-search="magnetic padel racket box foam insert rigid sports packaging customizable">
+            <div class="category-product-media"><img src="../assets/magnetic-padel-racket-box.webp" width="800" height="800" srcset="../assets/magnetic-padel-racket-box-480.webp 480w, ../assets/magnetic-padel-racket-box-768.webp 768w, ../assets/magnetic-padel-racket-box.webp 800w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom magnetic padel racket box with foam insert" loading="lazy" decoding="async"><span class="badge">Padel Packaging</span></div>
+            <div class="category-product-body"><h3>Magnetic Padel Racket Box</h3><p>Premium rigid magnetic box designed for padel rackets. Custom foam insert keeps the racket securely in place while creating a high-end presentation.</p><div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Foam</span></div></div><div class="category-product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a><a href="/products/magnetic-padel-racket-boxes/" class="btn btn-outline">View Details</a></div></div>
+          </article>
+<article class="category-product-card" data-category="Gift Packaging" data-search="luxury champagne gift set box rigid presentation box bottle glasses custom foil logo">
+            <div class="category-product-media">
+              <img src="../assets/luxury-champagne-gift-set-box.webp" width="1254" height="1254" srcset="../assets/luxury-champagne-gift-set-box-480.webp 480w, ../assets/luxury-champagne-gift-set-box-768.webp 768w, ../assets/luxury-champagne-gift-set-box.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury champagne gift set box with space for one bottle and two glasses" loading="lazy" decoding="async">
+              <span class="badge">Gift Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Luxury Champagne Gift Set Box</h3>
+              <p>Premium rigid presentation box designed for one champagne bottle and two glasses. Custom size, color, logo, insert and foil stamping are available.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard + Foam</span></div></div><div class="category-product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a></div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Apparel Packaging" data-search="luxury womens handbag packaging box foldable rigid magnetic closure carrying handle fashion accessories">
+            <div class="category-product-media">
+              <img src="../assets/luxury-womens-handbag-packaging-box.webp" width="943" height="943" srcset="../assets/luxury-womens-handbag-packaging-box-480.webp 480w, ../assets/luxury-womens-handbag-packaging-box-768.webp 768w, ../assets/luxury-womens-handbag-packaging-box.webp 943w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Luxury foldable womens handbag packaging box with magnetic closure and carrying handle" loading="lazy" decoding="async">
+              <span class="badge">Apparel Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Luxury Women&#8217;s Handbag Packaging Box</h3>
+              <p>Large foldable rigid box designed for women&#8217;s handbags, designer bags and fashion accessories. Features a magnetic closure and carrying handle, with custom size, color, logo and printing available.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div><div class="category-product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a></div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Gift Packaging" data-search="vip card boxes membership card packaging loyalty card presentation box premium rigid cardboard magnetic luxury unboxing">
+            <div class="category-product-media">
+              <img src="../assets/vip-card-boxes.webp" width="1254" height="1254" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Premium custom VIP and membership card presentation boxes in black rigid cardboard" loading="lazy" decoding="async">
+              <span class="badge">Membership Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>VIP Card Boxes</h3>
+              <p>Premium custom packaging for VIP and membership cards. Designed to elevate your brand and create a luxury unboxing experience.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">100 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">12-18 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div>
+              <div class="category-product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text=Hello%20GZ%20Woood%2C%20I%20would%20like%20a%20quote%20for%20VIP%20Card%20Boxes.%0A%0ACard%20size%3A%0AQuantity%3A%0ADestination%20country%3A%0ARequired%20date%3A&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a><a href="/products/vip-card-boxes/" class="btn btn-outline">View Details</a></div>
+            </div>
+          </article>
+<article class="category-product-card" data-category="Gift Packaging" data-search="custom advent calendar boxes christmas holiday gift packaging 24 compartments drawers rigid cardboard seasonal collection">
+            <div class="category-product-media">
+              <img src="../assets/custom-advent-calendar-boxes-768.webp" width="1254" height="1254" srcset="../assets/custom-advent-calendar-boxes-480.webp 480w, ../assets/custom-advent-calendar-boxes-768.webp 768w, ../assets/custom-advent-calendar-boxes.webp 1254w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1200px) calc(50vw - 32px), 380px" alt="Custom Christmas Advent calendar box with 24 numbered gift compartments" loading="lazy" decoding="async">
+              <span class="badge">Holiday Packaging</span>
+            </div>
+            <div class="category-product-body">
+              <h3>Custom Advent Calendar Boxes</h3>
+              <p>Premium custom packaging for Christmas gifts and holiday collections. Designed to create a magical unboxing experience with festive surprises.</p>
+              <div class="category-product-specs"><div class="category-product-spec"><span class="spec-label">MOQ</span><span class="spec-value">200 pcs</span></div><div class="category-product-spec"><span class="spec-label">LEAD TIME</span><span class="spec-value">20–25 working days</span></div><div class="category-product-spec"><span class="spec-label">MATERIAL</span><span class="spec-value">Rigid Cardboard</span></div></div>
+              <div class="category-product-actions"><a href="https://api.whatsapp.com/send/?phone=8613189018213&amp;text=Hello%20GZ%20Woood%2C%20I%20would%20like%20a%20quote%20for%20Custom%20Advent%20Calendar%20Boxes.%0A%0ACalendar%20size%3A%0AProduct%20sizes%3A%0ACompartment%20count%3A%0AQuantity%3A%0ADestination%20country%3A%0ARequired%20date%3A&amp;type=phone_number&amp;app_absent=0" class="btn" target="_blank" rel="noopener noreferrer">Quote This Product</a><a href="/products/custom-advent-calendar-boxes/" class="btn btn-outline">View Details</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
     <section id="applications">
       <div class="container">
         <div class="section-head">
@@ -836,3 +1131,4 @@
   </script>
 </body>
 </html>
+
