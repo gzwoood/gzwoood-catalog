@@ -265,6 +265,34 @@
     @media (max-width: 768px){.featured-product-entry{align-items:flex-start;flex-direction:column}}
   </style>
   <link rel="stylesheet" href="assets/css/main.min.css?v=20260731">
+  <style id="mobile-product-actions">
+    @media (max-width: 640px) {
+      #products .product-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+      }
+
+      #products .product-actions .btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 46px;
+        padding: 9px 7px;
+        font-size: 10px;
+        line-height: 1.25;
+        text-align: center;
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+    }
+
+    @media (max-width: 360px) {
+      #products .product-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
 
   <!-- Global Schema.org Metadata -->
@@ -2096,3 +2124,4 @@
   <!-- Deployment refresh: 2026-07-07 -->
 </body>
 </html>
+
