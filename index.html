@@ -575,7 +575,27 @@
     .compliance-entry-note{display:block;margin-top:18px;color:#777;font-size:11px;line-height:1.55}
     @media(max-width:820px){.compliance-entry-inner{grid-template-columns:160px minmax(0,1fr);gap:26px}.compliance-entry-copy h2{font-size:30px}}
     @media(max-width:620px){.compliance-entry{padding:36px 14px}.compliance-entry-inner{grid-template-columns:92px minmax(0,1fr);align-items:start;gap:20px;padding:20px}.compliance-entry-copy h2{font-size:25px}.compliance-entry-copy>p{font-size:13px}.compliance-entry-points,.compliance-entry-actions,.compliance-entry-note{grid-column:1/-1}.compliance-entry-points{margin:20px 0}.compliance-entry-actions{align-items:stretch;flex-direction:column}.compliance-entry-button{width:100%}.compliance-entry-request{text-align:center}.compliance-entry-badge{display:none}}
-</style><style id="product-catalog-cta-style">#products .product-catalog-cta{display:flex;align-items:center;justify-content:center;gap:20px;max-width:760px;margin:46px auto 0}#products .product-catalog-cta:before,#products .product-catalog-cta:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,163,78,.42))}#products .product-catalog-cta:after{background:linear-gradient(90deg,rgba(201,163,78,.42),transparent)}#products .product-catalog-cta a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border:1px solid var(--gold);border-radius:999px;color:#151515;font-size:13px;font-weight:900;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:.18s}#products .product-catalog-cta a:after{content:"→";margin-left:10px;color:var(--gold);font-size:16px}#products .product-catalog-cta a:hover{color:#fff;background:#151515;transform:translateY(-1px)}@media(max-width:700px){#products .product-catalog-cta{margin-top:34px}#products .product-catalog-cta:before,#products .product-catalog-cta:after{display:none}#products .product-catalog-cta a{width:100%;max-width:320px}}</style></head>
+</style><style id="product-catalog-cta-style">#products .product-catalog-cta{display:flex;align-items:center;justify-content:center;gap:20px;max-width:760px;margin:46px auto 0}#products .product-catalog-cta:before,#products .product-catalog-cta:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,163,78,.42))}#products .product-catalog-cta:after{background:linear-gradient(90deg,rgba(201,163,78,.42),transparent)}#products .product-catalog-cta a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border:1px solid var(--gold);border-radius:999px;color:#151515;font-size:13px;font-weight:900;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:.18s}#products .product-catalog-cta a:after{content:"→";margin-left:10px;color:var(--gold);font-size:16px}#products .product-catalog-cta a:hover{color:#fff;background:#151515;transform:translateY(-1px)}@media(max-width:700px){#products .product-catalog-cta{margin-top:34px}#products .product-catalog-cta:before,#products .product-catalog-cta:after{display:none}#products .product-catalog-cta a{width:100%;max-width:320px}}</style>
+<style id="qualified-quote-form-style">
+  #quote .quote-wrap{gap:72px}
+  #quote .quote-info{position:sticky;top:110px}
+  #quote .quote-benefits{display:grid;gap:12px;margin:30px 0 0;padding:0;list-style:none}
+  #quote .quote-benefits li{position:relative;padding-left:25px;color:#ddd;font-size:14px;font-weight:700}
+  #quote .quote-benefits li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:900}
+  #quote .quote-form{padding:40px;border:1px solid rgba(201,163,78,.22);box-shadow:0 24px 70px rgba(0,0,0,.2)}
+  #quote .form-intro{grid-column:1/-1;margin:0 0 4px;padding-bottom:18px;border-bottom:1px solid #e1ddd4}
+  #quote .form-intro strong{display:block;color:#111;font-size:21px;line-height:1.2}
+  #quote .form-intro span{display:block;margin-top:7px;color:#6e675d;font-size:13px;line-height:1.55}
+  #quote .field-label{display:block;margin:0 0 7px;color:#5d564c;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+  #quote .form-field{min-width:0}
+  #quote .form-field-full{grid-column:1/-1}
+  #quote .field,#quote .textarea{border-color:#ded9cf;border-radius:13px}
+  #quote .textarea{min-height:118px}
+  #quote .quote-submit{min-height:56px;font-size:13px;white-space:normal}
+  #quote .form-privacy{grid-column:1/-1;margin:-4px 0 0;color:#777;font-size:11px;line-height:1.55;text-align:center}
+  @media(max-width:992px){#quote .quote-info{position:static}#quote .quote-wrap{gap:44px}}
+  @media(max-width:600px){#quote .quote-form{padding:25px 20px;border-radius:26px}#quote .form-field,#quote .form-field-full{grid-column:1/-1}#quote .quote-info h2{font-size:42px}}
+</style></head>
 
 <body>
 
@@ -1858,8 +1878,13 @@
         <div class="quote-wrap">
           <div class="quote-info">
             <span class="kicker">Request a Quote</span>
-            <h2>Let's build your packaging</h2>
-            <p>Our packaging specialists are ready to help with structure, material selection, and cost optimization.</p>
+            <h2>Get a practical packaging recommendation</h2>
+            <p>Share the essentials and our team can recommend a suitable structure, material route and quotation basis for your project.</p>
+            <ul class="quote-benefits">
+              <li>Structure and material recommendation</li>
+              <li>MOQ and production quotation</li>
+              <li>Sampling and delivery guidance</li>
+            </ul>
             <div class="contact-list">
               <div>Email: <a href="mailto:timwu@gzwoood.com">timwu@gzwoood.com</a></div>
               <div>WhatsApp: <a href="https://wa.me/8613189018213">Live Chat</a></div>
@@ -1870,32 +1895,25 @@
           <form class="quote-form" id="contactForm">
             <div class="form-grid">
               <p class="form-status" id="formStatus" role="status">Your inquiry is ready. WhatsApp will open with the details pre-filled; please tap Send to reach our packaging team.</p>
-              <label class="visually-hidden" for="fullName">Full Name</label>
-              <input class="field" id="fullName" type="text" name="Full Name" placeholder="Full Name" autocomplete="name" required>
-              <label class="visually-hidden" for="contactMethod">Email or WhatsApp</label>
-              <input class="field" id="contactMethod" type="text" name="Email or WhatsApp" placeholder="Email or WhatsApp" autocomplete="email" required>
-              <label class="visually-hidden" for="boxType">Box Type</label>
-              <select class="field" id="boxType" name="Box Type">
-                <option value="">Box Type</option>
-                <option>Magnetic Box</option>
-                <option>Mailer Box</option>
-                <option>Folding Carton</option>
-                <option>Luxury Gift Box</option>
-                <option>Other</option>
-              </select>
-              <label class="visually-hidden" for="orderQuantity">Order Quantity</label>
-              <select class="field" id="orderQuantity" name="Order Quantity">
-                <option value="">Quantity</option>
-                <option>500 - 1,000 pcs</option>
-                <option>1,000 - 3,000 pcs</option>
-                <option>5,000+ pcs</option>
-              </select>
-              <label class="visually-hidden" for="boxSize">Box Size</label>
-              <input class="field-full" id="boxSize" type="text" name="Box Size" placeholder="Box Size (L x W x H)">
-              <label class="visually-hidden" for="projectDetails">Project Details</label>
-              <textarea class="field-full" id="projectDetails" name="Project Details" placeholder="Material preferences, printing colors, or special requests..."></textarea>
-              <button class="btn btn-gold field-full" type="submit">Submit Inquiry on WhatsApp</button>
-              <p class="field-full" style="margin:0;color:rgba(255,255,255,.68);font-size:13px;line-height:1.6;">Prefer email? Send your project details to <a href="mailto:timwu@gzwoood.com">timwu@gzwoood.com</a>.</p>
+              <div class="form-intro"><strong>Tell us the project essentials</strong><span>Fields marked * help us prepare a more useful first response. You can attach product photos after WhatsApp opens.</span></div>
+
+              <div class="form-field"><label class="field-label" for="fullName">Full name *</label><input class="field" id="fullName" type="text" name="Full Name" placeholder="Your name" autocomplete="name" required></div>
+              <div class="form-field"><label class="field-label" for="contactMethod">Email or WhatsApp *</label><input class="field" id="contactMethod" type="text" name="Email or WhatsApp" placeholder="How should we contact you?" autocomplete="email" required></div>
+
+              <div class="form-field form-field-full"><label class="field-label" for="productName">What are you packaging? *</label><input class="field" id="productName" type="text" name="Product" placeholder="e.g. handbag, perfume set, apparel or padel racket" required></div>
+
+              <div class="form-field"><label class="field-label" for="orderQuantity">Order quantity *</label><select class="field" id="orderQuantity" name="Order Quantity" required><option value="">Select quantity</option><option>100 - 199 pcs</option><option>200 - 299 pcs</option><option>300 - 499 pcs</option><option>500 - 999 pcs</option><option>1,000 - 2,999 pcs</option><option>3,000+ pcs</option><option>Not sure - need advice</option></select></div>
+              <div class="form-field"><label class="field-label" for="destinationCountry">Destination country *</label><input class="field" id="destinationCountry" type="text" name="Destination Country" placeholder="e.g. United States" autocomplete="country-name" required></div>
+
+              <div class="form-field"><label class="field-label" for="boxSize">Product or box size</label><input class="field" id="boxSize" type="text" name="Box Size" placeholder="L x W x H + unit"></div>
+              <div class="form-field"><label class="field-label" for="boxType">Preferred structure</label><select class="field" id="boxType" name="Box Type"><option value="">Not sure - recommend one</option><option>Magnetic rigid box</option><option>Lid and base rigid box</option><option>Drawer box</option><option>Corrugated mailer box</option><option>Folding carton</option><option>Custom paper bag</option><option>Other / custom structure</option></select></div>
+
+              <div class="form-field"><label class="field-label" for="deliveryDate">Required delivery date</label><input class="field" id="deliveryDate" type="text" name="Required Delivery Date" placeholder="Date or preferred timeline"></div>
+              <div class="form-field"><label class="field-label" for="artworkStatus">Artwork status</label><select class="field" id="artworkStatus" name="Artwork Status"><option value="">Select status</option><option>Logo and artwork ready</option><option>Logo ready - need layout support</option><option>Need design support</option><option>Still planning</option></select></div>
+
+              <div class="form-field form-field-full"><label class="field-label" for="projectDetails">Additional project details</label><textarea class="textarea" id="projectDetails" name="Project Details" placeholder="Materials, colors, inserts, finishing, shipping method or other requirements..."></textarea></div>
+              <button class="btn btn-gold field-full quote-submit" type="submit">Get Price &amp; Packaging Recommendation on WhatsApp</button>
+              <p class="form-privacy">WhatsApp opens with your project details pre-filled. Please review the message and tap Send. Prefer email? <a href="mailto:timwu@gzwoood.com">timwu@gzwoood.com</a></p>
             </div>
           </form>
           </div>
@@ -1972,10 +1990,15 @@
           '',
           'Full Name: ' + getValue('fullName'),
           'Email or WhatsApp: ' + getValue('contactMethod'),
-          'Box Type: ' + getValue('boxType'),
+          'Product: ' + getValue('productName'),
           'Quantity: ' + getValue('orderQuantity'),
-          'Box Size: ' + getValue('boxSize'),
+          'Destination Country: ' + getValue('destinationCountry'),
+          'Product or Box Size: ' + (getValue('boxSize') || 'Not confirmed'),
+          'Preferred Structure: ' + (getValue('boxType') || 'Please recommend'),
+          'Required Delivery Date: ' + (getValue('deliveryDate') || 'Flexible / not confirmed'),
+          'Artwork Status: ' + (getValue('artworkStatus') || 'Not confirmed'),
           'Project Details: ' + getValue('projectDetails'),
+          'Reference Images: I can attach them in this WhatsApp chat.',
           '',
           'Page: ' + window.location.href
         ].join('\n');
@@ -2111,9 +2134,13 @@
         quoteForm.addEventListener('submit', function(){
           if (!quoteForm.checkValidity()) return;
           var formText = [
+            getFieldValue('productName'),
             getFieldValue('boxType'),
             getFieldValue('orderQuantity'),
+            getFieldValue('destinationCountry'),
             getFieldValue('boxSize'),
+            getFieldValue('deliveryDate'),
+            getFieldValue('artworkStatus'),
             getFieldValue('projectDetails')
           ].join(' ');
           // This is a handoff request, not confirmation of a received inquiry.
@@ -2121,8 +2148,11 @@
             form_id: 'contactForm',
             form_name: 'Homepage Quote Form',
             lead_source: 'whatsapp_quote_form',
+            product_name: getFieldValue('productName'),
             box_type: getFieldValue('boxType'),
-            order_quantity: getFieldValue('orderQuantity')
+            order_quantity: getFieldValue('orderQuantity'),
+            destination_country: getFieldValue('destinationCountry'),
+            artwork_status: getFieldValue('artworkStatus')
           });
           if (hasSampleIntent(formText)) {
             sendGaEvent('sample_request', {
