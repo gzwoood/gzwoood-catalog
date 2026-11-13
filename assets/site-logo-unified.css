@@ -1,0 +1,49 @@
+/* Shared header logo: matches the homepage artwork and crop on every page. */
+.gw-header-logo {
+  display: block !important;
+  position: relative !important;
+  width: 270px !important;
+  height: 54px !important;
+  min-width: 270px !important;
+  flex: 0 0 270px !important;
+  overflow: hidden !important;
+  color: transparent !important;
+  text-decoration: none !important;
+}
+
+.gw-header-logo img {
+  display: block !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 360px !important;
+  max-width: none !important;
+  height: auto !important;
+  transform: translate(-50%, -50%) !important;
+  object-fit: initial !important;
+}
+
+@media (max-width: 760px) {
+  .gw-header-logo {
+    width: 210px !important;
+    height: 46px !important;
+    min-width: 210px !important;
+    flex-basis: 210px !important;
+  }
+
+  .gw-header-logo img {
+    width: 290px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .gw-header-logo {
+    width: 184px !important;
+    min-width: 184px !important;
+    flex-basis: 184px !important;
+  }
+
+  .gw-header-logo img {
+    width: 255px !important;
+  }
+}
