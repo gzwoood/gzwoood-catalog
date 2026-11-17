@@ -1,4 +1,4 @@
-﻿/* --- Performance Optimization: TBT Reduction --- */
+/* --- Performance Optimization: TBT Reduction --- */
     // Helper to defer non-critical tasks
     const idleRun = (fn) => {
       if ('requestIdleCallback' in window) {
@@ -103,7 +103,7 @@
     });
 
 
-    searchInput.addEventListener('input', filterProducts);
+    if (searchInput) searchInput.addEventListener('input', filterProducts);
 
     // Show confirmation after the form service redirects back to the quote section.
     const inquiryParams = new URLSearchParams(window.location.search);
@@ -125,4 +125,5 @@
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
     });
+
 
